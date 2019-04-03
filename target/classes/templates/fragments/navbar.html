@@ -36,6 +36,16 @@
                     <li class="nav-item active">
                         <a class="nav-link" th:href="@{/users/profile}">😾 Profile</a>
                     </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" th:href="@{/inclusion/strudent}">📚 My courses</a>
+                    </li>
+
+                    <th:block sec:authorize="hasRole('ROLE_ADMIN')">
+                        <li class="nav-item active">
+                            <a class="nav-link" th:href="@{/inclusion/all}">🏫 All course-student relations</a>
+                        </li>
+                    </th:block>
+
                     <th:block sec:authorize="hasRole('ROLE_MODERATOR')">
                         <li class="nav-item active">
                             <div class="dropdown show">

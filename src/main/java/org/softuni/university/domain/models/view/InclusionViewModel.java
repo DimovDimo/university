@@ -6,7 +6,7 @@ public class InclusionViewModel {
     private String imageUrl;
     private String name;
     private BigDecimal price;
-    private String customer;
+    private String student;
 
     public String getImageUrl() {
         return imageUrl;
@@ -32,11 +32,11 @@ public class InclusionViewModel {
         this.price = price;
     }
 
-    public String getCustomer() {
-        return customer;
+    public String getStudent() {
+        return student;
     }
 
-    public void setCustomer(String customer) {
-        this.customer = customer;
+    public void setStudent(String student) {
+        this.student = student;
     }
 }

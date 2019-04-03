@@ -58,7 +58,7 @@ public class InclusionsController extends BaseController {
     @PreAuthorize("isAuthenticated()")
     public ModelAndView getStudentInclusions(ModelAndView modelAndView, Principal principal) {
         String username = principal.getName();
-        List<InclusionViewModel> viewModels = inclusionService.findInclusionsByCustomer(username)
+        List<InclusionViewModel> viewModels = inclusionService.findInclusionsByStudent(username)
                 .stream()
                 .map(o -> mapper.map(o, InclusionViewModel.class))
                 .collect(Collectors.toList());

@@ -10,7 +10,7 @@ public class InclusionServiceModel implements IHaveCustomMappings {
     private String imageUrl;
     private String name;
     private BigDecimal price;
-    private String customer;
+    private String student;
 
     public String getImageUrl() {
         return imageUrl;
@@ -36,12 +36,12 @@ public class InclusionServiceModel implements IHaveCustomMappings {
         this.price = price;
     }
 
-    public String getCustomer() {
-        return customer;
+    public String getStudent() {
+        return student;
     }
 
-    public void setCustomer(String customer) {
-        this.customer = customer;
+    public void setStudent(String student) {
+        this.student = student;
     }
 
     @Override
@@ -61,7 +61,7 @@ public class InclusionServiceModel implements IHaveCustomMappings {
                 )
                 .addMapping(
                         entity -> entity.getUser().getUsername(),
-                        (dto, value) -> dto.setCustomer((String) value)
+                        (dto, value) -> dto.setStudent((String) value)
                 );
     }
 }

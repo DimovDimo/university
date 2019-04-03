@@ -69,7 +69,7 @@ public class InclusionServiceImpl implements InclusionService {
     }
 
     @Override
-    public List<InclusionServiceModel> findInclusionsByCustomer(String username) {
+    public List<InclusionServiceModel> findInclusionsByStudent(String username) {
         return inclusionRepository.findAllByUser_Username(username)
                 .stream()
                 .map(o -> mapper.map(o, InclusionServiceModel.class))

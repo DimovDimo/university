@@ -10,5 +10,5 @@ public interface InclusionService {
 
     List<InclusionServiceModel> findAllInclusions();
 
-    List<InclusionServiceModel> findInclusionsByCustomer(String username);
+    List<InclusionServiceModel> findInclusionsByStudent(String username);
 }

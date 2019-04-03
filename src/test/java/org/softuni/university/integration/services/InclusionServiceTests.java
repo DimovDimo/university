@@ -82,7 +82,7 @@ public class InclusionServiceTests {
         InclusionServiceModel orderResult = result.get(0);
 
         assertEquals(1, result.size());
-        assertEquals(customer, orderResult.getCustomer());
+        assertEquals(customer, orderResult.getStudent());
         assertEquals(productName, orderResult.getName());
         assertEquals(productImageUrl, orderResult.getImageUrl());
         assertEquals(productPrice, orderResult.getPrice());
