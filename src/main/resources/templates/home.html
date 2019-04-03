@@ -8,17 +8,17 @@
     <th:block th:replace="fragments/navbar"></th:block>
     <main class="mt-3">
         <div class="row d-flex justify-content-between">
-            <div class="products-navigation col-md-3">
-                <h2 class="font-weight-bold">Navigation</h2>
-                <form class="mt-3">
-                    <div class="custom-control custom-radio mt-3">
+            <div class="custom-css-modules-navigation modules-navigation col-md-12">
+                <h2 class="text-center font-weight-bold">Modules</h2>
+                <form class="text-center mt-3">
+                    <div class="custom-css-radio-button custom-control-inline custom-radio mt-3">
                         <input type="radio" id="allRadio" name="selection"
                                class="custom-control-input"
                                value="all">
                         <label class="h4 custom-control-label" for="allRadio">All</label>
                     </div>
                     <th:block th:each="module : ${modules}" th:object="${module}">
-                        <div class="custom-control custom-radio mt-3">
+                        <div class="custom-css-radio-button custom-control-inline custom-radio mt-3">
                             <input type="radio" th:id="|*{name.toLowerCase()}Radio|" name="selection"
                                    class="custom-control-input"
                                    th:value="*{name}">
@@ -28,8 +28,8 @@
                     </th:block>
                 </form>
             </div>
-            <div class="data col-md-8">
-                <h1 class="text-center font-weight-bold">Products</h1>
+            <div class="data text-center col-md-12">
+                <h2 class="text-center font-weight-bold">Courses</h2>
                 <div class="products-data"></div>
             </div>
         </div>
