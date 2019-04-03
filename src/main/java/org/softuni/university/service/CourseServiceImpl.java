@@ -1,0 +1,112 @@
+package org.softuni.university.service;
+
+import org.modelmapper.ModelMapper;
+import org.softuni.university.domain.entities.Course;
+import org.softuni.university.domain.entities.Module;
+import org.softuni.university.domain.models.service.CourseServiceModel;
+import org.softuni.university.error.CourseNameAlreadyExistsException;
+import org.softuni.university.error.CourseNotFoundException;
+import org.softuni.university.repository.CourseRepository;
+import org.softuni.university.validation.CourseValidationService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Service
+public class CourseServiceImpl implements CourseService {
+
+    private final CourseRepository courseRepository;
+    private final ModuleService moduleService;
+    private final CourseValidationService productValidation;
+    private final ModelMapper modelMapper;
+
+    @Autowired
+    public CourseServiceImpl(
+            CourseRepository courseRepository,
+            ModuleService moduleService,
+            CourseValidationService productValidation,
+            ModelMapper modelMapper) {
+        this.courseRepository = courseRepository;
+        this.moduleService = moduleService;
+        this.productValidation = productValidation;
+        this.modelMapper = modelMapper;
+    }
+
+    @Override
+    public CourseServiceModel createCourse(CourseServiceModel courseServiceModel) {
+        if (!productValidation.isValid(courseServiceModel)) {
+            throw new IllegalArgumentException();
+        }
+        Course course = this.courseRepository
+                .findByName(courseServiceModel.getName())
+                .orElse(null);
+
+        if (course != null) {
+            throw new CourseNameAlreadyExistsException("Course already exists");
+        }
+
+        course = this.modelMapper.map(courseServiceModel, Course.class);
+        course = this.courseRepository.save(course);
+
+        return this.modelMapper.map(course, CourseServiceModel.class);
+    }
+
+    @Override
+    public List<CourseServiceModel> findAllCourses() {
+        return this.courseRepository.findAll()
+                .stream()
+                .map(p -> this.modelMapper.map(p, CourseServiceModel.class))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public CourseServiceModel findCourseById(String id) {
+        return this.courseRepository.findById(id)
+                .map(p -> this.modelMapper.map(p, CourseServiceModel.class))
+                .orElseThrow(() -> new CourseNotFoundException("Course with the given id was not found!"));
+    }
+
+    @Override
+    public CourseServiceModel editCourse(String id, CourseServiceModel courseServiceModel) {
+        Course course = this.courseRepository.findById(id)
+                .orElseThrow(() -> new CourseNotFoundException("Course with the given id was not found!"));
+
+        courseServiceModel.setModules(
+                this.moduleService.findAllModules()
+                        .stream()
+                        .filter(c -> courseServiceModel.getModules().contains(c.getId()))
+                        .collect(Collectors.toList())
+        );
+
+        course.setName(courseServiceModel.getName());
+        course.setDescription(courseServiceModel.getDescription());
+        course.setPrice(courseServiceModel.getPrice());
+        course.setModules(
+                courseServiceModel.getModules()
+                        .stream()
+                        .map(c -> this.modelMapper.map(c, Module.class))
+                        .collect(Collectors.toList())
+        );
+
+        return this.modelMapper.map(this.courseRepository.saveAndFlush(course), CourseServiceModel.class);
+    }
+
+    @Override
+    public void deleteCourse(String id) {
+        Course course = this.courseRepository.findById(id).orElseThrow(() -> new CourseNotFoundException("Course with the given id was not found!"));
+
+        this.courseRepository.delete(course);
+    }
+
+    @Override
+    public List<CourseServiceModel> findAllByModule(String module) {
+        return this.courseRepository.findAll()
+                .stream()
+                .filter(product -> product.getModules().stream().anyMatch(moduleStream -> moduleStream.getName().equals(module)))
+                .map(product -> this.modelMapper.map(product, CourseServiceModel.class))
+                .collect(Collectors.toList());
+    }
+
+}
