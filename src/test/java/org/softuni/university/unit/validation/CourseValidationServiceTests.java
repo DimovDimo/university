@@ -24,7 +24,7 @@ public class CourseValidationServiceTests {
     }
 
     @Test
-    public void isValidWithProduct_whenValid_true() {
+    public void isValidWithCourse_whenValid_true() {
         Course course = new Course();
         course.setModules(List.of(new Module()));
         boolean result = service.isValid(course);
@@ -32,43 +32,43 @@ public class CourseValidationServiceTests {
     }
 
     @Test
-    public void isValidWithProduct_whenNull_false() {
+    public void isValidWithCourse_whenNull_false() {
         Course course = null;
         boolean result = service.isValid(course);
         assertFalse(result);
     }
 
     @Test
-    public void isValidWithProductServiceModel_whenNull_false() {
-        CourseServiceModel product = null;
-        boolean result = service.isValid(product);
+    public void isValidWithCourseServiceModel_whenNull_false() {
+        CourseServiceModel course = null;
+        boolean result = service.isValid(course);
         assertFalse(result);
     }
 
     @Test
-    public void isValidWithProductServiceModel_whenValid_true() {
-        CourseServiceModel product = new CourseServiceModel();
-        product.setModules(List.of(new ModuleServiceModel()));
-        boolean result = service.isValid(product);
+    public void isValidWithCourseServiceModel_whenValid_true() {
+        CourseServiceModel course = new CourseServiceModel();
+        course.setModules(List.of(new ModuleServiceModel()));
+        boolean result = service.isValid(course);
         assertTrue(result);
     }
 
     @Test
-    public void t1() {
-        CourseServiceModel product = new CourseServiceModel();
-        product.setModules(null);
+    public void isValidWithCourseServiceModel_whenSetModulesNull_false() {
+        CourseServiceModel course = new CourseServiceModel();
+        course.setModules(null);
 
-        boolean result = service.isValid(product);
+        boolean result = service.isValid(course);
         assertFalse(result);
     }
 
 
     @Test
-    public void t2() {
-        CourseServiceModel product = new CourseServiceModel();
-        product.setModules(new ArrayList<>());
+    public void isValidWithCourseServiceModel_whenSetModulesEmpty_false() {
+        CourseServiceModel course = new CourseServiceModel();
+        course.setModules(new ArrayList<>());
 
-        boolean result = service.isValid(product);
+        boolean result = service.isValid(course);
         assertFalse(result);
     }
 }

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ModuleService {
 
-    ModuleServiceModel addModule(ModuleServiceModel moduleServiceModel);
+    ModuleServiceModel addModule(ModuleServiceModel moduleServiceModel) throws Exception;
 
     List<ModuleServiceModel> findAllModules();
 

@@ -17,13 +17,15 @@ public class ModuleServiceImpl implements ModuleService {
     private final ModelMapper modelMapper;
 
     @Autowired
-    public ModuleServiceImpl(ModuleRepository moduleRepository, ModelMapper modelMapper) {
+    public ModuleServiceImpl(
+            ModuleRepository moduleRepository,
+            ModelMapper modelMapper) {
         this.moduleRepository = moduleRepository;
         this.modelMapper = modelMapper;
     }
 
     @Override
-    public ModuleServiceModel addModule(ModuleServiceModel moduleServiceModel) {
+    public ModuleServiceModel addModule(ModuleServiceModel moduleServiceModel) throws Exception {
         Module module = this.modelMapper.map(moduleServiceModel, Module.class);
 
         return this.modelMapper.map(this.moduleRepository.saveAndFlush(module), ModuleServiceModel.class);

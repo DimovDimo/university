@@ -35,7 +35,7 @@ public class ModuleController extends BaseController {
 
     @PostMapping("/add")
     @PreAuthorize("hasRole('ROLE_MODERATOR')")
-    public ModelAndView addModuleConfirm(@ModelAttribute ModuleAddBindingModel model) {
+    public ModelAndView addModuleConfirm(@ModelAttribute ModuleAddBindingModel model) throws Exception {
         this.moduleService.addModule(this.modelMapper.map(model, ModuleServiceModel.class));
 
         return super.redirect("/modules/all");

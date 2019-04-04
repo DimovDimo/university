@@ -47,6 +47,10 @@ public class InclusionServiceImpl implements InclusionService {
             throw new Exception();
         }
 
+        if(!userValidation.isValid(userModel)) {
+            throw new Exception();
+        }
+
         Course course = courseRepository.findById(productId)
                 .filter(productValidation::isValid)
                 .orElseThrow(Exception::new);
