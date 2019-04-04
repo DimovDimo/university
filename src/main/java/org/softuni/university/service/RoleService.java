@@ -8,7 +8,7 @@ public interface RoleService {
 
     void seedRolesInDb();
 
-    Set<RoleServiceModel> findAllRoles();
+    Set<RoleServiceModel> findAllRoles() throws Exception;
 
-    RoleServiceModel findByAuthority(String authority);
+    RoleServiceModel findByAuthority(String authority) throws Exception;
 }

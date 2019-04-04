@@ -40,7 +40,7 @@ public class UserController extends BaseController {
 
     @PostMapping("/register")
     @PreAuthorize("isAnonymous()")
-    public ModelAndView registerConfirm(@ModelAttribute UserRegisterBindingModel model) {
+    public ModelAndView registerConfirm(@ModelAttribute UserRegisterBindingModel model) throws Exception {
         if (!model.getPassword().equals(model.getConfirmPassword())) {
             return super.view("register");
         }
@@ -106,7 +106,7 @@ public class UserController extends BaseController {
 
     @PostMapping("/set-user/{id}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ModelAndView setUser(@PathVariable String id) {
+    public ModelAndView setUser(@PathVariable String id) throws Exception {
         this.userService.setUserRole(id, "user");
 
         return super.redirect("/users/all");
@@ -114,7 +114,7 @@ public class UserController extends BaseController {
 
     @PostMapping("/set-moderator/{id}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ModelAndView setModerator(@PathVariable String id) {
+    public ModelAndView setModerator(@PathVariable String id) throws Exception {
         this.userService.setUserRole(id, "moderator");
 
         return super.redirect("/users/all");
@@ -122,7 +122,7 @@ public class UserController extends BaseController {
 
     @PostMapping("/set-admin/{id}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ModelAndView setAdmin(@PathVariable String id) {
+    public ModelAndView setAdmin(@PathVariable String id) throws Exception {
         this.userService.setUserRole(id, "admin");
 
         return super.redirect("/users/all");

@@ -54,10 +54,6 @@ public class InclusionServiceTests {
     @MockBean
     CourseValidationService courseValidation;
 
-    @Autowired
-    private UserRepository userRepository;
-
-
     private List<Inclusion> inclusions;
 
     @Before

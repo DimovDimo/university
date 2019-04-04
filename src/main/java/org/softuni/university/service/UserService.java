@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface UserService extends UserDetailsService {
 
-    UserServiceModel registerUser(UserServiceModel userServiceModel);
+    UserServiceModel registerUser(UserServiceModel userServiceModel) throws Exception;
 
     UserServiceModel findUserByUserName(String username);
 
@@ -15,5 +15,5 @@ public interface UserService extends UserDetailsService {
 
     List<UserServiceModel> findAllUsers();
 
-    void setUserRole(String id, String role);
+    void setUserRole(String id, String role) throws Exception;
 }
