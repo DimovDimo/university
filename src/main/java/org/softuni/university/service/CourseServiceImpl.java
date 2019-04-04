@@ -19,24 +19,24 @@ public class CourseServiceImpl implements CourseService {
 
     private final CourseRepository courseRepository;
     private final ModuleService moduleService;
-    private final CourseValidationService productValidation;
+    private final CourseValidationService courseValidation;
     private final ModelMapper modelMapper;
 
     @Autowired
     public CourseServiceImpl(
             CourseRepository courseRepository,
             ModuleService moduleService,
-            CourseValidationService productValidation,
+            CourseValidationService courseValidation,
             ModelMapper modelMapper) {
         this.courseRepository = courseRepository;
         this.moduleService = moduleService;
-        this.productValidation = productValidation;
+        this.courseValidation = courseValidation;
         this.modelMapper = modelMapper;
     }
 
     @Override
     public CourseServiceModel createCourse(CourseServiceModel courseServiceModel) {
-        if (!productValidation.isValid(courseServiceModel)) {
+        if (!courseValidation.isValid(courseServiceModel)) {
             throw new IllegalArgumentException();
         }
         Course course = this.courseRepository
@@ -108,5 +108,4 @@ public class CourseServiceImpl implements CourseService {
                 .map(product -> this.modelMapper.map(product, CourseServiceModel.class))
                 .collect(Collectors.toList());
     }
-
 }

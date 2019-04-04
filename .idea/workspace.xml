@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cc90f95-c0fa-4509-861b-d32315c36170" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/CourseServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/InclusionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/InclusionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/ModuleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/ModuleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/ModuleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/ModuleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/CourseValidationServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/CourseValidationServiceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/CourseServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/CourseServiceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/InclusionServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/InclusionServiceTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -16,51 +15,63 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="-1" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="157" />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/ModuleValidationService.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/InclusionServiceTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/ModuleServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1450">
-              <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/InclusionService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/InclusionValidationService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="43" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="43" />
+            <state relative-caret-position="126">
+              <caret line="176" column="8" lean-forward="true" selection-start-line="176" selection-start-column="8" selection-end-line="177" selection-end-column="40" />
+              <folding>
+                <element signature="method#createOrder_whenUserAndProductAreValid_orderCreated#0;class#InclusionServiceTests#0" />
+                <element signature="method#createOrder_whenUserIsValidAndProductIsNotValid_throw#0;class#InclusionServiceTests#0" />
+                <element signature="method#createOrder_whenUserIsNotValidAndProductIsValid_throw#0;class#InclusionServiceTests#0" />
+                <element signature="method#createOrder_whenUserAndProductAreNotValid_throw#0;class#InclusionServiceTests#0" />
+                <element signature="method#findAllOrders_when1Orders_return1Orders#0;class#InclusionServiceTests#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/CourseServiceTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2889">
+              <caret line="187" column="5" selection-start-line="187" selection-start-column="5" selection-end-line="187" selection-end-column="5" />
+              <folding>
+                <element signature="method#createProduct_whenValid_productCreated#0;class#CourseServiceTests#0" />
+                <element signature="method#createProduct_whenNull_throw#0;class#CourseServiceTests#0" />
+                <element signature="method#findAllInclusions_when1Inclusions_return1Inclusions#0;class#CourseServiceTests#0" />
+                <element signature="method#findCourseById_when1Courses_return1Courses#1;class#CourseServiceTests#0" />
+                <element signature="e#5939#5940#0" expanded="true" />
+                <element signature="e#5999#6000#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/domain/entities/Module.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/InclusionValidationServiceTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
+            <state relative-caret-position="117">
               <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -70,10 +81,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/ModuleValidationServiceTests.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/CourseValidationServiceTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="30" selection-end-column="5" />
+            <state relative-caret-position="-648">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#772#773#0" expanded="true" />
+                <element signature="e#831#832#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/UserValidationServiceTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,50 +107,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/implementations/InclusionValidationServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="58" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#363#364#0" expanded="true" />
-                <element signature="e#403#404#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/implementations/ModuleValidationServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="30" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#345#346#0" expanded="true" />
-                <element signature="e#382#383#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/domain/models/service/InclusionServiceModel.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/CourseService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="8" column="34" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="34" />
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/mappings/MappingsInitializer.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/repository/InclusionRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/repository/CourseRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/CourseServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="109" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -148,6 +160,8 @@
       <find>userValidation</find>
       <find>new ArrayList&lt;&gt;()</find>
       <find>UserValidationService</find>
+      <find>Product</find>
+      <find>Order</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,11 +188,15 @@
         <option value="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/ModuleValidationServiceTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/RoleValidationServiceTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/UserValidationServiceTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/InclusionServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/ModuleServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/InclusionValidationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/implementations/InclusionValidationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/InclusionValidationServiceTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/ModuleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/InclusionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/InclusionServiceTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/CourseServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/CourseServiceTests.java" />
       </list>
     </option>
   </component>
@@ -189,7 +207,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="910" />
     <option name="width" value="1020" />
     <option name="height" value="1015" />
@@ -324,18 +342,7 @@
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="softuni" type="462c0819:PsiDirectoryNode" />
               <item name="university" type="462c0819:PsiDirectoryNode" />
-              <item name="error" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="university" type="b2602c69:ProjectViewProjectNode" />
-              <item name="university" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="softuni" type="462c0819:PsiDirectoryNode" />
-              <item name="university" type="462c0819:PsiDirectoryNode" />
-              <item name="mappings" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="university" type="b2602c69:ProjectViewProjectNode" />
@@ -352,29 +359,6 @@
               <item name="university" type="b2602c69:ProjectViewProjectNode" />
               <item name="university" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="softuni" type="462c0819:PsiDirectoryNode" />
-              <item name="university" type="462c0819:PsiDirectoryNode" />
-              <item name="validation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="university" type="b2602c69:ProjectViewProjectNode" />
-              <item name="university" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="softuni" type="462c0819:PsiDirectoryNode" />
-              <item name="university" type="462c0819:PsiDirectoryNode" />
-              <item name="validation" type="462c0819:PsiDirectoryNode" />
-              <item name="implementations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="university" type="b2602c69:ProjectViewProjectNode" />
-              <item name="university" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -410,6 +394,54 @@
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="softuni" type="462c0819:PsiDirectoryNode" />
               <item name="university" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="university" type="b2602c69:ProjectViewProjectNode" />
+              <item name="university" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="university" type="462c0819:PsiDirectoryNode" />
+              <item name="integration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="university" type="b2602c69:ProjectViewProjectNode" />
+              <item name="university" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="university" type="462c0819:PsiDirectoryNode" />
+              <item name="integration" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="university" type="b2602c69:ProjectViewProjectNode" />
+              <item name="university" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="university" type="462c0819:PsiDirectoryNode" />
+              <item name="integration" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="university" type="b2602c69:ProjectViewProjectNode" />
+              <item name="university" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="university" type="462c0819:PsiDirectoryNode" />
+              <item name="integration" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="university" type="b2602c69:ProjectViewProjectNode" />
@@ -465,77 +497,80 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.org.softuni.university.unit.validation in university">
-    <configuration name="InclusionValidationServiceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.org.softuni.university in university">
+    <configuration name="CourseServiceTests.deleteCourse_when1Courses_return0Courses" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="university" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.softuni.university.unit.validation.*" />
+          <option name="PATTERN" value="org.softuni.university.integration.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.softuni.university.unit.validation" />
-      <option name="MAIN_CLASS_NAME" value="org.softuni.university.unit.validation.InclusionValidationServiceTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RoleValidationServiceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="university" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.softuni.university.unit.validation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.softuni.university.unit.validation" />
-      <option name="MAIN_CLASS_NAME" value="org.softuni.university.unit.validation.RoleValidationServiceTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserValidationServiceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="university" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.softuni.university.unit.validation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.softuni.university.unit.validation" />
-      <option name="MAIN_CLASS_NAME" value="org.softuni.university.unit.validation.UserValidationServiceTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserValidationServiceTests.isValidWithUserServiceModel_whenValid_true" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="university" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.softuni.university.unit.validation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.softuni.university.unit.validation" />
-      <option name="MAIN_CLASS_NAME" value="org.softuni.university.unit.validation.UserValidationServiceTests" />
-      <option name="METHOD_NAME" value="isValidWithUserServiceModel_whenValid_true" />
+      <option name="PACKAGE_NAME" value="org.softuni.university.integration.services" />
+      <option name="MAIN_CLASS_NAME" value="org.softuni.university.integration.services.CourseServiceTests" />
+      <option name="METHOD_NAME" value="deleteCourse_when1Courses_return0Courses" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="org.softuni.university.unit.validation in university" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CourseServiceTests.deleteCourse_whenNoCourses_ThrowException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="university" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.softuni.university.unit.validation.*" />
+          <option name="PATTERN" value="org.softuni.university.integration.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.softuni.university.unit.validation" />
+      <option name="PACKAGE_NAME" value="org.softuni.university.integration.services" />
+      <option name="MAIN_CLASS_NAME" value="org.softuni.university.integration.services.CourseServiceTests" />
+      <option name="METHOD_NAME" value="deleteCourse_whenNoCourses_ThrowException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourseServiceTests.findAllByModule_when1Courses_return1Courses" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="university" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.softuni.university.integration.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.softuni.university.integration.services" />
+      <option name="MAIN_CLASS_NAME" value="org.softuni.university.integration.services.CourseServiceTests" />
+      <option name="METHOD_NAME" value="findAllByModule_when1Courses_return1Courses" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourseServiceTests.findAllByModule_whenNoModuleNames_returnEmptyCourses" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="university" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.softuni.university.integration.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.softuni.university.integration.services" />
+      <option name="MAIN_CLASS_NAME" value="org.softuni.university.integration.services.CourseServiceTests" />
+      <option name="METHOD_NAME" value="findAllByModule_whenNoModuleNames_returnEmptyCourses" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.softuni.university in university" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="university" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.softuni.university.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.softuni.university" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -550,11 +585,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.org.softuni.university.unit.validation in university" />
-        <item itemvalue="JUnit.InclusionValidationServiceTests" />
-        <item itemvalue="JUnit.RoleValidationServiceTests" />
-        <item itemvalue="JUnit.UserValidationServiceTests" />
-        <item itemvalue="JUnit.UserValidationServiceTests.isValidWithUserServiceModel_whenValid_true" />
+        <item itemvalue="JUnit.org.softuni.university in university" />
+        <item itemvalue="JUnit.CourseServiceTests.findAllByModule_whenNoModuleNames_returnEmptyCourses" />
+        <item itemvalue="JUnit.CourseServiceTests.findAllByModule_when1Courses_return1Courses" />
+        <item itemvalue="JUnit.CourseServiceTests.deleteCourse_whenNoCourses_ThrowException" />
+        <item itemvalue="JUnit.CourseServiceTests.deleteCourse_when1Courses_return0Courses" />
       </list>
     </recent_temporary>
   </component>
@@ -569,42 +604,47 @@
       <option name="presentableId" value="Default" />
       <updated>1554309363485</updated>
       <workItem from="1554309365938" duration="7302000" />
-      <workItem from="1554374708481" duration="6931000" />
+      <workItem from="1554374708481" duration="15180000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="org_softuni_university_in_university - 2019.04.04 at 15h 53m 29s.xml">
+    <history-entry file="CourseServiceTests_editCourse_whenNoModules_ThrowException - 2019.04.04 at 19h 52m 12s.xml">
+      <configuration name="CourseServiceTests.editCourse_whenNoModules_ThrowException" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="org_softuni_university_in_university - 2019.04.04 at 19h 53m 14s.xml">
       <configuration name="org.softuni.university in university" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="org_softuni_university_in_university - 2019.04.04 at 15h 54m 56s.xml">
+    <history-entry file="org_softuni_university_in_university - 2019.04.04 at 19h 54m 20s.xml">
       <configuration name="org.softuni.university in university" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CourseValidationServiceTests - 2019.04.04 at 16h 33m 31s.xml">
-      <configuration name="CourseValidationServiceTests" configurationId="JUnit" />
+    <history-entry file="CourseServiceTests_deleteCourse_when1Courses_return0Courses - 2019.04.04 at 20h 00m 19s.xml">
+      <configuration name="CourseServiceTests.deleteCourse_when1Courses_return0Courses" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserValidationServiceTests_isValidWithUserServiceModel_whenValid_true - 2019.04.04 at 16h 41m 51s.xml">
-      <configuration name="UserValidationServiceTests.isValidWithUserServiceModel_whenValid_true" configurationId="JUnit" />
+    <history-entry file="CourseServiceTests_deleteCourse_when1Courses_return0Courses - 2019.04.04 at 20h 02m 16s.xml">
+      <configuration name="CourseServiceTests.deleteCourse_when1Courses_return0Courses" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserValidationServiceTests - 2019.04.04 at 16h 43m 02s.xml">
-      <configuration name="UserValidationServiceTests" configurationId="JUnit" />
+    <history-entry file="CourseServiceTests_deleteCourse_when1Courses_return0Courses - 2019.04.04 at 20h 06m 22s.xml">
+      <configuration name="CourseServiceTests.deleteCourse_when1Courses_return0Courses" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RoleValidationServiceTests - 2019.04.04 at 16h 51m 54s.xml">
-      <configuration name="RoleValidationServiceTests" configurationId="JUnit" />
+    <history-entry file="CourseServiceTests_deleteCourse_when1Courses_return0Courses - 2019.04.04 at 20h 06m 44s.xml">
+      <configuration name="CourseServiceTests.deleteCourse_when1Courses_return0Courses" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RoleValidationServiceTests - 2019.04.04 at 16h 52m 14s.xml">
-      <configuration name="RoleValidationServiceTests" configurationId="JUnit" />
+    <history-entry file="CourseServiceTests_deleteCourse_whenNoCourses_ThrowException - 2019.04.04 at 20h 08m 10s.xml">
+      <configuration name="CourseServiceTests.deleteCourse_whenNoCourses_ThrowException" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="org_softuni_university_unit_validation_in_university - 2019.04.04 at 17h 44m 19s.xml">
-      <configuration name="org.softuni.university.unit.validation in university" configurationId="JUnit" />
+    <history-entry file="CourseServiceTests_findAllByModule_when1Courses_return1Courses - 2019.04.04 at 20h 12m 53s.xml">
+      <configuration name="CourseServiceTests.findAllByModule_when1Courses_return1Courses" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CourseServiceTests_findAllByModule_whenNoModuleNames_returnEmptyCourses - 2019.04.04 at 20h 15m 00s.xml">
+      <configuration name="CourseServiceTests.findAllByModule_whenNoModuleNames_returnEmptyCourses" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14233000" />
+    <option name="totallyTimeSpent" value="22482000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -617,7 +657,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -629,9 +669,9 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="right" id="Coverage" sideWeight="0.5021097" side_tool="true" weight="0.24966443" />
+      <window_info anchor="right" id="Coverage" sideWeight="0.5063291" side_tool="true" weight="0.24966443" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.4978903" weight="0.24966443" />
+      <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49367088" weight="0.24966443" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
@@ -645,58 +685,38 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/CourseServiceTests.java</url>
+          <line>89</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/CourseServiceTests.java</url>
+          <line>149</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/university$org_softuni_university_in_university.ic" NAME="org.softuni.university in university Coverage Results" MODIFIED="1554382415466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/university$UniversityApplication.ic" NAME="UniversityApplication Coverage Results" MODIFIED="1554398132025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/university$CourseServiceTests_editCourse_whenNoModules_ThrowException.ic" NAME="CourseServiceTests.editCourse_whenNoModules_ThrowException Coverage Results" MODIFIED="1554396652523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.softuni.university.integration.services.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/university$org_softuni_university_in_university.ic" NAME="org.softuni.university in university Coverage Results" MODIFIED="1554398261931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.softuni.university.*</FILTER>
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/Constants/GlobalConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/domain/entities/Inclusion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/domain/entities/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/domain/entities/Module.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/domain/models/binding/CourseAddBindingModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/domain/models/binding/ModuleAddBindingModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/domain/models/binding/UserEditBindingModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -708,13 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/domain/models/service/CourseServiceModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-206">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -739,13 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/repository/RoleRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -757,20 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/repository/InclusionRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/repository/CourseRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -841,18 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/CourseValidationServiceTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/domain/models/service/RoleServiceModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -864,20 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="44" column="31" lean-forward="true" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/CourseServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-320">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/ModuleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -917,27 +883,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/UserValidationServiceTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/RoleValidationService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="43" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/InclusionServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-316">
-          <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -982,13 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/InclusionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/ModuleValidationService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -1025,13 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/InclusionValidationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="43" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/implementations/InclusionValidationServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1044,12 +979,160 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/InclusionValidationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/ModuleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/InclusionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/ModuleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/integration/web/controllers/InclusionsControllerTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/domain/models/service/CourseServiceModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/InclusionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="72" column="57" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/repository/InclusionRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/CourseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/InclusionValidationServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
+        <state relative-caret-position="117">
           <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/CourseValidationServiceTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-648">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#831#832#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/UserValidationServiceTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/repository/CourseRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/InclusionServiceTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="176" column="8" lean-forward="true" selection-start-line="176" selection-start-column="8" selection-end-line="177" selection-end-column="40" />
+          <folding>
+            <element signature="method#createOrder_whenUserAndProductAreValid_orderCreated#0;class#InclusionServiceTests#0" />
+            <element signature="method#createOrder_whenUserIsValidAndProductIsNotValid_throw#0;class#InclusionServiceTests#0" />
+            <element signature="method#createOrder_whenUserIsNotValidAndProductIsValid_throw#0;class#InclusionServiceTests#0" />
+            <element signature="method#createOrder_whenUserAndProductAreNotValid_throw#0;class#InclusionServiceTests#0" />
+            <element signature="method#findAllOrders_when1Orders_return1Orders#0;class#InclusionServiceTests#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/domain/entities/Module.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/CourseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="109" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/CourseServiceTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2889">
+          <caret line="187" column="5" selection-start-line="187" selection-start-column="5" selection-end-line="187" selection-end-column="5" />
+          <folding>
+            <element signature="method#createProduct_whenValid_productCreated#0;class#CourseServiceTests#0" />
+            <element signature="method#createProduct_whenNull_throw#0;class#CourseServiceTests#0" />
+            <element signature="method#findAllInclusions_when1Inclusions_return1Inclusions#0;class#CourseServiceTests#0" />
+            <element signature="method#findCourseById_when1Courses_return1Courses#1;class#CourseServiceTests#0" />
+            <element signature="e#5939#5940#0" expanded="true" />
+            <element signature="e#5999#6000#0" expanded="true" />
           </folding>
         </state>
       </provider>

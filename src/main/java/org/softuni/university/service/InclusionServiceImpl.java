@@ -41,17 +41,13 @@ public class InclusionServiceImpl implements InclusionService {
     }
 
     @Override
-    public void createInclusion(String productId, String name) throws Exception {
+    public void createInclusion(String courseId, String name) throws Exception {
         UserServiceModel userModel = userService.findUserByUserName(name);
         if(!userValidation.isValid(userModel)) {
             throw new Exception();
         }
 
-        if(!userValidation.isValid(userModel)) {
-            throw new Exception();
-        }
-
-        Course course = courseRepository.findById(productId)
+        Course course = courseRepository.findById(courseId)
                 .filter(productValidation::isValid)
                 .orElseThrow(Exception::new);
 

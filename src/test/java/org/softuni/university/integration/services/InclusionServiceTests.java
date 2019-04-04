@@ -10,11 +10,15 @@ import org.softuni.university.domain.models.service.InclusionServiceModel;
 import org.softuni.university.domain.models.service.UserServiceModel;
 import org.softuni.university.repository.InclusionRepository;
 import org.softuni.university.repository.CourseRepository;
+import org.softuni.university.repository.UserRepository;
 import org.softuni.university.service.InclusionService;
 import org.softuni.university.service.UserService;
 import org.softuni.university.validation.CourseValidationService;
 import org.softuni.university.validation.UserValidationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.jdbc.EmbeddedDatabaseConnection;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -48,58 +52,28 @@ public class InclusionServiceTests {
     CourseRepository mockCourseRepository;
 
     @MockBean
-    CourseValidationService productValidation;
+    CourseValidationService courseValidation;
+
+    @Autowired
+    private UserRepository userRepository;
+
 
     private List<Inclusion> inclusions;
 
     @Before
     public void setupTest() {
         inclusions = new ArrayList<>();
+
         when(mockInclusionRepository.findAll())
                 .thenReturn(inclusions);
     }
 
     @Test
-    public void findAllOrders_when1Orders_return1Orders() {
-        String customer = "Test customer";
-        String productImageUrl = "http://image.url";
-        String productName = "course 1";
-        BigDecimal productPrice = BigDecimal.valueOf(1.34);
-
-        Inclusion inclusion = new Inclusion();
-        inclusion.setUser(new User() {{
-            setUsername(customer);
-        }});
-        inclusion.setCourse(new Course() {{
-            setImageUrl(productImageUrl);
-            setName(productName);
-            setPrice(productPrice);
-        }});
-
-        inclusions.add(inclusion);
-
-        var result = service.findAllInclusions();
-        InclusionServiceModel orderResult = result.get(0);
-
-        assertEquals(1, result.size());
-        assertEquals(customer, orderResult.getStudent());
-        assertEquals(productName, orderResult.getName());
-        assertEquals(productImageUrl, orderResult.getImageUrl());
-        assertEquals(productPrice, orderResult.getPrice());
-    }
-
-    @Test
-    public void findAllOrders_whenNoOrders_returnEmptyOrders() {
-        inclusions.clear();
-        var result = service.findAllInclusions();
-        assertTrue(result.isEmpty());
-    }
-
-    @Test
-    public void createOrder_whenUserAndProductAreValid_orderCreated() throws Exception {
+    public void createInclusion_whenUserAndCourseAreValid_inclusionCreated() throws Exception {
         when(mockUserValidation.isValid(any()))
                 .thenReturn(true);
-        when(productValidation.isValid(any(Course.class)))
+
+        when(courseValidation.isValid(any(Course.class)))
                 .thenReturn(true);
 
         when(mockUserService.findUserByUserName(any()))
@@ -115,32 +89,131 @@ public class InclusionServiceTests {
     }
 
     @Test(expected = Exception.class)
-    public void createOrder_whenUserIsValidAndProductIsNotValid_throw() throws Exception {
+    public void createInclusion_whenUserIsValidAndCourseIsNotValid_throw() throws Exception {
         when(mockUserValidation.isValid(any()))
                 .thenReturn(true);
-        when(productValidation.isValid(any(Course.class)))
+        when(courseValidation.isValid(any(Course.class)))
                 .thenReturn(false);
 
         service.createInclusion("", "");
     }
 
     @Test(expected = Exception.class)
-    public void createOrder_whenUserIsNotValidAndProductIsValid_throw() throws Exception {
+    public void createInclusion_whenUserIsNotValidAndCourseIsValid_throw() throws Exception {
         when(mockUserValidation.isValid(any()))
                 .thenReturn(false);
-        when(productValidation.isValid(any(Course.class)))
+        when(courseValidation.isValid(any(Course.class)))
                 .thenReturn(true);
 
         service.createInclusion("", "");
     }
 
     @Test(expected = Exception.class)
-    public void createOrder_whenUserAndProductAreNotValid_throw() throws Exception {
+    public void createInclusion_whenUserAndCourseAreNotValid_throw() throws Exception {
         when(mockUserValidation.isValid(any()))
                 .thenReturn(false);
-        when(productValidation.isValid(any(Course.class)))
+        when(courseValidation.isValid(any(Course.class)))
                 .thenReturn(false);
 
         service.createInclusion("", "");
+    }
+
+    @Test
+    public void findAllInclusions_when1Inclusions_return1Inclusions() {
+        String student = "Test student";
+        String courseImageUrl = "http://image.url";
+        String courseName = "course 1";
+        BigDecimal coursePrice = BigDecimal.valueOf(1.34);
+
+        Inclusion inclusion = new Inclusion();
+        inclusion.setUser(new User() {{
+            setUsername(student);
+        }});
+
+        inclusion.setCourse(new Course() {{
+            setImageUrl(courseImageUrl);
+            setName(courseName);
+            setPrice(coursePrice);
+        }});
+
+        inclusions.add(inclusion);
+
+        var result = service.findAllInclusions();
+        InclusionServiceModel inclusionResult = result.get(0);
+
+        assertEquals(1, result.size());
+        assertEquals(student, inclusionResult.getStudent());
+        assertEquals(courseName, inclusionResult.getName());
+        assertEquals(courseImageUrl, inclusionResult.getImageUrl());
+        assertEquals(coursePrice, inclusionResult.getPrice());
+    }
+
+    @Test
+    public void findAllInclusions_whenNoInclusions_returnEmptyInclusions() {
+        inclusions.clear();
+        var result = service.findAllInclusions();
+        assertTrue(result.isEmpty());
+    }
+
+    @Test
+    public void findInclusionsByStudent_whenValidStudent_return1Inclusions() {
+        String student = "Test student";
+        String courseImageUrl = "http://image.url";
+        String courseName = "course 1";
+        BigDecimal coursePrice = BigDecimal.valueOf(1.34);
+
+        Inclusion inclusion = new Inclusion();
+        User user = new User() {{ setUsername(student); }};
+        inclusion.setUser(user);
+
+        inclusion.setCourse(new Course() {{
+            setImageUrl(courseImageUrl);
+            setName(courseName);
+            setPrice(coursePrice);
+        }});
+
+        inclusions.add(inclusion);
+
+        when(mockInclusionRepository.findAllByUser_Username(student))
+                .thenReturn(inclusions);
+
+        var result = service.findInclusionsByStudent(student);
+        InclusionServiceModel inclusionResult = result.get(0);
+
+        assertEquals(1, result.size());
+        assertEquals(student, inclusionResult.getStudent());
+        assertEquals(courseName, inclusionResult.getName());
+        assertEquals(courseImageUrl, inclusionResult.getImageUrl());
+        assertEquals(coursePrice, inclusionResult.getPrice());
+    }
+
+    @Test
+    public void findInclusionsByStudent_whenNoStudent_returnEmptyInclusions() {
+        String student = "Test student";
+        String courseImageUrl = "http://image.url";
+        String courseName = "course 1";
+        BigDecimal coursePrice = BigDecimal.valueOf(1.34);
+
+        Inclusion inclusion = new Inclusion();
+        inclusion.setUser(new User() {{
+            setUsername(student);
+        }});
+
+        inclusion.setCourse(new Course() {{
+            setImageUrl(courseImageUrl);
+            setName(courseName);
+            setPrice(coursePrice);
+        }});
+
+        inclusions.add(inclusion);
+
+        var result = service.findInclusionsByStudent(student);
+        assertTrue(result.isEmpty());
+    }
+
+    @Test
+    public void findInclusionsByStudent_whenNoNull_returnEmptyInclusions() {
+        var result = service.findInclusionsByStudent(null);
+        assertTrue(result.isEmpty());
     }
 }
