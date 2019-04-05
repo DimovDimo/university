@@ -43,3 +43,20 @@ img.img-thumbnail {
 body {
     background-color: #ffffff;
 }
+
+.custom-css-profile-img{
+    text-align: center;
+    height: 190px;
+    width: 190px;
+}
+
+.custom-css-button-root{
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+.custom-css-profile-img-min{
+    text-align: center;
+    height: 50px;
+    width: 50px;
+}

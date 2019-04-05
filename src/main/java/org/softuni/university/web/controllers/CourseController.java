@@ -38,13 +38,13 @@ public class CourseController extends BaseController {
     }
 
     @GetMapping("/add")
-    @PreAuthorize("hasRole('ROLE_MODERATOR')")
+    @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     public ModelAndView addCourse() {
         return super.view("course/add-course");
     }
 
     @PostMapping("/add")
-    @PreAuthorize("hasRole('ROLE_MODERATOR')")
+    @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     public ModelAndView addCourseConfirm(@ModelAttribute CourseAddBindingModel model) throws IOException {
         CourseServiceModel courseServiceModel = this.modelMapper.map(model, CourseServiceModel.class);
         courseServiceModel.setModules(
@@ -63,7 +63,7 @@ public class CourseController extends BaseController {
     }
 
     @GetMapping("/all")
-    @PreAuthorize("hasRole('ROLE_MODERATOR')")
+    @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     public ModelAndView allCourses(ModelAndView modelAndView) {
         modelAndView.addObject("courses", this.courseService.findAllCourses()
                 .stream()
@@ -82,7 +82,7 @@ public class CourseController extends BaseController {
     }
 
     @GetMapping("/edit/{id}")
-    @PreAuthorize("hasRole('ROLE_MODERATOR')")
+    @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     public ModelAndView editCourse(@PathVariable String id, ModelAndView modelAndView) {
         CourseServiceModel courseServiceModel = this.courseService.findCourseById(id);
         CourseAddBindingModel model = this.modelMapper.map(courseServiceModel, CourseAddBindingModel.class);
@@ -95,7 +95,7 @@ public class CourseController extends BaseController {
     }
 
     @PostMapping("/edit/{id}")
-    @PreAuthorize("hasRole('ROLE_MODERATOR')")
+    @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     public ModelAndView editCourseConfirm(@PathVariable String id, @ModelAttribute CourseAddBindingModel model) {
         this.courseService.editCourse(id, this.modelMapper.map(model, CourseServiceModel.class));
 
@@ -103,7 +103,7 @@ public class CourseController extends BaseController {
     }
 
     @GetMapping("/delete/{id}")
-    @PreAuthorize("hasRole('ROLE_MODERATOR')")
+    @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     public ModelAndView deleteCourse(@PathVariable String id, ModelAndView modelAndView) {
         CourseServiceModel courseServiceModel = this.courseService.findCourseById(id);
         CourseAddBindingModel model = this.modelMapper.map(courseServiceModel, CourseAddBindingModel.class);
@@ -116,7 +116,7 @@ public class CourseController extends BaseController {
     }
 
     @PostMapping("/delete/{id}")
-    @PreAuthorize("hasRole('ROLE_MODERATOR')")
+    @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     public ModelAndView deleteCourseConfirm(@PathVariable String id) {
         this.courseService.deleteCourse(id);
 

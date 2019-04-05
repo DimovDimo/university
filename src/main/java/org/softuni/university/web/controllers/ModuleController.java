@@ -28,13 +28,13 @@ public class ModuleController extends BaseController {
     }
 
     @GetMapping("/add")
-    @PreAuthorize("hasRole('ROLE_MODERATOR')")
+    @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     public ModelAndView addModule() {
         return super.view("module/add-module");
     }
 
     @PostMapping("/add")
-    @PreAuthorize("hasRole('ROLE_MODERATOR')")
+    @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     public ModelAndView addModuleConfirm(@ModelAttribute ModuleAddBindingModel model) throws Exception {
         this.moduleService.addModule(this.modelMapper.map(model, ModuleServiceModel.class));
 
@@ -42,7 +42,7 @@ public class ModuleController extends BaseController {
     }
 
     @GetMapping("/all")
-    @PreAuthorize("hasRole('ROLE_MODERATOR')")
+    @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     public ModelAndView allModule(ModelAndView modelAndView) {
         modelAndView.addObject("modules",
                 this.moduleService.findAllModules()
@@ -55,7 +55,7 @@ public class ModuleController extends BaseController {
     }
 
     @GetMapping("/edit/{id}")
-    @PreAuthorize("hasRole('ROLE_MODERATOR')")
+    @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     public ModelAndView editModule(@PathVariable String id, ModelAndView modelAndView) {
         modelAndView.addObject("model",
                 this.modelMapper.map(this.moduleService.findModuleById(id), ModuleViewModel.class)
@@ -65,7 +65,7 @@ public class ModuleController extends BaseController {
     }
 
     @PostMapping("/edit/{id}")
-    @PreAuthorize("hasRole('ROLE_MODERATOR')")
+    @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     public ModelAndView editModuleConfirm(@PathVariable String id, @ModelAttribute ModuleAddBindingModel model) {
         this.moduleService.editModule(id, this.modelMapper.map(model, ModuleServiceModel.class));
 
@@ -73,7 +73,7 @@ public class ModuleController extends BaseController {
     }
 
     @GetMapping("/delete/{id}")
-    @PreAuthorize("hasRole('ROLE_MODERATOR')")
+    @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     public ModelAndView deleteModule(@PathVariable String id, ModelAndView modelAndView) {
         modelAndView.addObject("model",
                 this.modelMapper.map(this.moduleService.findModuleById(id), ModuleViewModel.class)
@@ -83,7 +83,7 @@ public class ModuleController extends BaseController {
     }
 
     @PostMapping("/delete/{id}")
-    @PreAuthorize("hasRole('ROLE_MODERATOR')")
+    @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     public ModelAndView deleteModuleConfirm(@PathVariable String id) {
         this.moduleService.deleteModule(id);
 
@@ -91,7 +91,7 @@ public class ModuleController extends BaseController {
     }
 
     @GetMapping("/fetch")
-    @PreAuthorize("hasRole('ROLE_MODERATOR')")
+    @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     @ResponseBody
     public List<ModuleViewModel> fetchModules() {
         return this.moduleService.findAllModules()

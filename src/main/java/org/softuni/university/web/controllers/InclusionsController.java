@@ -44,7 +44,7 @@ public class InclusionsController extends BaseController {
     }
 
     @GetMapping("/all")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ROLE_DEAN')")
     public ModelAndView getAllInclusions(ModelAndView modelAndView) {
         List<InclusionViewModel> viewModels = inclusionService.findAllInclusions()
                 .stream()

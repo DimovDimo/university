@@ -40,13 +40,13 @@
                         <a class="nav-link" th:href="@{/inclusion/strudent}">📚 My courses</a>
                     </li>
 
-                    <th:block sec:authorize="hasRole('ROLE_ADMIN')">
+                    <th:block sec:authorize="hasRole('ROLE_DEAN')">
                         <li class="nav-item active">
                             <a class="nav-link" th:href="@{/inclusion/all}">🏫 All course-student relations</a>
                         </li>
                     </th:block>
 
-                    <th:block sec:authorize="hasRole('ROLE_MODERATOR')">
+                    <th:block sec:authorize="hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')">
                         <li class="nav-item active">
                             <div class="dropdown show">
                                 <a class="nav-link active dropdown-toggle" href="#" role="button" id="moderatorDropdown"
@@ -64,7 +64,7 @@
                         </li>
                     </th:block>
 
-                    <th:block sec:authorize="hasRole('ROLE_ADMIN')">
+                    <th:block sec:authorize="hasRole('ROLE_DEAN')">
                         <li class="nav-item active">
                             <div class="dropdown">
                                 <a class="nav-link active dropdown-toggle" href="#" role="button" id="adminDropdown"

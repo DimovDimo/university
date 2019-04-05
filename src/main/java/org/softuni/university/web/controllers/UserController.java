@@ -87,7 +87,7 @@ public class UserController extends BaseController {
     }
 
     @GetMapping("/all")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ROLE_DEAN')")
     public ModelAndView allUsers(ModelAndView modelAndView) {
         List<UserAllViewModel> users = this.userService.findAllUsers()
                 .stream()
@@ -104,24 +104,24 @@ public class UserController extends BaseController {
         return super.view("all-users", modelAndView);
     }
 
-    @PostMapping("/set-user/{id}")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PostMapping("/set-student/{id}")
+    @PreAuthorize("hasRole('ROLE_DEAN')")
     public ModelAndView setUser(@PathVariable String id) throws Exception {
         this.userService.setUserRole(id, "user");
 
         return super.redirect("/users/all");
     }
 
-    @PostMapping("/set-moderator/{id}")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PostMapping("/set-chair-of-a-department/{id}")
+    @PreAuthorize("hasRole('ROLE_DEAN')")
     public ModelAndView setModerator(@PathVariable String id) throws Exception {
         this.userService.setUserRole(id, "moderator");
 
         return super.redirect("/users/all");
     }
 
-    @PostMapping("/set-admin/{id}")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PostMapping("/set-dean/{id}")
+    @PreAuthorize("hasRole('ROLE_DEAN')")
     public ModelAndView setAdmin(@PathVariable String id) throws Exception {
         this.userService.setUserRole(id, "admin");
 

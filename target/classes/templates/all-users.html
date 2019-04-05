@@ -14,7 +14,8 @@
     <table class="table table-hover w-75 mx-auto">
         <thead>
         <tr class="row mx-auto">
-            <th class="col-md-2 text-center">#</th>
+            <th class="col-md-2 text-center">Number</th>
+            <th class="col-md-3 text-center">Profile Image</th>
             <th class="col-md-3 text-center">Username</th>
             <th class="col-md-2 text-center">Email</th>
             <th class="col-md-2 text-center">Roles</th>
@@ -25,52 +26,56 @@
         <th:block th:each="user, iter : ${users}">
             <tr class="row mx-auto">
                 <th class="col-md-2 text-center" th:text="${iter.index + 1}"></th>
+                <th class="col-md-2 text-center" >
+                    <div class="text-center">
+                        <img class="text-center custom-css-profile-img-min" src="https://res.cloudinary.com/dimo-cloud/image/upload/v1554475784/cranium-2028555.svg" alt="profileImg">
+                    </div>
+                </th>
                 <td class="col-md-3 text-center" th:text="${user.username}"></td>
                 <td class="col-md-2 text-center" th:text="${user.email}"></td>
                 <td class="col-md-2 text-center" th:text="${#strings.listJoin(user.authorities, ', ')}"></td>
                 <td class="col-md-3 text-center">
-
                     <div class="row">
-                        <th:block th:if="${#lists.contains(user.authorities, 'ROLE_USER') &&
-                            !#lists.contains(user.authorities, 'ROLE_MODERATOR') && !#lists.contains(user.authorities, 'ROLE_ADMIN')
+                        <th:block th:if="${#lists.contains(user.authorities, 'ROLE_STUDENT') &&
+                            !#lists.contains(user.authorities, 'ROLE_CHAIR_OF_A_DEPARTMENT') && !#lists.contains(user.authorities, 'ROLE_DEAN')
                         }">
-                            <form th:action="@{/users/set-moderator/{id}(id=${user.id})}" method="post">
+                            <form class="custom-css-button-root" th:action="@{/users/set-chair-of-a-department/{id}(id=${user.id})}" method="post">
                                 <input type="hidden" name="_csrf"
                                        value="80417983-fe8b-45c7-963e-31f6915a1560">
-                                <button class="btn btn-dark">MODERATOR</button>
+                                <button class="btn btn-primary">Chair of a department</button>
                             </form>
-                            <form th:action="@{/users/set-admin/{id}(id=${user.id})}" method="post">
+                            <form class="custom-css-button-root" th:action="@{/users/set-dean/{id}(id=${user.id})}" method="post">
                                 <input type="hidden" name="_csrf"
                                        value="80417983-fe8b-45c7-963e-31f6915a1560">
-                                <button class="btn btn-dark">ADMIN</button>
+                                <button class="btn btn-success">Dean</button>
                             </form>
                         </th:block>
-                        <th:block th:if="${#lists.contains(user.authorities, 'ROLE_USER') &&
-                            #lists.contains(user.authorities, 'ROLE_MODERATOR') && !#lists.contains(user.authorities, 'ROLE_ADMIN')
+                        <th:block th:if="${#lists.contains(user.authorities, 'ROLE_STUDENT') &&
+                            #lists.contains(user.authorities, 'ROLE_CHAIR_OF_A_DEPARTMENT') && !#lists.contains(user.authorities, 'ROLE_DEAN')
                         }">
-                            <form th:action="@{/users/set-user/{id}(id=${user.id})}" method="post">
+                            <form class="custom-css-button-root" th:action="@{/users/set-student/{id}(id=${user.id})}" method="post">
                                 <input type="hidden" name="_csrf"
                                        value="80417983-fe8b-45c7-963e-31f6915a1560">
-                                <button class="btn btn-dark">USER</button>
+                                <button class="btn btn-default">Student</button>
                             </form>
-                            <form th:action="@{/users/set-admin/{id}(id=${user.id})}" method="post">
+                            <form class="custom-css-button-root" th:action="@{/users/set-dean/{id}(id=${user.id})}" method="post">
                                 <input type="hidden" name="_csrf"
                                        value="80417983-fe8b-45c7-963e-31f6915a1560">
-                                <button class="btn btn-dark">ADMIN</button>
+                                <button class="btn btn-success">Dean</button>
                             </form>
                         </th:block>
-                        <th:block th:if="${#lists.contains(user.authorities, 'ROLE_USER') &&
-                            #lists.contains(user.authorities, 'ROLE_MODERATOR') && #lists.contains(user.authorities, 'ROLE_ADMIN') && !#lists.contains(user.authorities, 'ROLE_ROOT')
+                        <th:block th:if="${#lists.contains(user.authorities, 'ROLE_STUDENT') &&
+                            #lists.contains(user.authorities, 'ROLE_CHAIR_OF_A_DEPARTMENT') && #lists.contains(user.authorities, 'ROLE_DEAN') && !#lists.contains(user.authorities, 'ROLE_PRESIDENT')
                         }">
-                            <form th:action="@{/users/set-user/{id}(id=${user.id})}" method="post">
+                            <form class="custom-css-button-root" th:action="@{/users/set-student/{id}(id=${user.id})}" method="post">
                                 <input type="hidden" name="_csrf"
                                        value="80417983-fe8b-45c7-963e-31f6915a1560">
-                                <button class="btn btn-dark">USER</button>
+                                <button class="btn btn-default">Student</button>
                             </form>
-                            <form th:action="@{/users/set-moderator/{id}(id=${user.id})}" method="post">
+                            <form class="custom-css-button-root" th:action="@{/users/set-chair-of-a-department/{id}(id=${user.id})}" method="post">
                                 <input type="hidden" name="_csrf"
                                        value="80417983-fe8b-45c7-963e-31f6915a1560">
-                                <button class="btn btn-dark">MODERATOR</button>
+                                <button class="btn btn-primary">Chair of a department</button>
                             </form>
                         </th:block>
                     </div>

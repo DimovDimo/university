@@ -294,7 +294,7 @@ public class UserServiceTests {
 
         users.add(user);
 
-        String role = "ROLE_USER";
+        String role = "ROLE_STUDENT";
         service.setUserRole(userId, role);
 
         User userResult = users.get(0);

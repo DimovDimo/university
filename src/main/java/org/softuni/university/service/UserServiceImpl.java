@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService {
         } else {
             userServiceModel.setAuthorities(new LinkedHashSet<>());
 
-            userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_USER"));
+            userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_STUDENT"));
         }
 
 
@@ -94,16 +94,16 @@ public class UserServiceImpl implements UserService {
 
         switch (role) {
             case "user":
-                userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_USER"));
+                userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_STUDENT"));
                 break;
             case "moderator":
-                userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_USER"));
-                userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_MODERATOR"));
+                userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_STUDENT"));
+                userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_CHAIR_OF_A_DEPARTMENT"));
                 break;
             case "admin":
-                userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_USER"));
-                userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_MODERATOR"));
-                userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_ADMIN"));
+                userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_STUDENT"));
+                userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_CHAIR_OF_A_DEPARTMENT"));
+                userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_DEAN"));
                 break;
         }
 
