@@ -1,7 +1,8 @@
 package org.softuni.university.web.controllers;
 
-import org.softuni.university.domain.models.rest.CourseOrderRequestModel;
+import org.softuni.university.domain.models.rest.CourseInclusionRequestModel;
 import org.softuni.university.service.InclusionService;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
@@ -16,7 +17,8 @@ public class InclusionsApiController {
     }
 
     @PostMapping("/submit")
-    public int submitInclusion(@RequestBody CourseOrderRequestModel model, Principal principal) throws Exception {
+    @PreAuthorize("isAuthenticated()")
+    public int submitInclusion(@RequestBody CourseInclusionRequestModel model, Principal principal) throws Exception {
         String name = principal.getName();
         inclusionService.createInclusion(model.getId(), name);
 

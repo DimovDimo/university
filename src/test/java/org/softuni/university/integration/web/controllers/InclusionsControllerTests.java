@@ -14,6 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;
@@ -37,6 +38,7 @@ public class InclusionsControllerTests {
 
     @MockBean
     InclusionRepository mockInclusionRepository;
+
     private ArrayList<Inclusion> inclusions;
 
     @Before
@@ -48,8 +50,8 @@ public class InclusionsControllerTests {
     }
 
     @Test
-    @WithMockUser
-    public void getCustomerOrders_whenCustomerHasNoOrders_empty() {
+    @WithMockUser("spring")
+    public void getStudentInclusions_whenStudentHasNoInclusions_empty() {
         inclusions.clear();
         ModelAndView modelAndView = new ModelAndView();
         when(principal.getName())
@@ -62,12 +64,9 @@ public class InclusionsControllerTests {
     }
 
     @Test
-    @WithMockUser
-    public void getCustomerOrders_whenAllOrdersAreForCustomer_orders() {
-        inclusions.addAll(List.of(
-                new Inclusion()
-        ));
-
+    @WithMockUser("spring")
+    public void getStudentInclusions_whenAllInclusionsAreForStudent_Inclusions() {
+        inclusions.addAll(List.of(new Inclusion()));
         ModelAndView modelAndView = new ModelAndView();
         when(principal.getName())
                 .thenReturn("");
@@ -80,8 +79,8 @@ public class InclusionsControllerTests {
     }
 
     @Test
-    @WithMockUser
-    public void getCustomerOrders_whenNotAllOrdersAreForCustomer_orders() {
+    @WithMockUser("spring")
+    public void getStudentInclusions_whenNotAllInclusionsAreForStudent_inclusions() {
         inclusions.addAll(List.of(
                 new Inclusion()
         ));
@@ -94,5 +93,34 @@ public class InclusionsControllerTests {
 
         List<InclusionViewModel> viewModels = (List<InclusionViewModel>) result.getModel().get("inclusions");
         assertEquals(inclusions.size(), viewModels.size());
+    }
+
+    @Test(expected = Exception.class)
+    @WithMockUser("spring")
+    public void inclusionCourse_whenInvalidId_throw() {
+        inclusions.addAll(List.of(new Inclusion()));
+        ModelAndView modelAndView = new ModelAndView();
+        when(principal.getName())
+                .thenReturn("");
+
+        ModelAndView result = controller.inclusionCourse("Test Id", modelAndView);
+
+        List<InclusionViewModel> viewModels = (List<InclusionViewModel>) result.getModel().get("inclusions");
+
+        assertEquals(inclusions.get(0).getCourse().getName(), viewModels.get(0).getName());
+    }
+
+    @Test(expected = Exception.class)
+    @WithMockUser("spring")
+    public void getAllInclusions_whenNoAccess_AccessIsDenied() {
+        inclusions.clear();
+        ModelAndView modelAndView = new ModelAndView();
+        when(principal.getName())
+                .thenReturn("");
+
+        ModelAndView result = controller.getAllInclusions(modelAndView);
+
+        List<InclusionViewModel> viewModels = (List<InclusionViewModel>) result.getModel().get("inclusions");
+        assertTrue(viewModels.isEmpty());
     }
 }
