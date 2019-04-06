@@ -30,22 +30,17 @@
             </div>
             <div class="data text-center col-md-12">
                 <h2 class="text-center font-weight-bold">Courses</h2>
-                <div class="products-data"></div>
+                <div class="courses-data"></div>
             </div>
         </div>
     </main>
     <th:block th:replace="fragments/footer"></th:block>
 </div>
 <script>
-    function formatProduct(course) {
-        return '<div class="course">'
-            + '<div class="text-center">'
-            + `<a href="/courses/details/${course.id}"><img src="${course.imageUrl}" class="course-image-home img-thumbnail px-auto" alt="Image not loaded..."/></a>`
-            + '</div>'
-            + `<h5 class="text-center font-weight-bold mt-3">Name: ${course.name}</h5>`
-            + `<h5 class="text-center font-weight-bold">Price: ${course.price.toFixed(2)}</h5>`
-            + '</div>'
-    }
+    function formatCourss(course) {
+        return '<span class="course">'
+            + '<span class="text-center">'
+            + `<a href="/courses/details/${course.id}"><img src="${course.imageUrl}" class="custom-css-course-image-home" alt="Image not loaded..."/></a>`}
 
     $('input[type=radio][name=selection]').change(function () {
         let module = $(this).val();
@@ -53,16 +48,14 @@
         fetch('http://localhost:8000/courses/fetch/' + module)
             .then((response) => response.json())
             .then((json) => {
-                $('.products-data').empty();
+                $('.courses-data').empty();
 
                 if (json.length === 0) {
-                    $('.products-data').append(`<h1 class="text-center font-weight-bold">There are no products in the ${module} module.</h1>`)
+                    $('.courses-data').append(`<h1 class="text-center font-weight-bold mt-5">You expect soon. There will be courses in the ${module} module.</h1>`)
                 } else {
-                    for (let i = 0; i < json.length; i += 3) {
-                        $('.products-data').append('<div class="products-row row d-flex justify-content-around mt-5">');
-                        if(i < json.length) $('.products-data .products-row:last-child').append(formatProduct(json[i]));
-                        if(i + 1 < json.length) $('.products-data .products-row:last-child').append(formatProduct(json[i + 1]));
-                        if(i + 2 < json.length) $('.products-data .products-row:last-child').append(formatProduct(json[i + 2]));
+                    for (let i = 0; i < json.length; i += 1) {
+                        $('.courses-data').append('<span class="courses-row row d-flex justify-content-around mt-5">');
+                        if(i < json.length) $('.courses-data .courses-row:last-child').append(formatCourss(json[i]));
                     }
                 }
             })

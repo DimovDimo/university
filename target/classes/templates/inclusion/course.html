@@ -11,32 +11,26 @@
 <main class="mt-3">
     <h1 class="text-center">Inclusion this course</h1>
     <div class="jumbotron bg-light text-center">
-        <div class="text-center">
-            <img th:src="${course.getImageUrl()}"
-                 width="350" height="350" alt="Product">
-        </div>
-        <div class="text-center">
-            <span>Student</span>
-            <input th:value="${#authentication.getPrincipal().getUsername()}" disabled class="disabled form-control"  />
+        <div class="text-center mt-5">
+            <img class="custom-css-course-image-home"  th:src="${course.getImageUrl()}" alt="Course">
         </div>
         <div class="row">
             <div class="col col-md-12 text-center mt-5">
-                <span>Name</span>
-                <input th:value="${course.getName()}" disabled class="disabled form-control"  />
+                <h4><span th:text="${course.getName()}"></span></h4>
             </div>
         </div>
         <div class="row">
-            <div class="col col-md-12 text-center mt-3">
-                <h4>Desciption: <span th:text="${course.getDescription()}"></span></h4>
+            <div class="col col-md-12 text-center mt-5">
+                <h4><span th:text="${course.getDescription()}"></span></h4>
             </div>
         </div>
         <div class="row">
-            <div class="col col-md-12 text-center">
-                <h4>Price: <span th:text="${course.getPrice()}"></span></h4>
+            <div class="col col-md-12 text-center mt-5">
+                <h4><span th:text="${course.getPrice()}"></span></h4>
             </div>
         </div>
         <form id="inclusion-form" action="/courses/inclusion" method="post">
-            <div class="button-holder d-flex justify-content-center">
+            <div class="button-holder d-flex justify-content-center mt-5">
                 <input id="tb-id" type="hidden" name="id" th:value="${course.getId()}" />
                 <button id="btn-submit-inclusion" type="submit" class="btn btn-success">Inclusion this course</button>
             </div>

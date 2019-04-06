@@ -48,19 +48,19 @@ public class InclusionServiceModel implements IHaveCustomMappings {
     public void configureMappings(ModelMapper mapper) {
         mapper.createTypeMap(Inclusion.class, InclusionServiceModel.class)
                 .addMapping(
-                        entity -> entity.getCourse().getName(),
+                        inclusion -> inclusion.getCourse().getName(),
                         (dto, value) -> dto.setName((String) value)
                 )
                 .addMapping(
-                        entity -> entity.getCourse().getPrice(),
+                        inclusion -> inclusion.getCourse().getPrice(),
                         (dto, value) -> dto.setPrice((BigDecimal) value)
                 )
                 .addMapping(
-                        entity -> entity.getCourse().getImageUrl(),
+                        inclusion -> inclusion.getCourse().getImageUrl(),
                         (dto, value) -> dto.setImageUrl((String) value)
                 )
                 .addMapping(
-                        entity -> entity.getUser().getUsername(),
+                        inclusion -> inclusion.getUser().getUsername(),
                         (dto, value) -> dto.setStudent((String) value)
                 );
     }

@@ -40,25 +40,19 @@
                         <a class="nav-link" th:href="@{/inclusion/strudent}">📚 My courses</a>
                     </li>
 
-                    <th:block sec:authorize="hasRole('ROLE_DEAN')">
-                        <li class="nav-item active">
-                            <a class="nav-link" th:href="@{/inclusion/all}">🏫 All course-student relations</a>
-                        </li>
-                    </th:block>
-
                     <th:block sec:authorize="hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')">
                         <li class="nav-item active">
                             <div class="dropdown show">
-                                <a class="nav-link active dropdown-toggle" href="#" role="button" id="moderatorDropdown"
+                                <a class="nav-link active dropdown-toggle" href="#" role="button" id="chairOfADepartmentDropdown"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Moderator
+                                    Chair
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="moderatorDropdown">
-                                    <a class="dropdown-item" th:href="@{/modules/add}">Add Module</a>
-                                    <a class="dropdown-item" th:href="@{/courses/add}">Add Course</a>
+                                <div class="dropdown-menu" aria-labelledby="chairOfADepartmentDropdown">
+                                    <a class="dropdown-item" th:href="@{/modules/add}">📄 Add Module</a>
+                                    <a class="dropdown-item" th:href="@{/courses/add}">📘 Add Course</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" th:href="@{/modules/all}">All Modules</a>
-                                    <a class="dropdown-item" th:href="@{/courses/all}">All Courses</a>
+                                    <a class="dropdown-item" th:href="@{/modules/all}">📓 All Modules</a>
+                                    <a class="dropdown-item" th:href="@{/courses/all}">📚 All Courses</a>
                                 </div>
                             </div>
                         </li>
@@ -67,12 +61,13 @@
                     <th:block sec:authorize="hasRole('ROLE_DEAN')">
                         <li class="nav-item active">
                             <div class="dropdown">
-                                <a class="nav-link active dropdown-toggle" href="#" role="button" id="adminDropdown"
+                                <a class="nav-link active dropdown-toggle" href="#" role="button" id="deanDropdown"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Admin
+                                    Dean
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="adminDropdown">
-                                    <a class="dropdown-item" th:href="@{/users/all}">All Users</a>
+                                <div class="dropdown-menu" aria-labelledby="deanDropdown">
+                                    <a class="nav-link" th:href="@{/users/all}">🤼 All Users</a>
+                                    <a class="nav-link" th:href="@{/inclusion/all}">🏫 All course-student relations</a>
                                 </div>
                             </div>
                         </li>

@@ -25,13 +25,13 @@
         <th:block th:each="course, iter : ${courses}">
             <tr class="row mx-auto">
                 <th class="col-md-1 text-center" th:text="${iter.index + 1}"></th>
-                <td class="col-md-3"><div class="text-center"><img th:src="${course.imageUrl}" width="40" height="40" alt="Product"></div></td>
+                <td class="col-md-3"><div class="text-center"><img class="custom-css-course-image-icon" th:src="${course.imageUrl}" alt="Course"></div></td>
                 <td class="col-md-3 text-center" th:text="${course.name}"></td>
                 <td class="col-md-2 text-center" th:text="${course.price}"></td>
                 <td class="col-md-3 text-center">
-                    <a th:href="@{/courses/details/{id}(id=${course.id})}" class="btn btn-secondary font-weight-bold text-white">Details</a>
-                    <a th:href="@{/courses/edit/{id}(id=${course.id})}" class="btn btn-success font-weight-bold text-white">Edit</a>
-                    <a th:href="@{/courses/delete/{id}(id=${course.id})}" class="btn btn-danger font-weight-bold text-white">Delete</a>
+                    <a th:href="@{/courses/details/{id}(id=${course.id})}" class="custom-css-button-root btn btn-info font-weight-bold text-white">Details</a>
+                    <a th:href="@{/courses/edit/{id}(id=${course.id})}" class="custom-css-button-root btn btn-success font-weight-bold text-white">Edit</a>
+                    <a th:href="@{/courses/delete/{id}(id=${course.id})}" class="custom-css-button-root btn btn-danger font-weight-bold text-white">Delete</a>
                 </td>
             </tr>
         </th:block>

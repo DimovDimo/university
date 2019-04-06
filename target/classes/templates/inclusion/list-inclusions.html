@@ -25,10 +25,10 @@
         <th:block th:each="inclusion, iter : ${inclusions}">
             <tr class="row mx-auto">
                 <th class="col-md-1 text-center" th:text="${iter.index + 1}"></th>
-                <td class="col-md-3"><div class="text-center"><img th:src="${inclusion.imageUrl}" width="40" height="40" alt="Product"></div></td>
+                <td class="col-md-3"><div class="text-center"><img class="text-center custom-css-course-image-icon" th:src="${inclusion.imageUrl}" alt="Course"></div></td>
                 <td class="col-md-3 text-center" th:text="${inclusion.name}"></td>
                 <td class="col-md-2 text-center" th:text="${inclusion.price}"></td>
-                <td class="col-md-2 text-center" th:text="${inclusion.student}"></td>
+                <td class="col-md-3 text-center" th:text="${inclusion.student}"></td>
             </tr>
         </th:block>
         </tbody>

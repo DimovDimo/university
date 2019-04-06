@@ -67,7 +67,7 @@ public class CourseController extends BaseController {
     public ModelAndView allCourses(ModelAndView modelAndView) {
         modelAndView.addObject("courses", this.courseService.findAllCourses()
                 .stream()
-                .map(p -> this.modelMapper.map(p, CourseAllViewModel.class))
+                .map(courseServiceModel -> this.modelMapper.map(courseServiceModel, CourseAllViewModel.class))
                 .collect(Collectors.toList()));
 
         return super.view("course/all-courses", modelAndView);
@@ -129,13 +129,13 @@ public class CourseController extends BaseController {
         if(module.equals("all")) {
             return this.courseService.findAllCourses()
                     .stream()
-                    .map(product -> this.modelMapper.map(product, CourseAllViewModel.class))
+                    .map(courseServiceModel -> this.modelMapper.map(courseServiceModel, CourseAllViewModel.class))
                     .collect(Collectors.toList());
         }
 
         return this.courseService.findAllByModule(module)
                 .stream()
-                .map(product -> this.modelMapper.map(product, CourseAllViewModel.class))
+                .map(courseServiceModel -> this.modelMapper.map(courseServiceModel, CourseAllViewModel.class))
                 .collect(Collectors.toList());
     }
 

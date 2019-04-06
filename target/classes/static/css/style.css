@@ -57,6 +57,22 @@ body {
 
 .custom-css-profile-img-min{
     text-align: center;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
+}
+
+.custom-css-course-image-home{
+    text-align: center;
+    height: 300px;
+    border-radius: 300px;
+}
+
+.custom-css-course-image-icon{
+    text-align: center;
+    height: 40px;
+    border-radius: 300px;
+}
+
+.custom-css-form-buttons{
+    margin-left: 80px;
 }

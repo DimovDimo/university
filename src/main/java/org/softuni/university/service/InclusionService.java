@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface InclusionService {
 
-    void createInclusion(String productId, String name) throws Exception;
+    void createInclusion(String courseId, String name) throws Exception;
 
     List<InclusionServiceModel> findAllInclusions();
 

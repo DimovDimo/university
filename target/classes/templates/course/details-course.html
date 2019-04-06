@@ -11,26 +11,26 @@
 <main class="mt-3">
     <div class="jumbotron bg-light text-center">
         <div class="text-center">
-            <img th:src="${course.imageUrl}" width="350" height="350" alt="Product">
+            <img class="custom-css-course-image-home" th:src="${course.imageUrl}" alt="Course">
         </div>
         <div class="row">
             <div class="col col-md-12 mt-5">
-                <h1 th:text="'Name: ' + ${course.name}"></h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col col-md-12 mt-3">
-                <h4 th:text="'Desciption: ' + ${course.description}"></h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col col-md-12">
-                <h4 th:text="'Price: ' + ${course.price}"></h4>
+                <h1 th:text="${course.name}"></h1>
             </div>
         </div>
         <div class="row">
             <div class="col col-md-12 mt-5">
-                <a  th:href="@{/inclusion/course/{id}(id=${course.id})}" class="btn btn-success">Order</a>
+                <h4 th:text="${course.description}"></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-12 mt-5">
+                <h4 th:text="${course.price}"></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-12 mt-5">
+                <a  th:href="@{/inclusion/course/{id}(id=${course.id})}" class="btn btn-success">Get knowledge</a>
             </div>
         </div>
     </div>

@@ -22,21 +22,21 @@ public class InclusionServiceImpl implements InclusionService {
     private final UserService userService;
     private final ModelMapper mapper;
     private final UserValidationService userValidation;
-    private final CourseValidationService productValidation;
+    private final CourseValidationService courseValidation;
 
     public InclusionServiceImpl(
             InclusionRepository inclusionRepository,
             CourseRepository courseRepository,
             UserService userService,
             UserValidationService userValidation,
-            CourseValidationService productValidation,
+            CourseValidationService courseValidation,
             ModelMapper mapper
     ) {
         this.inclusionRepository = inclusionRepository;
         this.courseRepository = courseRepository;
         this.userService = userService;
         this.userValidation = userValidation;
-        this.productValidation = productValidation;
+        this.courseValidation = courseValidation;
         this.mapper = mapper;
     }
 
@@ -48,7 +48,7 @@ public class InclusionServiceImpl implements InclusionService {
         }
 
         Course course = courseRepository.findById(courseId)
-                .filter(productValidation::isValid)
+                .filter(courseValidation::isValid)
                 .orElseThrow(Exception::new);
 
         User user = new User();

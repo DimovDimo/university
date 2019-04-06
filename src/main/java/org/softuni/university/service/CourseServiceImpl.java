@@ -57,14 +57,14 @@ public class CourseServiceImpl implements CourseService {
     public List<CourseServiceModel> findAllCourses() {
         return this.courseRepository.findAll()
                 .stream()
-                .map(p -> this.modelMapper.map(p, CourseServiceModel.class))
+                .map(course -> this.modelMapper.map(course, CourseServiceModel.class))
                 .collect(Collectors.toList());
     }
 
     @Override
     public CourseServiceModel findCourseById(String id) {
         return this.courseRepository.findById(id)
-                .map(p -> this.modelMapper.map(p, CourseServiceModel.class))
+                .map(course -> this.modelMapper.map(course, CourseServiceModel.class))
                 .orElseThrow(() -> new CourseNotFoundException("Course with the given id was not found!"));
     }
 
@@ -104,8 +104,8 @@ public class CourseServiceImpl implements CourseService {
     public List<CourseServiceModel> findAllByModule(String module) {
         return this.courseRepository.findAll()
                 .stream()
-                .filter(product -> product.getModules().stream().anyMatch(moduleStream -> moduleStream.getName().equals(module)))
-                .map(product -> this.modelMapper.map(product, CourseServiceModel.class))
+                .filter(course -> course.getModules().stream().anyMatch(moduleStream -> moduleStream.getName().equals(module)))
+                .map(course -> this.modelMapper.map(course, CourseServiceModel.class))
                 .collect(Collectors.toList());
     }
 }
