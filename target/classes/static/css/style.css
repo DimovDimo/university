@@ -76,3 +76,14 @@ body {
 .custom-css-form-buttons{
     margin-left: 80px;
 }
+
+.custom-css-canvas{
+    height: 300px;
+    width: 300px;
+    border-radius: 500px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

@@ -106,24 +106,24 @@ public class UserController extends BaseController {
 
     @PostMapping("/set-student/{id}")
     @PreAuthorize("hasRole('ROLE_DEAN')")
-    public ModelAndView setUser(@PathVariable String id) throws Exception {
-        this.userService.setUserRole(id, "user");
+    public ModelAndView setStudent(@PathVariable String id) throws Exception {
+        this.userService.setUserRole(id, "student");
 
         return super.redirect("/users/all");
     }
 
     @PostMapping("/set-chair-of-a-department/{id}")
     @PreAuthorize("hasRole('ROLE_DEAN')")
-    public ModelAndView setModerator(@PathVariable String id) throws Exception {
-        this.userService.setUserRole(id, "moderator");
+    public ModelAndView setChair(@PathVariable String id) throws Exception {
+        this.userService.setUserRole(id, "chair");
 
         return super.redirect("/users/all");
     }
 
     @PostMapping("/set-dean/{id}")
     @PreAuthorize("hasRole('ROLE_DEAN')")
-    public ModelAndView setAdmin(@PathVariable String id) throws Exception {
-        this.userService.setUserRole(id, "admin");
+    public ModelAndView setDean(@PathVariable String id) throws Exception {
+        this.userService.setUserRole(id, "dean");
 
         return super.redirect("/users/all");
     }

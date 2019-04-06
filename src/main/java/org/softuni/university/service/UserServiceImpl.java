@@ -93,14 +93,14 @@ public class UserServiceImpl implements UserService {
         userServiceModel.getAuthorities().clear();
 
         switch (role) {
-            case "user":
+            case "student":
                 userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_STUDENT"));
                 break;
-            case "moderator":
+            case "chair":
                 userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_STUDENT"));
                 userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_CHAIR_OF_A_DEPARTMENT"));
                 break;
-            case "admin":
+            case "dean":
                 userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_STUDENT"));
                 userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_CHAIR_OF_A_DEPARTMENT"));
                 userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_DEAN"));
