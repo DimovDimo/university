@@ -7,16 +7,20 @@ import org.softuni.university.domain.models.service.ContactServiceModel;
 import org.softuni.university.domain.models.service.UserServiceModel;
 import org.softuni.university.repository.ContactRepository;
 import org.softuni.university.validation.UserValidationService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class ContactServiceImpl implements ContactService {
     private final ContactRepository contactRepository;
     private final UserService userService;
     private final ModelMapper mapper;
     private final UserValidationService userValidation;
 
+    @Autowired
     public ContactServiceImpl(ContactRepository contactRepository, UserService userService, ModelMapper mapper, UserValidationService userValidation) {
         this.contactRepository = contactRepository;
         this.userService = userService;
