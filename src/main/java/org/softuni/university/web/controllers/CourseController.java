@@ -127,12 +127,20 @@ public class CourseController extends BaseController {
     @ResponseBody
     public List<CourseAllViewModel> fetchByModule(@PathVariable String module) {
         if(module.equals("all")) {
-            return this.courseService.findAllCourses()
-                    .stream()
-                    .map(courseServiceModel -> this.modelMapper.map(courseServiceModel, CourseAllViewModel.class))
-                    .collect(Collectors.toList());
+            return findAllCourses();
         }
 
+        return findAllByModule(module);
+    }
+
+    private List<CourseAllViewModel> findAllCourses() {
+        return this.courseService.findAllCourses()
+                .stream()
+                .map(courseServiceModel -> this.modelMapper.map(courseServiceModel, CourseAllViewModel.class))
+                .collect(Collectors.toList());
+    }
+
+    private List<CourseAllViewModel> findAllByModule(@PathVariable String module) {
         return this.courseService.findAllByModule(module)
                 .stream()
                 .map(courseServiceModel -> this.modelMapper.map(courseServiceModel, CourseAllViewModel.class))

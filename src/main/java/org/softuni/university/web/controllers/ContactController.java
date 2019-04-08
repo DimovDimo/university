@@ -3,6 +3,7 @@ package org.softuni.university.web.controllers;
 import org.modelmapper.ModelMapper;
 import org.softuni.university.domain.models.binding.ContactAddBindingModel;
 import org.softuni.university.domain.models.service.ContactServiceModel;
+import org.softuni.university.domain.models.view.ContactAllViewModel;
 import org.softuni.university.service.ContactService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/contact")
@@ -44,6 +46,17 @@ public class ContactController extends BaseController {
                 name
         );
 
-        return super.redirect("/home");
+        return super.view("contact/thanks-contact");
+    }
+
+    @GetMapping("/all")
+    @PreAuthorize("hasRole('ROLE_PUBLIC_RELATIONS')")
+    public ModelAndView allContacts(ModelAndView modelAndView) {
+        modelAndView.addObject("contacts", this.contactService.findAllContacts()
+                .stream()
+                .map(contactServiceModel -> this.mapper.map(contactServiceModel, ContactAllViewModel.class))
+                .collect(Collectors.toList()));
+
+        return super.view("contact/all-contacts", modelAndView);
     }
 }

@@ -40,6 +40,20 @@
                         <a class="nav-link" th:href="@{/inclusion/strudent}">📚 My courses</a>
                     </li>
 
+                    <th:block sec:authorize="hasRole('ROLE_PUBLIC_RELATIONS')">
+                        <li class="nav-item active">
+                            <div class="dropdown show">
+                                <a class="nav-link active dropdown-toggle" href="#" role="button" id="publicRelationsDropdown"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    PR
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="publicRelationsDropdown">
+                                    <a class="dropdown-item" th:href="@{/contact/all}">📢 All Contacts</a>
+                                </div>
+                            </div>
+                        </li>
+                    </th:block>
+
                     <th:block sec:authorize="hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')">
                         <li class="nav-item active">
                             <div class="dropdown show">
