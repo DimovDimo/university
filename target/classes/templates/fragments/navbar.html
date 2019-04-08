@@ -33,12 +33,21 @@
                     <li class="nav-item active">
                         <a class="nav-link" th:href="@{/home}">🏠 Home</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" th:href="@{/users/profile}">😾 Profile</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" th:href="@{/inclusion/strudent}">📚 My courses</a>
-                    </li>
+
+                    <th:block sec:authorize="hasRole('ROLE_STUDENT')">
+                        <li class="nav-item active">
+                            <div class="dropdown">
+                                <a class="nav-link active dropdown-toggle" href="#" role="button" id="studentDropdown"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Student
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="studentDropdown">
+                                    <a class="dropdown-item" th:href="@{/users/profile}">😾 Profile</a>
+                                    <a class="dropdown-item" th:href="@{/inclusion/strudent}">📚 My courses</a>
+                                </div>
+                            </div>
+                        </li>
+                    </th:block>
 
                     <th:block sec:authorize="hasRole('ROLE_PUBLIC_RELATIONS')">
                         <li class="nav-item active">
