@@ -37,8 +37,15 @@
                 <td class="col-md-3 text-right">
                     <div class="custom-css-form-buttons row text-right">
                         <th:block th:if="${#lists.contains(user.authorities, 'ROLE_STUDENT') &&
-                            !#lists.contains(user.authorities, 'ROLE_CHAIR_OF_A_DEPARTMENT') && !#lists.contains(user.authorities, 'ROLE_DEAN')
+                            !#lists.contains(user.authorities, 'ROLE_PUBLIC_RELATIONS') &&
+                            !#lists.contains(user.authorities, 'ROLE_CHAIR_OF_A_DEPARTMENT') &&
+                            !#lists.contains(user.authorities, 'ROLE_DEAN')
                         }">
+                            <form class="custom-css-button-root" th:action="@{/users/set-public-relations/{id}(id=${user.id})}" method="post">
+                                <input type="hidden" name="_csrf"
+                                       value="80417983-fe8b-45c7-963e-31f6915a1560">
+                                <button class="btn btn-warning">PR</button>
+                            </form>
                             <form class="custom-css-button-root" th:action="@{/users/set-chair-of-a-department/{id}(id=${user.id})}" method="post">
                                 <input type="hidden" name="_csrf"
                                        value="80417983-fe8b-45c7-963e-31f6915a1560">
@@ -51,12 +58,19 @@
                             </form>
                         </th:block>
                         <th:block th:if="${#lists.contains(user.authorities, 'ROLE_STUDENT') &&
-                            #lists.contains(user.authorities, 'ROLE_CHAIR_OF_A_DEPARTMENT') && !#lists.contains(user.authorities, 'ROLE_DEAN')
+                            #lists.contains(user.authorities, 'ROLE_PUBLIC_RELATIONS') &&
+                            !#lists.contains(user.authorities, 'ROLE_CHAIR_OF_A_DEPARTMENT') &&
+                            !#lists.contains(user.authorities, 'ROLE_DEAN')
                         }">
                             <form class="custom-css-button-root" th:action="@{/users/set-student/{id}(id=${user.id})}" method="post">
                                 <input type="hidden" name="_csrf"
                                        value="80417983-fe8b-45c7-963e-31f6915a1560">
                                 <button class="btn btn-default">Student</button>
+                            </form>
+                            <form class="custom-css-button-root" th:action="@{/users/set-chair-of-a-department/{id}(id=${user.id})}" method="post">
+                                <input type="hidden" name="_csrf"
+                                       value="80417983-fe8b-45c7-963e-31f6915a1560">
+                                <button class="btn btn-primary">Chair</button>
                             </form>
                             <form class="custom-css-button-root" th:action="@{/users/set-dean/{id}(id=${user.id})}" method="post">
                                 <input type="hidden" name="_csrf"
@@ -65,12 +79,40 @@
                             </form>
                         </th:block>
                         <th:block th:if="${#lists.contains(user.authorities, 'ROLE_STUDENT') &&
-                            #lists.contains(user.authorities, 'ROLE_CHAIR_OF_A_DEPARTMENT') && #lists.contains(user.authorities, 'ROLE_DEAN') && !#lists.contains(user.authorities, 'ROLE_PRESIDENT')
+                            #lists.contains(user.authorities, 'ROLE_PUBLIC_RELATIONS') &&
+                            #lists.contains(user.authorities, 'ROLE_CHAIR_OF_A_DEPARTMENT') &&
+                            !#lists.contains(user.authorities, 'ROLE_DEAN')
                         }">
                             <form class="custom-css-button-root" th:action="@{/users/set-student/{id}(id=${user.id})}" method="post">
                                 <input type="hidden" name="_csrf"
                                        value="80417983-fe8b-45c7-963e-31f6915a1560">
                                 <button class="btn btn-default">Student</button>
+                            </form>
+                            <form class="custom-css-button-root" th:action="@{/users/set-public-relations/{id}(id=${user.id})}" method="post">
+                                <input type="hidden" name="_csrf"
+                                       value="80417983-fe8b-45c7-963e-31f6915a1560">
+                                <button class="btn btn-warning">PR</button>
+                            </form>
+                            <form class="custom-css-button-root" th:action="@{/users/set-dean/{id}(id=${user.id})}" method="post">
+                                <input type="hidden" name="_csrf"
+                                       value="80417983-fe8b-45c7-963e-31f6915a1560">
+                                <button class="btn btn-success">Dean</button>
+                            </form>
+                        </th:block>
+                        <th:block th:if="${#lists.contains(user.authorities, 'ROLE_STUDENT') &&
+                            #lists.contains(user.authorities, 'ROLE_PUBLIC_RELATIONS') &&
+                            #lists.contains(user.authorities, 'ROLE_CHAIR_OF_A_DEPARTMENT') &&
+                            #lists.contains(user.authorities, 'ROLE_DEAN') && !#lists.contains(user.authorities, 'ROLE_PRESIDENT')
+                        }">
+                            <form class="custom-css-button-root" th:action="@{/users/set-student/{id}(id=${user.id})}" method="post">
+                                <input type="hidden" name="_csrf"
+                                       value="80417983-fe8b-45c7-963e-31f6915a1560">
+                                <button class="btn btn-default">Student</button>
+                            </form>
+                            <form class="custom-css-button-root" th:action="@{/users/set-public-relations/{id}(id=${user.id})}" method="post">
+                                <input type="hidden" name="_csrf"
+                                       value="80417983-fe8b-45c7-963e-31f6915a1560">
+                                <button class="btn btn-warning">PR</button>
                             </form>
                             <form class="custom-css-button-root" th:action="@{/users/set-chair-of-a-department/{id}(id=${user.id})}" method="post">
                                 <input type="hidden" name="_csrf"

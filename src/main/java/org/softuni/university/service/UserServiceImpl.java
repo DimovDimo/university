@@ -96,12 +96,18 @@ public class UserServiceImpl implements UserService {
             case "student":
                 userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_STUDENT"));
                 break;
+            case "public":
+                userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_STUDENT"));
+                userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_PUBLIC_RELATIONS"));
+                break;
             case "chair":
                 userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_STUDENT"));
+                userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_PUBLIC_RELATIONS"));
                 userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_CHAIR_OF_A_DEPARTMENT"));
                 break;
             case "dean":
                 userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_STUDENT"));
+                userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_PUBLIC_RELATIONS"));
                 userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_CHAIR_OF_A_DEPARTMENT"));
                 userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_DEAN"));
                 break;

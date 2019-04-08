@@ -112,6 +112,14 @@ public class UserController extends BaseController {
         return super.redirect("/users/all");
     }
 
+    @PostMapping("/set-public-relations/{id}")
+    @PreAuthorize("hasRole('ROLE_DEAN')")
+    public ModelAndView setPublicRelations(@PathVariable String id) throws Exception {
+        this.userService.setUserRole(id, "public");
+
+        return super.redirect("/users/all");
+    }
+
     @PostMapping("/set-chair-of-a-department/{id}")
     @PreAuthorize("hasRole('ROLE_DEAN')")
     public ModelAndView setChair(@PathVariable String id) throws Exception {
