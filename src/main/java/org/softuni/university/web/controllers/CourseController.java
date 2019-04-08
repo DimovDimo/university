@@ -47,16 +47,8 @@ public class CourseController extends BaseController {
     @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     public ModelAndView addCourseConfirm(@ModelAttribute CourseAddBindingModel model) throws IOException {
         CourseServiceModel courseServiceModel = this.modelMapper.map(model, CourseServiceModel.class);
-        courseServiceModel.setModules(
-                this.moduleService.findAllModules()
-                        .stream()
-                        .filter(c -> model.getModules().contains(c.getId()))
-                        .collect(Collectors.toList())
-        );
-        courseServiceModel.setImageUrl(
-                this.cloudinaryService.uploadImage(model.getImage())
-        );
-
+        addCourseeSetModules(model, courseServiceModel);
+        addCourseeSetImageUrl(model, courseServiceModel);
         this.courseService.createCourse(courseServiceModel);
 
         return super.redirect("/courses/all");
@@ -65,10 +57,7 @@ public class CourseController extends BaseController {
     @GetMapping("/all")
     @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     public ModelAndView allCourses(ModelAndView modelAndView) {
-        modelAndView.addObject("courses", this.courseService.findAllCourses()
-                .stream()
-                .map(courseServiceModel -> this.modelMapper.map(courseServiceModel, CourseAllViewModel.class))
-                .collect(Collectors.toList()));
+        allCoursesGet(modelAndView);
 
         return super.view("course/all-courses", modelAndView);
     }
@@ -86,7 +75,7 @@ public class CourseController extends BaseController {
     public ModelAndView editCourse(@PathVariable String id, ModelAndView modelAndView) {
         CourseServiceModel courseServiceModel = this.courseService.findCourseById(id);
         CourseAddBindingModel model = this.modelMapper.map(courseServiceModel, CourseAddBindingModel.class);
-        model.setModules(courseServiceModel.getModules().stream().map(c -> c.getName()).collect(Collectors.toList()));
+        editCourseSetModules(courseServiceModel, model);
 
         modelAndView.addObject("course", model);
         modelAndView.addObject("courseId", id);
@@ -107,7 +96,7 @@ public class CourseController extends BaseController {
     public ModelAndView deleteCourse(@PathVariable String id, ModelAndView modelAndView) {
         CourseServiceModel courseServiceModel = this.courseService.findCourseById(id);
         CourseAddBindingModel model = this.modelMapper.map(courseServiceModel, CourseAddBindingModel.class);
-        model.setModules(courseServiceModel.getModules().stream().map(c -> c.getName()).collect(Collectors.toList()));
+        deleteCourseSetModules(courseServiceModel, model);
 
         modelAndView.addObject("course", model);
         modelAndView.addObject("courseId", id);
@@ -133,20 +122,6 @@ public class CourseController extends BaseController {
         return findAllByModule(module);
     }
 
-    private List<CourseAllViewModel> findAllCourses() {
-        return this.courseService.findAllCourses()
-                .stream()
-                .map(courseServiceModel -> this.modelMapper.map(courseServiceModel, CourseAllViewModel.class))
-                .collect(Collectors.toList());
-    }
-
-    private List<CourseAllViewModel> findAllByModule(@PathVariable String module) {
-        return this.courseService.findAllByModule(module)
-                .stream()
-                .map(courseServiceModel -> this.modelMapper.map(courseServiceModel, CourseAllViewModel.class))
-                .collect(Collectors.toList());
-    }
-
     @ExceptionHandler({CourseNotFoundException.class})
     public ModelAndView handleCourseNotFound(CourseNotFoundException e) {
         ModelAndView modelAndView = new ModelAndView("error");
@@ -163,5 +138,58 @@ public class CourseController extends BaseController {
         modelAndView.addObject("statusCode", e.getStatusCode());
 
         return modelAndView;
+    }
+
+    private List<CourseAllViewModel> findAllCourses() {
+        return this.courseService.findAllCourses()
+                .stream()
+                .map(courseServiceModel -> this.modelMapper.map(courseServiceModel, CourseAllViewModel.class))
+                .collect(Collectors.toList());
+    }
+
+    private List<CourseAllViewModel> findAllByModule(@PathVariable String module) {
+        return this.courseService.findAllByModule(module)
+                .stream()
+                .map(courseServiceModel -> this.modelMapper.map(courseServiceModel, CourseAllViewModel.class))
+                .collect(Collectors.toList());
+    }
+
+    private void deleteCourseSetModules(CourseServiceModel courseServiceModel, CourseAddBindingModel model) {
+        model.setModules(
+                courseServiceModel.getModules()
+                        .stream()
+                        .map(c -> c.getName())
+                        .collect(Collectors.toList())
+        );
+    }
+
+    private void editCourseSetModules(CourseServiceModel courseServiceModel, CourseAddBindingModel model) {
+        model.setModules(
+                courseServiceModel.getModules()
+                        .stream().map(c -> c.getName())
+                        .collect(Collectors.toList())
+        );
+    }
+
+    private void allCoursesGet(ModelAndView modelAndView) {
+        modelAndView.addObject("courses", this.courseService.findAllCourses()
+                .stream()
+                .map(courseServiceModel -> this.modelMapper.map(courseServiceModel, CourseAllViewModel.class))
+                .collect(Collectors.toList()));
+    }
+
+    private void addCourseeSetImageUrl(@ModelAttribute CourseAddBindingModel model, CourseServiceModel courseServiceModel) throws IOException {
+        courseServiceModel.setImageUrl(
+                this.cloudinaryService.uploadImage(model.getImage())
+        );
+    }
+
+    private void addCourseeSetModules(@ModelAttribute CourseAddBindingModel model, CourseServiceModel courseServiceModel) {
+        courseServiceModel.setModules(
+                this.moduleService.findAllModules()
+                        .stream()
+                        .filter(c -> model.getModules().contains(c.getId()))
+                        .collect(Collectors.toList())
+        );
     }
 }

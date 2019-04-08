@@ -40,30 +40,40 @@ public class InclusionsController extends BaseController {
         CourseServiceModel serviceModel = courseService.findCourseById(id);
         CourseDetailsViewModel viewModel = mapper.map(serviceModel, CourseDetailsViewModel.class);
         modelAndView.addObject("course", viewModel);
+
         return view("inclusion/course", modelAndView);
     }
 
     @GetMapping("/all")
     @PreAuthorize("hasRole('ROLE_DEAN')")
     public ModelAndView getAllInclusions(ModelAndView modelAndView) {
-        List<InclusionViewModel> viewModels = inclusionService.findAllInclusions()
-                .stream()
-                .map(o -> mapper.map(o, InclusionViewModel.class))
-                .collect(Collectors.toList());
+        List<InclusionViewModel> viewModels = findAllInclusions();
         modelAndView.addObject("inclusions", viewModels);
+
         return view("inclusion/list-inclusions", modelAndView);
     }
 
     @GetMapping("/strudent")
     @PreAuthorize("isAuthenticated()")
     public ModelAndView getStudentInclusions(ModelAndView modelAndView, Principal principal) {
-        String username = principal.getName();
-        List<InclusionViewModel> viewModels = inclusionService.findInclusionsByStudent(username)
-                .stream()
-                .map(o -> mapper.map(o, InclusionViewModel.class))
-                .collect(Collectors.toList());
+        List<InclusionViewModel> viewModels = findInclusionsByStudent(principal);
         modelAndView.addObject("inclusions", viewModels);
 
         return view("inclusion/list-inclusions", modelAndView);
+    }
+
+    private List<InclusionViewModel> findInclusionsByStudent(Principal principal) {
+        String username = principal.getName();
+        return inclusionService.findInclusionsByStudent(username)
+                .stream()
+                .map(o -> mapper.map(o, InclusionViewModel.class))
+                .collect(Collectors.toList());
+    }
+
+    private List<InclusionViewModel> findAllInclusions() {
+        return inclusionService.findAllInclusions()
+                .stream()
+                .map(o -> mapper.map(o, InclusionViewModel.class))
+                .collect(Collectors.toList());
     }
 }

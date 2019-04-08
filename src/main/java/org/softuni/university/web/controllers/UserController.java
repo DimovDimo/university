@@ -59,8 +59,7 @@ public class UserController extends BaseController {
     @GetMapping("/profile")
     @PreAuthorize("isAuthenticated()")
     public ModelAndView profile(Principal principal, ModelAndView modelAndView) {
-        modelAndView
-                .addObject("model", this.modelMapper.map(this.userService.findUserByUserName(principal.getName()), UserProfileViewModel.class));
+        findUserByUserName(principal, modelAndView);
 
         return super.view("profile", modelAndView);
     }
@@ -68,8 +67,7 @@ public class UserController extends BaseController {
     @GetMapping("/edit")
     @PreAuthorize("isAuthenticated()")
     public ModelAndView editProfile(Principal principal, ModelAndView modelAndView) {
-        modelAndView
-                .addObject("model", this.modelMapper.map(this.userService.findUserByUserName(principal.getName()), UserProfileViewModel.class));
+        editProfileUserByUserName(principal, modelAndView);
 
         return super.view("edit-profile", modelAndView);
     }
@@ -89,16 +87,7 @@ public class UserController extends BaseController {
     @GetMapping("/all")
     @PreAuthorize("hasRole('ROLE_DEAN')")
     public ModelAndView allUsers(ModelAndView modelAndView) {
-        List<UserAllViewModel> users = this.userService.findAllUsers()
-                .stream()
-                .map(u -> {
-                    UserAllViewModel user = this.modelMapper.map(u, UserAllViewModel.class);
-                    user.setAuthorities(u.getAuthorities().stream().map(a -> a.getAuthority()).collect(Collectors.toSet()));
-
-                    return user;
-                })
-                .collect(Collectors.toList());
-
+        List<UserAllViewModel> users = findAllUsers();
         modelAndView.addObject("users", users);
 
         return super.view("all-users", modelAndView);
@@ -139,5 +128,35 @@ public class UserController extends BaseController {
     @InitBinder
     private void initBinder(WebDataBinder webDataBinder) {
         webDataBinder.registerCustomEditor(String.class, new StringTrimmerEditor(true));
+    }
+
+    private List<UserAllViewModel> findAllUsers() {
+        return this.userService.findAllUsers()
+                .stream()
+                .map(u -> {
+                    UserAllViewModel user = this.modelMapper.map(u, UserAllViewModel.class);
+                    user.setAuthorities(u.getAuthorities().stream().map(a -> a.getAuthority()).collect(Collectors.toSet()));
+
+                    return user;
+                })
+                .collect(Collectors.toList());
+    }
+
+    private void editProfileUserByUserName(Principal principal, ModelAndView modelAndView) {
+        modelAndView
+                .addObject("model",
+                        this.modelMapper.map(
+                                this.userService.findUserByUserName(principal.getName()),
+                                UserProfileViewModel.class)
+                );
+    }
+
+    private void findUserByUserName(Principal principal, ModelAndView modelAndView) {
+        modelAndView
+                .addObject("model",
+                        this.modelMapper.map(
+                                this.userService.findUserByUserName(principal.getName()),
+                                UserProfileViewModel.class)
+                );
     }
 }

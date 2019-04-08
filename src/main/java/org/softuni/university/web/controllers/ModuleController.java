@@ -44,12 +44,7 @@ public class ModuleController extends BaseController {
     @GetMapping("/all")
     @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     public ModelAndView allModule(ModelAndView modelAndView) {
-        modelAndView.addObject("modules",
-                this.moduleService.findAllModules()
-                        .stream()
-                        .map(c -> this.modelMapper.map(c, ModuleViewModel.class))
-                        .collect(Collectors.toList())
-        );
+        findAllModules(modelAndView);
 
         return super.view("module/all-modules", modelAndView);
     }
@@ -94,9 +89,22 @@ public class ModuleController extends BaseController {
     @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
     @ResponseBody
     public List<ModuleViewModel> fetchModules() {
+        return fetchModulesFindAll();
+    }
+
+    private List<ModuleViewModel> fetchModulesFindAll() {
         return this.moduleService.findAllModules()
                 .stream()
                 .map(c -> this.modelMapper.map(c, ModuleViewModel.class))
                 .collect(Collectors.toList());
+    }
+
+    private void findAllModules(ModelAndView modelAndView) {
+        modelAndView.addObject("modules",
+                this.moduleService.findAllModules()
+                        .stream()
+                        .map(c -> this.modelMapper.map(c, ModuleViewModel.class))
+                        .collect(Collectors.toList())
+        );
     }
 }

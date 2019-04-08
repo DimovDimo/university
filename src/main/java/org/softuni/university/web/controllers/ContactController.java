@@ -12,7 +12,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.io.IOException;
 import java.util.stream.Collectors;
 
 @Controller
@@ -36,7 +35,27 @@ public class ContactController extends BaseController {
     @PreAuthorize("isAuthenticated()")
     public ModelAndView addContactConfirm(@ModelAttribute ContactAddBindingModel model) throws Exception {
         ContactServiceModel contactServiceModel = this.mapper.map(model, ContactServiceModel.class);
+        createContact(contactServiceModel);
 
+        return super.view("contact/thanks-contact");
+    }
+
+    @GetMapping("/all")
+    @PreAuthorize("hasRole('ROLE_PUBLIC_RELATIONS')")
+    public ModelAndView allContacts(ModelAndView modelAndView) {
+        findAllContacts(modelAndView);
+
+        return super.view("contact/all-contacts", modelAndView);
+    }
+
+    private void findAllContacts(ModelAndView modelAndView) {
+        modelAndView.addObject("contacts", this.contactService.findAllContacts()
+                .stream()
+                .map(contactServiceModel -> this.mapper.map(contactServiceModel, ContactAllViewModel.class))
+                .collect(Collectors.toList()));
+    }
+
+    private void createContact(ContactServiceModel contactServiceModel) throws Exception {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String name = auth.getName();
 
@@ -45,18 +64,5 @@ public class ContactController extends BaseController {
                 contactServiceModel.getDescription(),
                 name
         );
-
-        return super.view("contact/thanks-contact");
-    }
-
-    @GetMapping("/all")
-    @PreAuthorize("hasRole('ROLE_PUBLIC_RELATIONS')")
-    public ModelAndView allContacts(ModelAndView modelAndView) {
-        modelAndView.addObject("contacts", this.contactService.findAllContacts()
-                .stream()
-                .map(contactServiceModel -> this.mapper.map(contactServiceModel, ContactAllViewModel.class))
-                .collect(Collectors.toList()));
-
-        return super.view("contact/all-contacts", modelAndView);
     }
 }
