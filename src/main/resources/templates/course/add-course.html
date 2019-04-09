@@ -14,25 +14,25 @@
     <form id="add-course-form" class="form w-25 mx-auto" th:action="@{/courses/add}" method="post"
           enctype="multipart/form-data"><input type="hidden" name="_csrf" value="c686cd14-a7f9-4216-8009-c093b7d3df86">
         <div class="form-group">
-            <label for="add-course-name" class="font-weight-bold">Name</label>
+            <label for="add-course-name" class="font-weight-bold">📍 Name</label>
             <input type="text" class="form-control text-center" id="add-course-name" name="name">
         </div>
         <div class="form-group">
-            <label for="add-course-description" class="font-weight-bold">Description</label>
+            <label for="add-course-description" class="font-weight-bold">📍 Description</label>
             <textarea name="description" id="add-course-description" cols="41" rows="5"></textarea>
         </div>
         <div class="form-group">
-            <label for="add-course-price" class="font-weight-bold">Price</label>
+            <label for="add-course-price" class="font-weight-bold">📍 Price</label>
             <input type="number" step="any" class="form-control text-center" id="add-course-price" name="price">
         </div>
         <div class="form-group">
-            <label for="add-course-modules" class="font-weight-bold">Modules</label>
+            <label for="add-course-modules" class="font-weight-bold">📍 Modules</label>
             <select multiple="" class="form-control" id="add-course-modules" name="modules">
                 <option selected="" disabled="">Choice Modules</option>
             </select>
         </div>
         <div class="form-group">
-            <label for="add-course-image" class="font-weight-bold">Image</label>
+            <label for="add-course-image" class="font-weight-bold">📍 Image</label>
             <input type="file" class="form-control-file" id="add-course-image" name="image">
         </div>
         <hr class="hr-2 bg-dark w-25">

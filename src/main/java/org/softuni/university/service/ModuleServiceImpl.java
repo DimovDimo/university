@@ -1,9 +1,14 @@
 package org.softuni.university.service;
 
 import org.modelmapper.ModelMapper;
+import org.softuni.university.domain.entities.Course;
 import org.softuni.university.domain.entities.Module;
 import org.softuni.university.domain.models.service.ModuleServiceModel;
+import org.softuni.university.error.CourseDoNotCreateException;
+import org.softuni.university.error.CourseNameAlreadyExistsException;
+import org.softuni.university.error.ModuleNotFoundException;
 import org.softuni.university.repository.ModuleRepository;
+import org.softuni.university.validation.ModuleValidationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,7 +47,7 @@ public class ModuleServiceImpl implements ModuleService {
     @Override
     public ModuleServiceModel findModuleById(String id) {
         Module module = this.moduleRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException());
+                .orElseThrow(() -> new ModuleNotFoundException("ModuleNotFoundException with the given id was not found!"));
 
         return this.modelMapper.map(module, ModuleServiceModel.class);
     }
@@ -50,7 +55,7 @@ public class ModuleServiceImpl implements ModuleService {
     @Override
     public ModuleServiceModel editModule(String id, ModuleServiceModel moduleServiceModel) {
         Module module = this.moduleRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException());
+                .orElseThrow(() -> new ModuleNotFoundException("ModuleNotFoundException with the given id was not found!"));
 
         module.setName(moduleServiceModel.getName());
 
@@ -60,7 +65,7 @@ public class ModuleServiceImpl implements ModuleService {
     @Override
     public ModuleServiceModel deleteModule(String id) {
         Module module = this.moduleRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException());
+                .orElseThrow(() -> new ModuleNotFoundException("ModuleNotFoundException with the given id was not found!"));
 
         this.moduleRepository.delete(module);
 

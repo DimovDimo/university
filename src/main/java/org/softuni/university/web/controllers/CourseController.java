@@ -5,6 +5,7 @@ import org.softuni.university.domain.models.binding.CourseAddBindingModel;
 import org.softuni.university.domain.models.service.CourseServiceModel;
 import org.softuni.university.domain.models.view.CourseAllViewModel;
 import org.softuni.university.domain.models.view.CourseDetailsViewModel;
+import org.softuni.university.error.CourseDoNotCreateException;
 import org.softuni.university.error.CourseNameAlreadyExistsException;
 import org.softuni.university.error.CourseNotFoundException;
 import org.softuni.university.service.ModuleService;
@@ -133,6 +134,15 @@ public class CourseController extends BaseController {
 
     @ExceptionHandler({CourseNameAlreadyExistsException.class})
     public ModelAndView handleCourseNameALreadyExist(CourseNameAlreadyExistsException e) {
+        ModelAndView modelAndView = new ModelAndView("error");
+        modelAndView.addObject("message", e.getMessage());
+        modelAndView.addObject("statusCode", e.getStatusCode());
+
+        return modelAndView;
+    }
+
+    @ExceptionHandler({CourseDoNotCreateException.class})
+    public ModelAndView handleCourseNotDoNotCreate(CourseDoNotCreateException e) {
         ModelAndView modelAndView = new ModelAndView("error");
         modelAndView.addObject("message", e.getMessage());
         modelAndView.addObject("statusCode", e.getStatusCode());

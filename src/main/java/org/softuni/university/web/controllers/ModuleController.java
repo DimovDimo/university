@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.softuni.university.domain.models.binding.ModuleAddBindingModel;
 import org.softuni.university.domain.models.service.ModuleServiceModel;
 import org.softuni.university.domain.models.view.ModuleViewModel;
+import org.softuni.university.error.ModuleNotFoundException;
 import org.softuni.university.service.ModuleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -90,6 +91,15 @@ public class ModuleController extends BaseController {
     @ResponseBody
     public List<ModuleViewModel> fetchModules() {
         return fetchModulesFindAll();
+    }
+
+    @ExceptionHandler({ModuleNotFoundException.class})
+    public ModelAndView handleModuleNotFound(ModuleNotFoundException e) {
+        ModelAndView modelAndView = new ModelAndView("error");
+        modelAndView.addObject("message", e.getMessage());
+        modelAndView.addObject("statusCode", e.getStatusCode());
+
+        return modelAndView;
     }
 
     private List<ModuleViewModel> fetchModulesFindAll() {

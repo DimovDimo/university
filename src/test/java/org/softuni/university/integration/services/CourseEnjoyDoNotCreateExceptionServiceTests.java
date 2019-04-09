@@ -31,7 +31,7 @@ import static org.mockito.Mockito.when;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class CourseServiceTests {
+public class CourseEnjoyDoNotCreateExceptionServiceTests {
     @Autowired
     private CourseService service;
 

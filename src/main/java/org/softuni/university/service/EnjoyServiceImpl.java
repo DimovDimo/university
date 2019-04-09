@@ -6,6 +6,8 @@ import org.softuni.university.domain.entities.Enjoy;
 import org.softuni.university.domain.entities.User;
 import org.softuni.university.domain.models.service.EnjoyServiceModel;
 import org.softuni.university.domain.models.service.UserServiceModel;
+import org.softuni.university.error.CourseNotFoundException;
+import org.softuni.university.error.EnjoyDoNotCreateException;
 import org.softuni.university.repository.CourseRepository;
 import org.softuni.university.repository.EnjoyRepository;
 import org.softuni.university.validation.CourseValidationService;
@@ -45,12 +47,12 @@ public class EnjoyServiceImpl implements EnjoyService {
     public void createEnjoy(String courseId, String name) throws Exception {
         UserServiceModel userModel = userService.findUserByUserName(name);
         if(!userValidation.isValid(userModel)) {
-            throw new Exception();
+            throw new EnjoyDoNotCreateException("EnjoyIllegalArgumentException this enjoy is invalid");
         }
 
         Course course = courseRepository.findById(courseId)
                 .filter(courseValidation::isValid)
-                .orElseThrow(Exception::new);
+                .orElseThrow(() -> new CourseNotFoundException("CourseNotFoundException with the given id was not found!"));
 
         User user = new User();
         user.setId(userModel.getId());

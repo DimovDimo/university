@@ -4,10 +4,12 @@ import org.modelmapper.ModelMapper;
 import org.softuni.university.domain.models.service.CourseServiceModel;
 import org.softuni.university.domain.models.view.CourseDetailsViewModel;
 import org.softuni.university.domain.models.view.EnjoyViewModel;
+import org.softuni.university.error.EnjoyDoNotCreateException;
 import org.softuni.university.service.CourseService;
 import org.softuni.university.service.EnjoyService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -60,6 +62,15 @@ public class EnjoyController extends BaseController {
         modelAndView.addObject("enjoys", viewModels);
 
         return view("enjoy/list-enjoys", modelAndView);
+    }
+
+    @ExceptionHandler({EnjoyDoNotCreateException.class})
+    public ModelAndView handleEnjoyDoNotCreate(EnjoyDoNotCreateException e) {
+        ModelAndView modelAndView = new ModelAndView("error");
+        modelAndView.addObject("message", e.getMessage());
+        modelAndView.addObject("statusCode", e.getStatusCode());
+
+        return modelAndView;
     }
 
     private List<EnjoyViewModel> findEnjoysByStudent(Principal principal) {

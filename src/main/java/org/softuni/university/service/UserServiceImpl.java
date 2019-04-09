@@ -41,7 +41,6 @@ public class UserServiceImpl implements UserService {
             userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_STUDENT"));
         }
 
-
         User user = this.modelMapper.map(userServiceModel, User.class);
         user.setPassword(this.bCryptPasswordEncoder.encode(userServiceModel.getPassword()));
 

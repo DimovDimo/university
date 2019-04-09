@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.softuni.university.domain.entities.Course;
 import org.softuni.university.domain.entities.Module;
 import org.softuni.university.domain.models.service.CourseServiceModel;
+import org.softuni.university.error.CourseDoNotCreateException;
 import org.softuni.university.error.CourseNameAlreadyExistsException;
 import org.softuni.university.error.CourseNotFoundException;
 import org.softuni.university.repository.CourseRepository;
@@ -37,14 +38,14 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public CourseServiceModel createCourse(CourseServiceModel courseServiceModel) {
         if (!courseValidation.isValid(courseServiceModel)) {
-            throw new IllegalArgumentException();
+            throw new CourseDoNotCreateException("CourseIllegalArgumentException this course is invalid");
         }
         Course course = this.courseRepository
                 .findByName(courseServiceModel.getName())
                 .orElse(null);
 
         if (course != null) {
-            throw new CourseNameAlreadyExistsException("Course already exists");
+            throw new CourseNameAlreadyExistsException("CourseIllegalArgumentException already exists");
         }
 
         course = this.modelMapper.map(courseServiceModel, Course.class);
@@ -65,13 +66,13 @@ public class CourseServiceImpl implements CourseService {
     public CourseServiceModel findCourseById(String id) {
         return this.courseRepository.findById(id)
                 .map(course -> this.modelMapper.map(course, CourseServiceModel.class))
-                .orElseThrow(() -> new CourseNotFoundException("Course with the given id was not found!"));
+                .orElseThrow(() -> new CourseNotFoundException("CourseNotFoundException with the given id was not found!"));
     }
 
     @Override
     public CourseServiceModel editCourse(String id, CourseServiceModel courseServiceModel) {
         Course course = this.courseRepository.findById(id)
-                .orElseThrow(() -> new CourseNotFoundException("Course with the given id was not found!"));
+                .orElseThrow(() -> new CourseNotFoundException("CourseNotFoundException with the given id was not found!"));
 
         courseServiceModel.setModules(
                 this.moduleService.findAllModules()
@@ -95,7 +96,7 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public void deleteCourse(String id) {
-        Course course = this.courseRepository.findById(id).orElseThrow(() -> new CourseNotFoundException("Course with the given id was not found!"));
+        Course course = this.courseRepository.findById(id).orElseThrow(() -> new CourseNotFoundException("CourseNotFoundException with the given id was not found!"));
 
         this.courseRepository.delete(course);
     }

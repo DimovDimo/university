@@ -51,7 +51,7 @@
                 $('.courses-data').empty();
 
                 if (json.length === 0) {
-                    $('.courses-data').append(`<h1 class="text-center font-weight-bold mt-5">You expect soon. There will be courses in the ${module} module.</h1>`)
+                    $('.courses-data').append(`<h1 class="text-center font-weight-bold mt-5">You expect soon. Courses in the ${module} module.</h1>`)
                 } else {
                     for (let i = 0; i < json.length; i += 1) {
                         $('.courses-data').append('<span class="courses-row row d-flex justify-content-around mt-5">');

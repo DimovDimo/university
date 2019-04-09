@@ -8,6 +8,7 @@ import org.softuni.university.domain.models.service.UserServiceModel;
 import org.softuni.university.repository.ContactRepository;
 import org.softuni.university.validation.UserValidationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -29,10 +30,10 @@ public class ContactServiceImpl implements ContactService {
     }
 
     @Override
-    public void createContact(String title, String description, String name) throws Exception {
+    public void createContact(String title, String description, String name) throws UsernameNotFoundException {
         UserServiceModel userModel = userService.findUserByUserName(name);
         if(!userValidation.isValid(userModel)) {
-            throw new Exception();
+            throw new UsernameNotFoundException("Username not found!");
         }
 
         User user = new User();

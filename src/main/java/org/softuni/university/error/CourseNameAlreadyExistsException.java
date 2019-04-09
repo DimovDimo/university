@@ -3,7 +3,7 @@ package org.softuni.university.error;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ResponseStatus(code = HttpStatus.CONFLICT, reason = "Course name exists.")
+@ResponseStatus(code = HttpStatus.CONFLICT, reason = "CourseNameAlreadyExistsException not found!")
 public class CourseNameAlreadyExistsException extends RuntimeException {
 
     private int statusCode;

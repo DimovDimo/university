@@ -6,10 +6,12 @@ import org.softuni.university.domain.entities.Inclusion;
 import org.softuni.university.domain.entities.User;
 import org.softuni.university.domain.models.service.InclusionServiceModel;
 import org.softuni.university.domain.models.service.UserServiceModel;
+import org.softuni.university.error.CourseNotFoundException;
 import org.softuni.university.repository.InclusionRepository;
 import org.softuni.university.repository.CourseRepository;
 import org.softuni.university.validation.CourseValidationService;
 import org.softuni.university.validation.UserValidationService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -44,12 +46,12 @@ public class InclusionServiceImpl implements InclusionService {
     public void createInclusion(String courseId, String name) throws Exception {
         UserServiceModel userModel = userService.findUserByUserName(name);
         if(!userValidation.isValid(userModel)) {
-            throw new Exception();
+            throw new UsernameNotFoundException("Username not found!");
         }
 
         Course course = courseRepository.findById(courseId)
                 .filter(courseValidation::isValid)
-                .orElseThrow(Exception::new);
+                .orElseThrow(() -> new CourseNotFoundException("CourseNotFoundException with the given id was not found!"));
 
         User user = new User();
         user.setId(userModel.getId());
