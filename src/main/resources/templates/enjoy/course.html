@@ -24,11 +24,6 @@
                 <h4><span th:text="${course.getDescription()}"></span></h4>
             </div>
         </div>
-        <div class="row">
-            <div class="col col-md-12 text-center mt-5">
-                <h4><span th:text="${course.getPrice()}"></span></h4>
-            </div>
-        </div>
         <form id="enjoy-form" action="/courses/enjoy" method="post">
             <div class="button-holder d-flex justify-content-center mt-5">
                 <input id="tb-id" type="hidden" name="id" th:value="${course.getId()}" />

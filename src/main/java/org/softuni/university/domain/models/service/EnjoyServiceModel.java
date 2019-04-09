@@ -1,7 +1,7 @@
 package org.softuni.university.domain.models.service;
 
 import org.modelmapper.ModelMapper;
-import org.softuni.university.domain.entities.Inclusion;
+import org.softuni.university.domain.entities.Enjoy;
 import org.softuni.university.mappings.IHaveCustomMappings;
 
 import java.math.BigDecimal;
@@ -46,21 +46,21 @@ public class EnjoyServiceModel implements IHaveCustomMappings {
 
     @Override
     public void configureMappings(ModelMapper mapper) {
-        mapper.createTypeMap(Inclusion.class, EnjoyServiceModel.class)
+        mapper.createTypeMap(Enjoy.class, EnjoyServiceModel.class)
                 .addMapping(
-                        inclusion -> inclusion.getCourse().getName(),
+                        enjoy -> enjoy.getCourse().getName(),
                         (dto, value) -> dto.setName((String) value)
                 )
                 .addMapping(
-                        inclusion -> inclusion.getCourse().getPrice(),
+                        enjoy -> enjoy.getCourse().getPrice(),
                         (dto, value) -> dto.setPrice((BigDecimal) value)
                 )
                 .addMapping(
-                        inclusion -> inclusion.getCourse().getImageUrl(),
+                        enjoy -> enjoy.getCourse().getImageUrl(),
                         (dto, value) -> dto.setImageUrl((String) value)
                 )
                 .addMapping(
-                        inclusion -> inclusion.getUser().getUsername(),
+                        enjoy -> enjoy.getUser().getUsername(),
                         (dto, value) -> dto.setStudent((String) value)
                 );
     }
