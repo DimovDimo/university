@@ -1,7 +1,6 @@
-package org.softuni.university.validation.implementations;
+package org.softuni.university.validation.service;
 
 import org.softuni.university.domain.models.service.EnjoyServiceModel;
-import org.softuni.university.validation.EnjoyValidationService;
 
 public class EnjoyValidationServiceImpl implements EnjoyValidationService {
     @Override

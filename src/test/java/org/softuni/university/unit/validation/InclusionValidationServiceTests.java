@@ -3,8 +3,8 @@ package org.softuni.university.unit.validation;
 import org.junit.Before;
 import org.junit.Test;
 import org.softuni.university.domain.models.service.InclusionServiceModel;
-import org.softuni.university.validation.InclusionValidationService;
-import org.softuni.university.validation.implementations.InclusionValidationServiceImpl;
+import org.softuni.university.validation.service.InclusionValidationService;
+import org.softuni.university.validation.service.InclusionValidationServiceImpl;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertFalse;

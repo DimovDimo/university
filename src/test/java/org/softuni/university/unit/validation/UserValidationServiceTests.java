@@ -3,8 +3,8 @@ package org.softuni.university.unit.validation;
 import org.junit.Before;
 import org.junit.Test;
 import org.softuni.university.domain.models.service.UserServiceModel;
-import org.softuni.university.validation.UserValidationService;
-import org.softuni.university.validation.implementations.UserValidationServiceImpl;
+import org.softuni.university.validation.service.UserValidationService;
+import org.softuni.university.validation.service.UserValidationServiceImpl;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

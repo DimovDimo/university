@@ -1,7 +1,6 @@
-package org.softuni.university.validation.implementations;
+package org.softuni.university.validation.service;
 
 import org.softuni.university.domain.models.service.RoleServiceModel;
-import org.softuni.university.validation.RoleValidationService;
 
 public class RoleValidationServiceImpl implements RoleValidationService {
     @Override

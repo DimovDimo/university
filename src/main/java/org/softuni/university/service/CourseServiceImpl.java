@@ -8,7 +8,7 @@ import org.softuni.university.error.CourseDoNotCreateException;
 import org.softuni.university.error.CourseNameAlreadyExistsException;
 import org.softuni.university.error.CourseNotFoundException;
 import org.softuni.university.repository.CourseRepository;
-import org.softuni.university.validation.CourseValidationService;
+import org.softuni.university.validation.service.CourseValidationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

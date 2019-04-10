@@ -1,9 +1,8 @@
-package org.softuni.university.validation.implementations;
+package org.softuni.university.validation.service;
 
 import org.softuni.university.domain.entities.Course;
 import org.softuni.university.domain.models.service.ModuleServiceModel;
 import org.softuni.university.domain.models.service.CourseServiceModel;
-import org.softuni.university.validation.CourseValidationService;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

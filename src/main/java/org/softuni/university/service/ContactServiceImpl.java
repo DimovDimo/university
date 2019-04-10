@@ -6,7 +6,7 @@ import org.softuni.university.domain.entities.User;
 import org.softuni.university.domain.models.service.ContactServiceModel;
 import org.softuni.university.domain.models.service.UserServiceModel;
 import org.softuni.university.repository.ContactRepository;
-import org.softuni.university.validation.UserValidationService;
+import org.softuni.university.validation.service.UserValidationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;

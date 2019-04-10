@@ -6,8 +6,8 @@ import org.softuni.university.domain.entities.Course;
 import org.softuni.university.domain.entities.Module;
 import org.softuni.university.domain.models.service.ModuleServiceModel;
 import org.softuni.university.domain.models.service.CourseServiceModel;
-import org.softuni.university.validation.CourseValidationService;
-import org.softuni.university.validation.implementations.CourseValidationServiceImpl;
+import org.softuni.university.validation.service.CourseValidationService;
+import org.softuni.university.validation.service.CourseValidationServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;

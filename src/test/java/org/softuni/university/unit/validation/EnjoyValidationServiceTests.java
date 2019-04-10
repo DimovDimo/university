@@ -3,8 +3,8 @@ package org.softuni.university.unit.validation;
 import org.junit.Before;
 import org.junit.Test;
 import org.softuni.university.domain.models.service.EnjoyServiceModel;
-import org.softuni.university.validation.EnjoyValidationService;
-import org.softuni.university.validation.implementations.EnjoyValidationServiceImpl;
+import org.softuni.university.validation.service.EnjoyValidationService;
+import org.softuni.university.validation.service.EnjoyValidationServiceImpl;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertFalse;

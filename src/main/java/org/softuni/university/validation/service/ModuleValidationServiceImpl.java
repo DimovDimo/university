@@ -1,7 +1,6 @@
-package org.softuni.university.validation.implementations;
+package org.softuni.university.validation.service;
 
 import org.softuni.university.domain.models.service.ModuleServiceModel;
-import org.softuni.university.validation.ModuleValidationService;
 
 public class ModuleValidationServiceImpl implements ModuleValidationService {
 

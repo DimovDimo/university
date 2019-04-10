@@ -9,8 +9,8 @@ import org.softuni.university.domain.models.service.UserServiceModel;
 import org.softuni.university.error.CourseNotFoundException;
 import org.softuni.university.repository.InclusionRepository;
 import org.softuni.university.repository.CourseRepository;
-import org.softuni.university.validation.CourseValidationService;
-import org.softuni.university.validation.UserValidationService;
+import org.softuni.university.validation.service.CourseValidationService;
+import org.softuni.university.validation.service.UserValidationService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,6 @@
-package org.softuni.university.validation.implementations;
+package org.softuni.university.validation.service;
 
 import org.softuni.university.domain.models.service.InclusionServiceModel;
-import org.softuni.university.validation.InclusionValidationService;
 
 public class InclusionValidationServiceImpl implements InclusionValidationService {
     @Override

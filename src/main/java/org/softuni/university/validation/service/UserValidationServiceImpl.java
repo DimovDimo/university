@@ -1,7 +1,6 @@
-package org.softuni.university.validation.implementations;
+package org.softuni.university.validation.service;
 
 import org.softuni.university.domain.models.service.UserServiceModel;
-import org.softuni.university.validation.UserValidationService;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,4 +1,4 @@
-package org.softuni.university.validation;
+package org.softuni.university.validation.service;
 
 import org.softuni.university.domain.models.service.EnjoyServiceModel;
 

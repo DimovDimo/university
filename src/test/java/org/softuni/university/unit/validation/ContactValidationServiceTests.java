@@ -3,9 +3,8 @@ package org.softuni.university.unit.validation;
 import org.junit.Before;
 import org.junit.Test;
 import org.softuni.university.domain.models.service.ContactServiceModel;
-import org.softuni.university.validation.ContactValidationService;
-import org.softuni.university.validation.implementations.ContactValidationServiceImpl;
-import org.softuni.university.validation.implementations.InclusionValidationServiceImpl;
+import org.softuni.university.validation.service.ContactValidationService;
+import org.softuni.university.validation.service.ContactValidationServiceImpl;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertFalse;

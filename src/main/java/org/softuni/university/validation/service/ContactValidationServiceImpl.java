@@ -1,7 +1,6 @@
-package org.softuni.university.validation.implementations;
+package org.softuni.university.validation.service;
 
 import org.softuni.university.domain.models.service.ContactServiceModel;
-import org.softuni.university.validation.ContactValidationService;
 
 public class ContactValidationServiceImpl implements ContactValidationService {
     @Override

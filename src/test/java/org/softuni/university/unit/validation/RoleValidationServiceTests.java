@@ -3,8 +3,8 @@ package org.softuni.university.unit.validation;
 import org.junit.Before;
 import org.junit.Test;
 import org.softuni.university.domain.models.service.RoleServiceModel;
-import org.softuni.university.validation.RoleValidationService;
-import org.softuni.university.validation.implementations.RoleValidationServiceImpl;
+import org.softuni.university.validation.service.RoleValidationService;
+import org.softuni.university.validation.service.RoleValidationServiceImpl;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertFalse;

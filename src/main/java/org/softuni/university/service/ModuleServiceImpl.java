@@ -1,17 +1,14 @@
 package org.softuni.university.service;
 
 import org.modelmapper.ModelMapper;
-import org.softuni.university.domain.entities.Course;
 import org.softuni.university.domain.entities.Module;
 import org.softuni.university.domain.models.service.ModuleServiceModel;
-import org.softuni.university.error.CourseDoNotCreateException;
-import org.softuni.university.error.CourseNameAlreadyExistsException;
 import org.softuni.university.error.ModuleNotFoundException;
 import org.softuni.university.repository.ModuleRepository;
-import org.softuni.university.validation.ModuleValidationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.xml.validation.Validator;
 import java.util.List;
 import java.util.stream.Collectors;
 
