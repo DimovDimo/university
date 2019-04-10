@@ -93,14 +93,14 @@ public class ModuleController extends BaseController {
         return fetchModulesFindAll();
     }
 
-    @ExceptionHandler({ModuleNotFoundException.class})
-    public ModelAndView handleModuleNotFound(ModuleNotFoundException e) {
-        ModelAndView modelAndView = new ModelAndView("error");
-        modelAndView.addObject("message", e.getMessage());
-        modelAndView.addObject("statusCode", e.getStatusCode());
-
-        return modelAndView;
-    }
+//    @ExceptionHandler({ModuleNotFoundException.class})
+//    public ModelAndView handleModuleNotFound(ModuleNotFoundException e) {
+//        ModelAndView modelAndView = new ModelAndView("error");
+//        modelAndView.addObject("message", e.getMessage());
+//        modelAndView.addObject("statusCode", e.getStatusCode());
+//
+//        return modelAndView;
+//    }
 
     private List<ModuleViewModel> fetchModulesFindAll() {
         return this.moduleService.findAllModules()

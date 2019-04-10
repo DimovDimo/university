@@ -18,9 +18,9 @@ hr.hr-2 {
 }
 
 img.img-thumbnail {
-    border: 1px solid #ddd; /* Gray border */
-    border-radius: 4px; /* Rounded border */
-    padding: 5px; /* Some padding */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
     max-width: 40px;
     max-height: 40px;
 }
@@ -42,6 +42,7 @@ img.img-thumbnail {
 
 body {
     background-color: #ffffff;
+    padding: 0px;
 }
 
 .custom-css-profile-img{
@@ -110,4 +111,12 @@ body {
         height: 0px;
         border-radius: 300px;
     }
+}
+
+.custom-css-user{
+    color: #005cbf !important;
+}
+
+.custom-css-sero-padding{
+    padding: 0px;
 }

@@ -33,7 +33,7 @@
 
                     <th:block sec:authorize="hasRole('ROLE_STUDENT')">
                         <li class="nav-item active">
-                            <a class="nav-link" th:href="@{/users/profile}" sec:authentication="name"></a>
+                            <a class="nav-link custom-css-user" th:href="@{/users/profile}" sec:authentication="name"></a>
                         </li>
                     </th:block>
 

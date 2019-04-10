@@ -16,9 +16,9 @@ public class TitleInterceptor extends HandlerInterceptorAdapter {
             modelAndView = new ModelAndView();
         }
 
-        String title = getTitle(modelAndView);
+        String title = "University";
 
-        modelAndView.addObject("title", title);
+        modelAndView.addObject("titleText", title);
     }
 
     private String getTitle(ModelAndView modelAndView) {

@@ -63,7 +63,7 @@ public class CourseEnjoyDoNotCreateExceptionServiceTests {
               .save(any());
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = Exception.class)
     public void createCourse_whenNull_throw() {
         service.createCourse(null);
         verify(mockCourseRepository)
