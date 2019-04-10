@@ -3,6 +3,7 @@ package org.softuni.university.web.controllers;
 import org.modelmapper.ModelMapper;
 import org.softuni.university.domain.models.view.ModuleViewModel;
 import org.softuni.university.service.ModuleService;
+import org.softuni.university.web.annotations.PageTitle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -25,12 +26,14 @@ public class HomeController extends BaseController {
 
     @GetMapping("/")
     @PreAuthorize("isAnonymous()")
+    @PageTitle("Index")
     public ModelAndView index() {
         return super.view("index");
     }
 
     @GetMapping("/home")
     @PreAuthorize("isAuthenticated()")
+    @PageTitle("Home")
     public ModelAndView home(ModelAndView modelAndView) {
         modelAndView.addObject("modules", this.moduleService.findAllModules().stream().map(module -> this.modelMapper.map(module, ModuleViewModel.class)).collect(Collectors.toList()));
 

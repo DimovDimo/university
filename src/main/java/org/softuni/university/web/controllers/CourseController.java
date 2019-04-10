@@ -11,6 +11,7 @@ import org.softuni.university.error.CourseNotFoundException;
 import org.softuni.university.service.ModuleService;
 import org.softuni.university.service.CloudinaryService;
 import org.softuni.university.service.CourseService;
+import org.softuni.university.web.annotations.PageTitle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -40,6 +41,7 @@ public class CourseController extends BaseController {
 
     @GetMapping("/add")
     @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
+    @PageTitle("Add course")
     public ModelAndView addCourse() {
         return super.view("course/add-course");
     }
@@ -57,6 +59,7 @@ public class CourseController extends BaseController {
 
     @GetMapping("/all")
     @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
+    @PageTitle("All courses")
     public ModelAndView allCourses(ModelAndView modelAndView) {
         allCoursesGet(modelAndView);
 
@@ -65,6 +68,7 @@ public class CourseController extends BaseController {
 
     @GetMapping("/details/{id}")
     @PreAuthorize("isAuthenticated()")
+    @PageTitle("Details course")
     public ModelAndView detailsCourse(@PathVariable String id, ModelAndView modelAndView) {
         modelAndView.addObject("course", this.modelMapper.map(this.courseService.findCourseById(id), CourseDetailsViewModel.class));
 
@@ -73,6 +77,7 @@ public class CourseController extends BaseController {
 
     @GetMapping("/edit/{id}")
     @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
+    @PageTitle("Edit course")
     public ModelAndView editCourse(@PathVariable String id, ModelAndView modelAndView) {
         CourseServiceModel courseServiceModel = this.courseService.findCourseById(id);
         CourseAddBindingModel model = this.modelMapper.map(courseServiceModel, CourseAddBindingModel.class);
@@ -94,6 +99,7 @@ public class CourseController extends BaseController {
 
     @GetMapping("/delete/{id}")
     @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
+    @PageTitle("Delete course")
     public ModelAndView deleteCourse(@PathVariable String id, ModelAndView modelAndView) {
         CourseServiceModel courseServiceModel = this.courseService.findCourseById(id);
         CourseAddBindingModel model = this.modelMapper.map(courseServiceModel, CourseAddBindingModel.class);

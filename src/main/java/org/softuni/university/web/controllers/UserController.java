@@ -7,6 +7,7 @@ import org.softuni.university.domain.models.service.UserServiceModel;
 import org.softuni.university.domain.models.view.UserAllViewModel;
 import org.softuni.university.domain.models.view.UserProfileViewModel;
 import org.softuni.university.service.UserService;
+import org.softuni.university.web.annotations.PageTitle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -34,6 +35,7 @@ public class UserController extends BaseController {
 
     @GetMapping("/register")
     @PreAuthorize("isAnonymous()")
+    @PageTitle("Register")
     public ModelAndView register() {
         return super.view("register");
     }
@@ -52,12 +54,14 @@ public class UserController extends BaseController {
 
     @GetMapping("/login")
     @PreAuthorize("isAnonymous()")
+    @PageTitle("Login")
     public ModelAndView login() {
         return super.view("login");
     }
 
     @GetMapping("/profile")
     @PreAuthorize("isAuthenticated()")
+    @PageTitle("Profile")
     public ModelAndView profile(Principal principal, ModelAndView modelAndView) {
         findUserByUserName(principal, modelAndView);
 
@@ -66,6 +70,7 @@ public class UserController extends BaseController {
 
     @GetMapping("/edit")
     @PreAuthorize("isAuthenticated()")
+    @PageTitle("Edit profile")
     public ModelAndView editProfile(Principal principal, ModelAndView modelAndView) {
         editProfileUserByUserName(principal, modelAndView);
 
@@ -86,6 +91,7 @@ public class UserController extends BaseController {
 
     @GetMapping("/all")
     @PreAuthorize("hasRole('ROLE_DEAN')")
+    @PageTitle("All users")
     public ModelAndView allUsers(ModelAndView modelAndView) {
         List<UserAllViewModel> users = findAllUsers();
         modelAndView.addObject("users", users);

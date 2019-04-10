@@ -6,6 +6,7 @@ import org.softuni.university.domain.models.service.ModuleServiceModel;
 import org.softuni.university.domain.models.view.ModuleViewModel;
 import org.softuni.university.error.ModuleNotFoundException;
 import org.softuni.university.service.ModuleService;
+import org.softuni.university.web.annotations.PageTitle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -30,6 +31,7 @@ public class ModuleController extends BaseController {
 
     @GetMapping("/add")
     @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
+    @PageTitle("Add module")
     public ModelAndView addModule() {
         return super.view("module/add-module");
     }
@@ -44,7 +46,8 @@ public class ModuleController extends BaseController {
 
     @GetMapping("/all")
     @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
-    public ModelAndView allModule(ModelAndView modelAndView) {
+    @PageTitle("All modules")
+    public ModelAndView allModules(ModelAndView modelAndView) {
         findAllModules(modelAndView);
 
         return super.view("module/all-modules", modelAndView);
@@ -52,6 +55,7 @@ public class ModuleController extends BaseController {
 
     @GetMapping("/edit/{id}")
     @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
+    @PageTitle("Edit module")
     public ModelAndView editModule(@PathVariable String id, ModelAndView modelAndView) {
         modelAndView.addObject("model",
                 this.modelMapper.map(this.moduleService.findModuleById(id), ModuleViewModel.class)
@@ -70,6 +74,7 @@ public class ModuleController extends BaseController {
 
     @GetMapping("/delete/{id}")
     @PreAuthorize("hasRole('ROLE_CHAIR_OF_A_DEPARTMENT')")
+    @PageTitle("Delete module")
     public ModelAndView deleteModule(@PathVariable String id, ModelAndView modelAndView) {
         modelAndView.addObject("model",
                 this.modelMapper.map(this.moduleService.findModuleById(id), ModuleViewModel.class)

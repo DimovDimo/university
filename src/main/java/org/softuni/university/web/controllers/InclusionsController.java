@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.softuni.university.domain.models.view.InclusionViewModel;
+import org.softuni.university.web.annotations.PageTitle;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -36,6 +37,7 @@ public class InclusionsController extends BaseController {
 
     @GetMapping("/course/{id}")
     @PreAuthorize("isAuthenticated()")
+    @PageTitle("Inclusion course")
     public ModelAndView inclusionCourse(@PathVariable String id, ModelAndView modelAndView) {
         CourseServiceModel serviceModel = courseService.findCourseById(id);
         CourseDetailsViewModel viewModel = mapper.map(serviceModel, CourseDetailsViewModel.class);
@@ -46,6 +48,7 @@ public class InclusionsController extends BaseController {
 
     @GetMapping("/all")
     @PreAuthorize("hasRole('ROLE_DEAN')")
+    @PageTitle("All inclusions")
     public ModelAndView getAllInclusions(ModelAndView modelAndView) {
         List<InclusionViewModel> viewModels = findAllInclusions();
         modelAndView.addObject("inclusions", viewModels);
@@ -55,6 +58,7 @@ public class InclusionsController extends BaseController {
 
     @GetMapping("/strudent")
     @PreAuthorize("isAuthenticated()")
+    @PageTitle("Student inclusions")
     public ModelAndView getStudentInclusions(ModelAndView modelAndView, Principal principal) {
         List<InclusionViewModel> viewModels = findInclusionsByStudent(principal);
         modelAndView.addObject("inclusions", viewModels);

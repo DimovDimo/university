@@ -7,6 +7,7 @@ import org.softuni.university.domain.models.view.EnjoyViewModel;
 import org.softuni.university.error.EnjoyDoNotCreateException;
 import org.softuni.university.service.CourseService;
 import org.softuni.university.service.EnjoyService;
+import org.softuni.university.web.annotations.PageTitle;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -38,6 +39,7 @@ public class EnjoyController extends BaseController {
 
     @GetMapping("/course/{id}")
     @PreAuthorize("isAuthenticated()")
+    @PageTitle("Enjoy course")
     public ModelAndView enjoyCourse(@PathVariable String id, ModelAndView modelAndView) {
         CourseServiceModel serviceModel = courseService.findCourseById(id);
         CourseDetailsViewModel viewModel = mapper.map(serviceModel, CourseDetailsViewModel.class);
@@ -48,6 +50,7 @@ public class EnjoyController extends BaseController {
 
     @GetMapping("/all")
     @PreAuthorize("hasRole('ROLE_PUBLIC_RELATIONS')")
+    @PageTitle("All enjoys")
     public ModelAndView getAllEnjoys(ModelAndView modelAndView) {
         List<EnjoyViewModel> viewModels = findAllEnjoys();
         modelAndView.addObject("enjoys", viewModels);
@@ -57,6 +60,7 @@ public class EnjoyController extends BaseController {
 
     @GetMapping("/strudent")
     @PreAuthorize("isAuthenticated()")
+    @PageTitle("Student enjoys")
     public ModelAndView getStudentEnjoys(ModelAndView modelAndView, Principal principal) {
         List<EnjoyViewModel> viewModels = findEnjoysByStudent(principal);
         modelAndView.addObject("enjoys", viewModels);

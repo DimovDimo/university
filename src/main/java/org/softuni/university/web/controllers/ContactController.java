@@ -5,6 +5,7 @@ import org.softuni.university.domain.models.binding.ContactAddBindingModel;
 import org.softuni.university.domain.models.service.ContactServiceModel;
 import org.softuni.university.domain.models.view.ContactAllViewModel;
 import org.softuni.university.service.ContactService;
+import org.softuni.university.web.annotations.PageTitle;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -27,12 +28,14 @@ public class ContactController extends BaseController {
 
     @GetMapping("/add")
     @PreAuthorize("isAuthenticated()")
+    @PageTitle("Add contact")
     public ModelAndView addContact() {
         return super.view("contact/add-contact");
     }
 
     @PostMapping("/add")
     @PreAuthorize("isAuthenticated()")
+    @PageTitle("Тhanks for your contact")
     public ModelAndView addContactConfirm(@ModelAttribute ContactAddBindingModel model) throws Exception {
         ContactServiceModel contactServiceModel = this.mapper.map(model, ContactServiceModel.class);
         createContact(contactServiceModel);
@@ -42,6 +45,7 @@ public class ContactController extends BaseController {
 
     @GetMapping("/all")
     @PreAuthorize("hasRole('ROLE_PUBLIC_RELATIONS')")
+    @PageTitle("All contacts")
     public ModelAndView allContacts(ModelAndView modelAndView) {
         findAllContacts(modelAndView);
 
