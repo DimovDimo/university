@@ -30,6 +30,13 @@
             </button>
             <div class="collapse navbar-collapse d-flex justify-content-end" id="userNav">
                 <ul class="navbar-nav">
+                    
+                    <th:block sec:authorize="hasRole('ROLE_STUDENT')">
+                        <li class="nav-item active">
+                            <a class="nav-link" th:href="@{/users/profile}" sec:authentication="name"></a>
+                        </li>
+                    </th:block>
+
                     <li class="nav-item active">
                         <a class="nav-link" th:href="@{/home}">🏠 Home</a>
                     </li>
