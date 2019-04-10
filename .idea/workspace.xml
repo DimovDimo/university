@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cc90f95-c0fa-4509-861b-d32315c36170" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/ModuleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/ModuleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/web/interceptors/TitleInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/web/interceptors/TitleInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contact/add-contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contact/add-contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/course/add-course.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/course/add-course.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/course/delete-course.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/course/delete-course.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/course/edit-course.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/course/edit-course.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/inclusion/course.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/inclusion/course.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/web/controllers/ModuleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/web/controllers/ModuleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/web/interceptors/TitleInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/web/interceptors/TitleInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/course/add-course.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/course/add-course.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/course/delete-course.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/course/delete-course.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/course/edit-course.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/course/edit-course.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/inclusion/course.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/inclusion/course.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/config/ApplicationBeanConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/config/ApplicationBeanConfiguration.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -48,15 +26,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
+            <state relative-caret-position="1717">
               <caret line="119" column="24" selection-start-line="119" selection-start-column="1" selection-end-line="119" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inclusion/list-inclusions.html">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/config/ApplicationBeanConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -122,7 +104,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -183,7 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/domain/models/service/EnjoyServiceModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/repository/EnjoyRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/enjoy/course.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/enjoy/list-enjoys.html" />
@@ -234,6 +215,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/contact/add-contact.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/home.html" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/config/ApplicationBeanConfiguration.java" />
       </list>
     </option>
   </component>
@@ -691,7 +673,7 @@
       <workItem from="1554714801194" duration="19216000" />
       <workItem from="1554798376926" duration="16407000" />
       <workItem from="1554880413480" duration="13806000" />
-      <workItem from="1554912007304" duration="972000" />
+      <workItem from="1554912007304" duration="1248000" />
     </task>
     <servers />
   </component>
@@ -728,7 +710,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124012000" />
+    <option name="totallyTimeSpent" value="124288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -826,13 +808,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/implementations/ModuleValidationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/error/CourseDoNotCreateException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -1189,17 +1164,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="119" column="24" selection-start-line="119" selection-start-column="1" selection-end-line="119" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1717">
+          <caret line="119" column="24" selection-start-line="119" selection-start-column="1" selection-end-line="119" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/config/ApplicationBeanConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
         </state>
       </provider>
     </entry>
