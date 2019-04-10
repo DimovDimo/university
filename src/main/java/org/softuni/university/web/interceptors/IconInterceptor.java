@@ -11,13 +11,17 @@ import javax.servlet.http.HttpServletResponse;
 public class IconInterceptor extends HandlerInterceptorAdapter {
 
     @Override
-    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        if (modelAndView == null) {
-            modelAndView = new ModelAndView();
-        }
+    public void postHandle(
+            HttpServletRequest request,
+            HttpServletResponse response,
+            Object handler,
+            ModelAndView modelAndView
+    ) throws Exception {
 
         String iconLink = "https://res.cloudinary.com/dimo-cloud/image/upload/v1554834927/icon2.png";
 
-        modelAndView.addObject("iconLink", iconLink);
+        if (modelAndView != null) {
+            modelAndView.addObject("iconLink", iconLink);
+        }
     }
 }
