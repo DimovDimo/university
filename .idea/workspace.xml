@@ -2,75 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cc90f95-c0fa-4509-861b-d32315c36170" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/ContactServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/ContactServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/CourseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/EnjoyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/EnjoyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/InclusionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/InclusionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/ModuleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/ModuleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/ContactValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/ContactValidationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/CourseValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/CourseValidationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/EnjoyValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/EnjoyValidationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/InclusionValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/InclusionValidationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/ModuleValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/ModuleValidationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/RoleValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/RoleValidationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/UserValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/UserValidationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/implementations/ContactValidationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/ContactValidationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/implementations/CourseValidationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/CourseValidationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/implementations/EnjoyValidationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/EnjoyValidationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/implementations/InclusionValidationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/InclusionValidationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/implementations/ModuleValidationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/ModuleValidationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/implementations/RoleValidationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/RoleValidationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/implementations/UserValidationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/UserValidationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/InclusionServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/InclusionServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/ContactValidationServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/ContactValidationServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/CourseValidationServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/CourseValidationServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/EnjoyValidationServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/EnjoyValidationServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/InclusionValidationServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/InclusionValidationServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/ModuleValidationServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/ModuleValidationServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/RoleValidationServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/RoleValidationServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/UserValidationServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/UserValidationServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/service/ContactServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/service/ContactServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/service/CourseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/service/CourseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/service/EnjoyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/service/EnjoyServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/service/InclusionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/service/InclusionServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/service/ModuleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/service/ModuleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/ContactValidationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/CourseValidationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/EnjoyValidationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/InclusionValidationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/ModuleValidationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/RoleValidationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/UserValidationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/implementations/ContactValidationServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/implementations/CourseValidationServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/implementations/EnjoyValidationServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/implementations/InclusionValidationServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/implementations/ModuleValidationServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/implementations/RoleValidationServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/implementations/UserValidationServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/InclusionServiceTests$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/InclusionServiceTests$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/InclusionServiceTests$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/InclusionServiceTests$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/InclusionServiceTests$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/InclusionServiceTests$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/InclusionServiceTests$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/InclusionServiceTests$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/InclusionServiceTests$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/InclusionServiceTests$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/InclusionServiceTests$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/InclusionServiceTests$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/InclusionServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/InclusionServiceTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/unit/validation/ContactValidationServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/unit/validation/ContactValidationServiceTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/unit/validation/CourseValidationServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/unit/validation/CourseValidationServiceTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/unit/validation/EnjoyValidationServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/unit/validation/EnjoyValidationServiceTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/unit/validation/InclusionValidationServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/unit/validation/InclusionValidationServiceTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/unit/validation/ModuleValidationServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/unit/validation/ModuleValidationServiceTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/unit/validation/RoleValidationServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/unit/validation/RoleValidationServiceTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/unit/validation/UserValidationServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/unit/validation/UserValidationServiceTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/repository/UserRepository.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -92,31 +24,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/ModuleServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/InclusionServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/CourseServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/ContactValidationService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret selection-end-line="111" selection-end-column="1" />
+              <caret column="49" selection-start-column="31" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/user/UserEditValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="508">
+              <caret line="50" column="95" lean-forward="true" selection-start-line="50" selection-start-column="95" selection-end-line="50" selection-end-column="95" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,19 +45,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/ContactValidationService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/user/UserRegisterValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="49" lean-forward="true" selection-start-column="31" selection-end-column="49" />
+            <state relative-caret-position="321">
+              <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/CourseValidationService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/repository/UserRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/ValidationConstants.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <caret line="4" column="86" selection-start-line="4" selection-start-column="86" selection-end-line="4" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -201,7 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&quot;ROLE_ROOT&quot;</find>
       <find>ROLE_ADMIN</find>
       <find>ROLE_MODERATOR</find>
       <find>ROLE_USER</find>
@@ -231,6 +162,7 @@
       <find>fetchModules</find>
       <find>textarea</find>
       <find>Category</find>
+      <find>USERNAME_LENGTH</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -239,10 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/error/CourseDoNotCreateException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/error/ModuleNotFoundException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/error/CourseNotFoundException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/error/CourseNameAlreadyExistsException.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/InclusionServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/EnjoyServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/error/ModuleNameAlreadyExistsException.java" />
@@ -290,6 +218,10 @@
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/module/ModuleAddValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/ModuleServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/ContactValidationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/user/UserEditValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/repository/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/ValidationConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/user/UserRegisterValidator.java" />
       </list>
     </option>
   </component>
@@ -408,6 +340,17 @@
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="softuni" type="462c0819:PsiDirectoryNode" />
               <item name="university" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="university" type="b2602c69:ProjectViewProjectNode" />
+              <item name="university" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="university" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -444,6 +387,18 @@
               <item name="university" type="462c0819:PsiDirectoryNode" />
               <item name="validation" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="university" type="b2602c69:ProjectViewProjectNode" />
+              <item name="university" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="university" type="462c0819:PsiDirectoryNode" />
+              <item name="validation" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="university" type="b2602c69:ProjectViewProjectNode" />
@@ -819,7 +774,7 @@
       <workItem from="1554880413480" duration="13806000" />
       <workItem from="1554912007304" duration="3915000" />
       <workItem from="1554916134246" duration="169000" />
-      <workItem from="1554916448597" duration="1280000" />
+      <workItem from="1554916448597" duration="1750000" />
     </task>
     <servers />
   </component>
@@ -856,7 +811,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128404000" />
+    <option name="totallyTimeSpent" value="128874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -954,44 +909,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding>
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#407#408#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/EnjoyApiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/EnjoyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="67" column="46" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/GlobalExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/InclusionsApiController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1339,7 +1256,41 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/ContactValidationService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="49" lean-forward="true" selection-start-column="31" selection-end-column="49" />
+          <caret column="49" selection-start-column="31" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/ValidationConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="86" selection-start-line="4" selection-start-column="86" selection-end-line="4" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/user/UserEditValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="50" column="95" lean-forward="true" selection-start-line="50" selection-start-column="95" selection-end-line="50" selection-end-column="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/user/UserRegisterValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
