@@ -9,6 +9,9 @@
     <th:block th:include="~{fragments/navbar}"></th:block>
 </header>
 <main class="mt-3">
+    <div class="text-center">
+        <img class="custom-css-course-image-home" th:src="${imageLink}" alt="image">
+    </div>
     <h1 class="text-center text-dark">Login</h1>
     <hr class="hr-2 bg-dark w-25">
     <th:block th:if="${param.logout}">
