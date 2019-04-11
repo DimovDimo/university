@@ -30,7 +30,7 @@ public class ContactServiceImpl implements ContactService {
     }
 
     @Override
-    public void createContact(String title, String description, String name) throws UsernameNotFoundException {
+    public void createContact(ContactServiceModel contactServiceModel, String name) throws UsernameNotFoundException {
         UserServiceModel userModel = userService.findUserByUserName(name);
         if(!userValidation.isValid(userModel)) {
             throw new UsernameNotFoundException("Username not found!");
@@ -38,9 +38,7 @@ public class ContactServiceImpl implements ContactService {
 
         User user = new User();
         user.setId(userModel.getId());
-        Contact contact = new Contact();
-        contact.setTitle(title);
-        contact.setDescription(description);
+        Contact contact = this.mapper.map(contactServiceModel, Contact.class);
         contact.setUser(user);
 
         contactRepository.save(contact);

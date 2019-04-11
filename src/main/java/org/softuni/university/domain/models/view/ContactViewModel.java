@@ -5,6 +5,11 @@ import java.math.BigDecimal;
 public class ContactViewModel {
     private String title;
     private String description;
+    private String telefon;
+    private String postenskiKod;
+    private String qdres;
+    private String skype;
+    private String site;
     private String student;
 
     public String getTitle() {
@@ -21,6 +26,46 @@ public class ContactViewModel {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getTelefon() {
+        return telefon;
+    }
+
+    public void setTelefon(String telefon) {
+        this.telefon = telefon;
+    }
+
+    public String getPostenskiKod() {
+        return postenskiKod;
+    }
+
+    public void setPostenskiKod(String postenskiKod) {
+        this.postenskiKod = postenskiKod;
+    }
+
+    public String getQdres() {
+        return qdres;
+    }
+
+    public void setQdres(String qdres) {
+        this.qdres = qdres;
+    }
+
+    public String getSkype() {
+        return skype;
+    }
+
+    public void setSkype(String skype) {
+        this.skype = skype;
+    }
+
+    public String getSite() {
+        return site;
+    }
+
+    public void setSite(String site) {
+        this.site = site;
     }
 
     public String getStudent() {

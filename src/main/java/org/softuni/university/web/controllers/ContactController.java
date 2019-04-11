@@ -38,7 +38,9 @@ public class ContactController extends BaseController {
     @PageTitle("Тhanks for your contact")
     public ModelAndView addContactConfirm(@ModelAttribute ContactAddBindingModel model) throws Exception {
         ContactServiceModel contactServiceModel = this.mapper.map(model, ContactServiceModel.class);
-        createContact(contactServiceModel);
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String name = auth.getName();
+        this.contactService.createContact(contactServiceModel, name);
 
         return super.view("contact/thanks-contact");
     }
@@ -57,16 +59,5 @@ public class ContactController extends BaseController {
                 .stream()
                 .map(contactServiceModel -> this.mapper.map(contactServiceModel, ContactAllViewModel.class))
                 .collect(Collectors.toList()));
-    }
-
-    private void createContact(ContactServiceModel contactServiceModel) throws Exception {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        String name = auth.getName();
-
-        this.contactService.createContact(
-                contactServiceModel.getTitle(),
-                contactServiceModel.getDescription(),
-                name
-        );
     }
 }

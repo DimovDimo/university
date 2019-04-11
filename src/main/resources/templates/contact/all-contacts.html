@@ -23,6 +23,7 @@
         <tbody>
         <th:block th:each="contact, iter : ${contacts}">
             <tr class="row mx-auto">
+                <!--                TODO: qdd detqils-->
                 <th class="col-md-1 text-center" th:text="${iter.index + 1}"></th>
                 <td class="col-md-3 text-center" th:text="${contact.title}"></td>
                 <td class="col-md-6 text-center" th:text="${contact.description}"></td>
