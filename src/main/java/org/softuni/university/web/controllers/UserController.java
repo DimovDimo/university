@@ -53,7 +53,7 @@ public class UserController extends BaseController {
             @ModelAttribute(name = "model") UserRegisterBindingModel model
     ) {
         modelAndView.addObject("model", model);
-        return super.view("register", modelAndView);
+        return super.view("user/register", modelAndView);
     }
 
     @PostMapping("/register")
@@ -64,7 +64,7 @@ public class UserController extends BaseController {
             BindingResult bindingResult
     ) throws Exception {
         if (bindingResultHasErrors(modelAndView, model, bindingResult)){
-            return super.view("register", modelAndView);
+            return super.view("user/register", modelAndView);
         }
 
         UserServiceModel userServiceModel = this.modelMapper.map(model, UserServiceModel.class);
@@ -77,7 +77,7 @@ public class UserController extends BaseController {
     @PreAuthorize("isAnonymous()")
     @PageTitle("Login")
     public ModelAndView login() {
-        return super.view("login");
+        return super.view("user/login");
     }
 
     @GetMapping("/profile")
@@ -88,7 +88,7 @@ public class UserController extends BaseController {
         UserProfileViewModel model = this.modelMapper.map(userServiceModel, UserProfileViewModel.class);
         modelAndView.addObject("model", model);
 
-        return super.view("profile", modelAndView);
+        return super.view("user/profile", modelAndView);
     }
 
     @GetMapping("/edit")
@@ -104,14 +104,14 @@ public class UserController extends BaseController {
         model.setPassword(null);
         modelAndView.addObject("model", model);
 
-        return super.view("edit-profile", modelAndView);
+        return super.view("user/edit-profile", modelAndView);
     }
 
     @PatchMapping("/edit")
     @PreAuthorize("isAuthenticated()")
     public ModelAndView editProfileConfirm(ModelAndView modelAndView, @ModelAttribute(name = "model") UserEditBindingModel model, BindingResult bindingResult) {
         if (editValidator(modelAndView, model, bindingResult)){
-            return super.view("edit-profile", modelAndView);
+            return super.view("user/edit-profile", modelAndView);
         }
 
         UserServiceModel userServiceModel = this.modelMapper.map(model, UserServiceModel.class);
@@ -127,7 +127,7 @@ public class UserController extends BaseController {
         List<UserAllViewModel> users = findAllUsers();
         modelAndView.addObject("users", users);
 
-        return super.view("all-users", modelAndView);
+        return super.view("user/all-users", modelAndView);
     }
 
     @PostMapping("/set-student/{id}")
