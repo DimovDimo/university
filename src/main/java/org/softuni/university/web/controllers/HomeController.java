@@ -35,8 +35,16 @@ public class HomeController extends BaseController {
     @PreAuthorize("isAuthenticated()")
     @PageTitle("Home")
     public ModelAndView home(ModelAndView modelAndView) {
-        modelAndView.addObject("modules", this.moduleService.findAllModules().stream().map(module -> this.modelMapper.map(module, ModuleViewModel.class)).collect(Collectors.toList()));
+        addModules(modelAndView);
 
         return super.view("home", modelAndView);
+    }
+
+    private void addModules(ModelAndView modelAndView) {
+        modelAndView.addObject("modules",
+                this.moduleService.findAllModules()
+                        .stream()
+                        .map(module -> this.modelMapper.map(module, ModuleViewModel.class)
+                ).collect(Collectors.toList()));
     }
 }
