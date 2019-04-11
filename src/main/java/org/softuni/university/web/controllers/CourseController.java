@@ -70,7 +70,7 @@ public class CourseController extends BaseController {
     @PreAuthorize("isAuthenticated()")
     @PageTitle("Details course")
     public ModelAndView detailsCourse(@PathVariable String id, ModelAndView modelAndView) {
-        modelAndView.addObject("course", this.modelMapper.map(this.courseService.findCourseById(id), CourseDetailsViewModel.class));
+        findCourseDetailsById(id, modelAndView);
 
         return super.view("course/details-course", modelAndView);
     }
@@ -207,5 +207,15 @@ public class CourseController extends BaseController {
                         .filter(c -> model.getModules().contains(c.getId()))
                         .collect(Collectors.toList())
         );
+    }
+
+
+
+    private void findCourseDetailsById(@PathVariable String id, ModelAndView modelAndView) {
+        modelAndView.addObject("course",
+                this.modelMapper.map(
+                        this.courseService.findCourseById(id),
+                        CourseDetailsViewModel.class
+                ));
     }
 }
