@@ -1,10 +1,10 @@
 package org.softuni.university.web.controllers;
 
 import org.modelmapper.ModelMapper;
-import org.softuni.university.domain.models.binding.CampAddBindingModel;
-import org.softuni.university.domain.models.service.CampServiceModel;
-import org.softuni.university.domain.models.view.CampAllViewModel;
-import org.softuni.university.service.CampService;
+import org.softuni.university.domain.models.binding.PollAddBindingModel;
+import org.softuni.university.domain.models.service.PollServiceModel;
+import org.softuni.university.domain.models.view.PollAllViewModel;
+import org.softuni.university.service.PollService;
 import org.softuni.university.web.annotations.PageTitle;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
@@ -19,50 +19,50 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.stream.Collectors;
 
 @Controller
-@RequestMapping("/camp")
-public class CampController extends BaseController {
-    private final CampService campService;
+@RequestMapping("/poll")
+public class PollController extends BaseController {
+    private final PollService pollService;
     private final ModelMapper mapper;
 
-    public CampController(CampService campService, ModelMapper mapper) {
-        this.campService = campService;
+    public PollController(PollService pollService, ModelMapper mapper) {
+        this.pollService = pollService;
         this.mapper = mapper;
     }
 
     @GetMapping("/add")
     @PreAuthorize("isAuthenticated()")
-    @PageTitle("Add camp")
-    public ModelAndView addCamp() {
-        return super.view("camp/add-camp");
+    @PageTitle("Add poll")
+    public ModelAndView addPoll() {
+        return super.view("poll/add-poll");
     }
 
     @PostMapping("/add")
     @PreAuthorize("isAuthenticated()")
-    @PageTitle("Тhanks for your camp")
-    public ModelAndView addCampConfirm(@ModelAttribute CampAddBindingModel model) throws Exception {
-        CampServiceModel campServiceModel = this.mapper.map(model, CampServiceModel.class);
+    @PageTitle("Тhanks for your poll")
+    public ModelAndView addPollConfirm(@ModelAttribute PollAddBindingModel model) throws Exception {
+        PollServiceModel pollServiceModel = this.mapper.map(model, PollServiceModel.class);
 //        createContact(contactServiceModel);//TODO
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String name = auth.getName();
 
-        campService.createCamp(campServiceModel, name);
+        pollService.createPoll(pollServiceModel, name);
 
-        return super.view("camp/thanks-camp");
+        return super.view("poll/thanks-poll");
     }
 
     @GetMapping("/all")
     @PreAuthorize("hasRole('ROLE_PUBLIC_RELATIONS')")
-    @PageTitle("All camps")
-    public ModelAndView allCamps(ModelAndView modelAndView) {
-        findAllCamps(modelAndView);
+    @PageTitle("All polls")
+    public ModelAndView allPolls(ModelAndView modelAndView) {
+        findAllPolls(modelAndView);
 
-        return super.view("camp/all-camps", modelAndView);
+        return super.view("poll/all-polls", modelAndView);
     }
 
-    private void findAllCamps(ModelAndView modelAndView) {
-        modelAndView.addObject("camps", this.campService.findAllCamps()
+    private void findAllPolls(ModelAndView modelAndView) {
+        modelAndView.addObject("polls", this.pollService.findAllPolls()
                 .stream()
-                .map(campServiceModel -> this.mapper.map(campServiceModel, CampAllViewModel.class))
+                .map(pollServiceModel -> this.mapper.map(pollServiceModel, PollAllViewModel.class))
                 .collect(Collectors.toList()));
     }
 
@@ -71,7 +71,7 @@ public class CampController extends BaseController {
 //        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 //        String name = auth.getName();
 //
-//        this.campService.createContact(
+//        this.pollService.createContact(
 //                contactServiceModel.getTitle(),
 //                contactServiceModel.getDescription(),
 //                name

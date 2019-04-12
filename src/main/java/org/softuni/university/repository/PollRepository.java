@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface WenketeRepository extends JpaRepository<Poll, String> {
+public interface PollRepository extends JpaRepository<Poll, String> {
     List<Poll> findAllByUser_Username(String username);
 }

@@ -2,6 +2,6 @@ package org.softuni.university.validation.service;
 
 import org.softuni.university.domain.entities.Poll;
 
-public interface WenketeValidationService {
+public interface PollValidationService {
     boolean isValid(Poll poll);
 }
