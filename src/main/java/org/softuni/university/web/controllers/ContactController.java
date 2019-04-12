@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.softuni.university.domain.models.binding.ContactAddBindingModel;
 import org.softuni.university.domain.models.service.ContactServiceModel;
 import org.softuni.university.domain.models.view.ContactAllViewModel;
+import org.softuni.university.domain.models.view.ContactViewModel;
 import org.softuni.university.service.ContactService;
 import org.softuni.university.web.annotations.PageTitle;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -52,6 +53,23 @@ public class ContactController extends BaseController {
         findAllContacts(modelAndView);
 
         return super.view("contact/all-contacts", modelAndView);
+    }
+
+    @GetMapping("/details/{id}")
+    @PreAuthorize("hasRole('ROLE_PUBLIC_RELATIONS')")
+    @PageTitle("Details contact")
+    public ModelAndView detailsContact(@PathVariable String id, ModelAndView modelAndView) {
+        findContactDetailsById(id, modelAndView);
+
+        return super.view("contact/details-contact", modelAndView);
+    }
+
+    private void findContactDetailsById(@PathVariable String id, ModelAndView modelAndView) {
+        modelAndView.addObject("contact",
+                this.mapper.map(
+                        this.contactService.findContactById(id),
+                        ContactViewModel.class
+                ));
     }
 
     private void findAllContacts(ModelAndView modelAndView) {

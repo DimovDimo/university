@@ -3,6 +3,7 @@ package org.softuni.university.domain.models.view;
 import java.math.BigDecimal;
 
 public class ContactViewModel {
+    private String id;
     private String title;
     private String description;
     private String phone;
@@ -11,6 +12,14 @@ public class ContactViewModel {
     private String skype;
     private String website;
     private String student;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;

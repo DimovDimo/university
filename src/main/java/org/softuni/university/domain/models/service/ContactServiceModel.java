@@ -5,6 +5,7 @@ import org.softuni.university.domain.entities.Contact;
 import org.softuni.university.mappings.IHaveCustomMappings;
 
 public class ContactServiceModel implements IHaveCustomMappings {
+    private String id;
     private String title;
     private String description;
     private String phone;
@@ -13,6 +14,14 @@ public class ContactServiceModel implements IHaveCustomMappings {
     private String skype;
     private String website;
     private String student;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;

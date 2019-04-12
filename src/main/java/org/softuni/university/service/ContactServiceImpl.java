@@ -5,6 +5,7 @@ import org.softuni.university.domain.entities.Contact;
 import org.softuni.university.domain.entities.User;
 import org.softuni.university.domain.models.service.ContactServiceModel;
 import org.softuni.university.domain.models.service.UserServiceModel;
+import org.softuni.university.error.ContactNotFoundException;
 import org.softuni.university.repository.ContactRepository;
 import org.softuni.university.validation.service.UserValidationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,5 +51,12 @@ public class ContactServiceImpl implements ContactService {
                 .stream()
                 .map(contact -> mapper.map(contact, ContactServiceModel.class))
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public ContactServiceModel findContactById(String id) {
+        return this.contactRepository.findById(id)
+                .map(course -> this.mapper.map(course, ContactServiceModel.class))
+                .orElseThrow(() -> new ContactNotFoundException("ContactNotFoundException with the given id was not found!"));
     }
 }

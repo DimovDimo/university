@@ -10,4 +10,6 @@ public interface ContactService {
     void createContact(ContactServiceModel contactServiceModel, String name) throws Exception;
 
     List<ContactServiceModel> findAllContacts();
+
+    ContactServiceModel findContactById(String id);
 }
