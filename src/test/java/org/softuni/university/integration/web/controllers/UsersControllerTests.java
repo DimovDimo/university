@@ -10,6 +10,7 @@ import org.springframework.boot.jdbc.EmbeddedDatabaseConnection;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -173,5 +174,27 @@ public class UsersControllerTests {
                 .andExpect(view().name("user/register"));
     }
 
-    // TODO
+    @Test
+    @WithMockUser
+    public void profile_whenGetIsNotAuthenticated_returnsErrorView() throws Exception {
+        this.mockMvc
+                .perform(get("/users/profile"))
+                .andExpect(view().name("error"));
+    }
+
+    @Test
+    @WithMockUser
+    public void edit_whenGetIsNotAuthenticated_returnsErrorView() throws Exception {
+        this.mockMvc
+                .perform(get("/users/edit"))
+                .andExpect(view().name("error"));
+    }
+
+    @Test
+    @WithMockUser
+    public void all_whenGetIsNotAuthenticated_returnsErrorView() throws Exception {
+        this.mockMvc
+                .perform(get("/users/all"))
+                .andExpect(view().name("error"));
+    }
 }
