@@ -4,11 +4,11 @@ public class ContactAddBindingModel {
 
     private String title;
     private String description;
-    private String telefon;
-    private String postenskiKod;
-    private String qdres;
+    private String phone;
+    private String zipCode;
+    private String address;
     private String skype;
-    private String site;
+    private String website;
 
     public ContactAddBindingModel() {
     }
@@ -29,28 +29,28 @@ public class ContactAddBindingModel {
         this.description = description;
     }
 
-    public String getTelefon() {
-        return telefon;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setTelefon(String telefon) {
-        this.telefon = telefon;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getPostenskiKod() {
-        return postenskiKod;
+    public String getZipCode() {
+        return zipCode;
     }
 
-    public void setPostenskiKod(String postenskiKod) {
-        this.postenskiKod = postenskiKod;
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 
-    public String getQdres() {
-        return qdres;
+    public String getAddress() {
+        return address;
     }
 
-    public void setQdres(String qdres) {
-        this.qdres = qdres;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getSkype() {
@@ -61,11 +61,11 @@ public class ContactAddBindingModel {
         this.skype = skype;
     }
 
-    public String getSite() {
-        return site;
+    public String getWebsite() {
+        return website;
     }
 
-    public void setSite(String site) {
-        this.site = site;
+    public void setWebsite(String website) {
+        this.website = website;
     }
 }

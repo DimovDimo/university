@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "wenketes")
-public class Wenkete extends BaseEntity {
+public class Poll extends BaseEntity {
     private String hqreswqne;
     private String neHqreswqne;
     private String nqjLesno;
@@ -19,7 +19,7 @@ public class Wenkete extends BaseEntity {
 
     User user;
 
-    public Wenkete() {
+    public Poll() {
     }
 
     @Column(name = "hqreswqne",nullable = true, unique = false, updatable = false)

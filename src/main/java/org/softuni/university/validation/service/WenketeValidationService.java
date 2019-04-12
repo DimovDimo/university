@@ -1,7 +1,7 @@
 package org.softuni.university.validation.service;
 
-import org.softuni.university.domain.entities.Wenkete;
+import org.softuni.university.domain.entities.Poll;
 
 public interface WenketeValidationService {
-    boolean isValid(Wenkete wenkete);
+    boolean isValid(Poll poll);
 }

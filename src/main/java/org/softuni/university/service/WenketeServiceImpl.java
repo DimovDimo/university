@@ -1,8 +1,8 @@
 package org.softuni.university.service;
 
 import org.modelmapper.ModelMapper;
+import org.softuni.university.domain.entities.Poll;
 import org.softuni.university.domain.entities.User;
-import org.softuni.university.domain.entities.Wenkete;
 import org.softuni.university.domain.models.service.UserServiceModel;
 import org.softuni.university.domain.models.service.WenketeServiceModel;
 import org.softuni.university.repository.WenketeRepository;
@@ -43,10 +43,10 @@ public class WenketeServiceImpl implements WenketeService {
 
         User user = new User();
         user.setId(userModel.getId());
-        Wenkete wenkete = this.mapper.map(wenketeServiceModel, Wenkete.class);
-        wenkete.setUser(user);
+        Poll poll = this.mapper.map(wenketeServiceModel, Poll.class);
+        poll.setUser(user);
 
-        this.wenketeRepository.save(wenkete);
+        this.wenketeRepository.save(poll);
     }
 
     @Override

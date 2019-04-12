@@ -10,12 +10,11 @@ import javax.persistence.Table;
 public class Contact extends BaseEntity {
     private String title;
     private String description;
-    private String telefon;
-    private String postenskiKod;
-    private String qdres;
+    private String phone;
+    private String zipCode;
+    private String address;
     private String skype;
-    private String site;
-
+    private String website;
     User user;
 
     public Contact() {
@@ -39,34 +38,34 @@ public class Contact extends BaseEntity {
         this.description = description;
     }
 
-    @Column(name = "telefon",nullable = true, unique = false, updatable = false)
-    public String getTelefon() {
-        return telefon;
+    @Column(name = "contact_phone",nullable = true, unique = false, updatable = false)
+    public String getPhone() {
+        return phone;
     }
 
-    public void setTelefon(String telefon) {
-        this.telefon = telefon;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    @Column(name = "postenskiKod",nullable = true, unique = false, updatable = false)
-    public String getPostenskiKod() {
-        return postenskiKod;
+    @Column(name = "contact_zip_code",nullable = true, unique = false, updatable = false)
+    public String getZipCode() {
+        return zipCode;
     }
 
-    public void setPostenskiKod(String postenskiKod) {
-        this.postenskiKod = postenskiKod;
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 
-    @Column(name = "qdres",nullable = true, unique = false, updatable = false)
-    public String getQdres() {
-        return qdres;
+    @Column(name = "contact_address",nullable = true, unique = false, updatable = false)
+    public String getAddress() {
+        return address;
     }
 
-    public void setQdres(String qdres) {
-        this.qdres = qdres;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    @Column(name = "skype",nullable = true, unique = false, updatable = false)
+    @Column(name = "contact_skype",nullable = true, unique = false, updatable = false)
     public String getSkype() {
         return skype;
     }
@@ -75,13 +74,13 @@ public class Contact extends BaseEntity {
         this.skype = skype;
     }
 
-    @Column(name = "site",nullable = true, unique = false, updatable = false)
-    public String getSite() {
-        return site;
+    @Column(name = "contact_website",nullable = true, unique = false, updatable = false)
+    public String getWebsite() {
+        return website;
     }
 
-    public void setSite(String site) {
-        this.site = site;
+    public void setWebsite(String website) {
+        this.website = website;
     }
 
     @ManyToOne(targetEntity = User.class)

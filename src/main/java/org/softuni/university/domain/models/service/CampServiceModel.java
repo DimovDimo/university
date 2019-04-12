@@ -2,7 +2,6 @@ package org.softuni.university.domain.models.service;
 
 import org.modelmapper.ModelMapper;
 import org.softuni.university.domain.entities.Camp;
-import org.softuni.university.domain.entities.Wenkete;
 import org.softuni.university.mappings.IHaveCustomMappings;
 
 public class CampServiceModel implements IHaveCustomMappings {

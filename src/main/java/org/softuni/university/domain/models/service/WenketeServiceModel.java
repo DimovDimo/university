@@ -1,7 +1,7 @@
 package org.softuni.university.domain.models.service;
 
 import org.modelmapper.ModelMapper;
-import org.softuni.university.domain.entities.Wenkete;
+import org.softuni.university.domain.entities.Poll;
 import org.softuni.university.mappings.IHaveCustomMappings;
 
 public class WenketeServiceModel implements IHaveCustomMappings {
@@ -90,7 +90,7 @@ public class WenketeServiceModel implements IHaveCustomMappings {
 
     @Override
     public void configureMappings(ModelMapper mapper) {
-        mapper.createTypeMap(Wenkete.class, WenketeServiceModel.class)
+        mapper.createTypeMap(Poll.class, WenketeServiceModel.class)
                 .addMapping(
                         wenkete -> wenkete.getUser().getUsername(),
                         (dto, value) -> dto.setStudent((String) value)
