@@ -5,6 +5,7 @@ import org.softuni.university.domain.entities.Camp;
 import org.softuni.university.domain.entities.User;
 import org.softuni.university.domain.models.service.CampServiceModel;
 import org.softuni.university.domain.models.service.UserServiceModel;
+import org.softuni.university.error.CampNotFoundException;
 import org.softuni.university.repository.CampRepository;
 import org.softuni.university.validation.service.UserValidationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,5 +56,12 @@ public class CampServiceImpl implements CampService {
                 .stream()
                 .map(contact -> mapper.map(contact, CampServiceModel.class))
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public CampServiceModel findCampById(String id) {
+        return this.campRepository.findById(id)
+                .map(course -> this.mapper.map(course, CampServiceModel.class))
+                .orElseThrow(() -> new CampNotFoundException("CampNotFoundException with the given id was not found!"));
     }
 }

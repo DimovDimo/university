@@ -5,6 +5,7 @@ import org.softuni.university.domain.entities.Camp;
 import org.softuni.university.mappings.IHaveCustomMappings;
 
 public class CampServiceModel implements IHaveCustomMappings {
+    private String id;
     private int nights;
     private int beds;
     private int parkingLots;
@@ -16,6 +17,14 @@ public class CampServiceModel implements IHaveCustomMappings {
     private String teamGame;
     private String whatDontYouWantHave;
     private String student;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public int getNights() {
         return nights;

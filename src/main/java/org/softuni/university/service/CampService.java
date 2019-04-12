@@ -9,4 +9,6 @@ public interface CampService {
     void createCamp(CampServiceModel campServiceModel, String name) throws Exception;
 
     List<CampServiceModel> findAllCamps();
+
+    CampServiceModel findCampById(String id);
 }

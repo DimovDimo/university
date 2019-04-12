@@ -10,10 +10,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.stream.Collectors;
@@ -41,7 +38,6 @@ public class CampController extends BaseController {
     @PageTitle("Тhanks for your camp")
     public ModelAndView addCampConfirm(@ModelAttribute CampAddBindingModel model) throws Exception {
         CampServiceModel campServiceModel = this.mapper.map(model, CampServiceModel.class);
-//        createContact(contactServiceModel);//TODO
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String name = auth.getName();
 
@@ -59,22 +55,27 @@ public class CampController extends BaseController {
         return super.view("camp/all-camps", modelAndView);
     }
 
+    @GetMapping("/details/{id}")
+    @PreAuthorize("hasRole('ROLE_PUBLIC_RELATIONS')")
+    @PageTitle("Details camp")
+    public ModelAndView detailsCamp(@PathVariable String id, ModelAndView modelAndView) {
+        findCampDetailsById(id, modelAndView);
+
+        return super.view("camp/details-camp", modelAndView);
+    }
+
+    private void findCampDetailsById(@PathVariable String id, ModelAndView modelAndView) {
+        modelAndView.addObject("camp",
+                this.mapper.map(
+                        this.campService.findCampById(id),
+                        CampAllViewModel.class
+                ));
+    }
+
     private void findAllCamps(ModelAndView modelAndView) {
         modelAndView.addObject("camps", this.campService.findAllCamps()
                 .stream()
                 .map(campServiceModel -> this.mapper.map(campServiceModel, CampAllViewModel.class))
                 .collect(Collectors.toList()));
     }
-
-    //TODO : remove
-//    private void createContact(ContactServiceModel contactServiceModel) throws Exception {
-//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-//        String name = auth.getName();
-//
-//        this.campService.createContact(
-//                contactServiceModel.getTitle(),
-//                contactServiceModel.getDescription(),
-//                name
-//        );
-//    }
 }
