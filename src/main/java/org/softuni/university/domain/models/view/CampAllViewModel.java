@@ -3,16 +3,16 @@ package org.softuni.university.domain.models.view;
 public class CampAllViewModel {
 
     private String id;
-    private int nostuwki;
-    private int leglq;
-    private int pqrkoMestq;
-    private String zelqniNqpitki;
-    private String zelqniSpeciqlniqstiq;
-    private String zelqnqMuzikq;
-    private String zelqnTuristiceskoObektWokolnosttq;
-    private String predlovenieZqOtbornqIgrq;
-    private String ocqwqniWpecqtleniq;
-    private String kqkwoNeIskqteDqImq;
+    private int nights;
+    private int beds;
+    private int parkingLots;
+    private String place;
+    private String drinks;
+    private String dishes;
+    private String music;
+    private String touristSitesInTheVicinity;
+    private String teamGame;
+    private String whatDontYouWantHave;
     private String student;
 
     public CampAllViewModel() {
@@ -26,84 +26,84 @@ public class CampAllViewModel {
         this.id = id;
     }
 
-    public int getNostuwki() {
-        return nostuwki;
+    public int getNights() {
+        return nights;
     }
 
-    public void setNostuwki(int nostuwki) {
-        this.nostuwki = nostuwki;
+    public void setNights(int nights) {
+        this.nights = nights;
     }
 
-    public int getLeglq() {
-        return leglq;
+    public int getBeds() {
+        return beds;
     }
 
-    public void setLeglq(int leglq) {
-        this.leglq = leglq;
+    public void setBeds(int beds) {
+        this.beds = beds;
     }
 
-    public int getPqrkoMestq() {
-        return pqrkoMestq;
+    public int getParkingLots() {
+        return parkingLots;
     }
 
-    public void setPqrkoMestq(int pqrkoMestq) {
-        this.pqrkoMestq = pqrkoMestq;
+    public void setParkingLots(int parkingLots) {
+        this.parkingLots = parkingLots;
     }
 
-    public String getZelqniNqpitki() {
-        return zelqniNqpitki;
+    public String getPlace() {
+        return place;
     }
 
-    public void setZelqniNqpitki(String zelqniNqpitki) {
-        this.zelqniNqpitki = zelqniNqpitki;
+    public void setPlace(String place) {
+        this.place = place;
     }
 
-    public String getZelqniSpeciqlniqstiq() {
-        return zelqniSpeciqlniqstiq;
+    public String getDrinks() {
+        return drinks;
     }
 
-    public void setZelqniSpeciqlniqstiq(String zelqniSpeciqlniqstiq) {
-        this.zelqniSpeciqlniqstiq = zelqniSpeciqlniqstiq;
+    public void setDrinks(String drinks) {
+        this.drinks = drinks;
     }
 
-    public String getZelqnqMuzikq() {
-        return zelqnqMuzikq;
+    public String getDishes() {
+        return dishes;
     }
 
-    public void setZelqnqMuzikq(String zelqnqMuzikq) {
-        this.zelqnqMuzikq = zelqnqMuzikq;
+    public void setDishes(String dishes) {
+        this.dishes = dishes;
     }
 
-    public String getZelqnTuristiceskoObektWokolnosttq() {
-        return zelqnTuristiceskoObektWokolnosttq;
+    public String getMusic() {
+        return music;
     }
 
-    public void setZelqnTuristiceskoObektWokolnosttq(String zelqnTuristiceskoObektWokolnosttq) {
-        this.zelqnTuristiceskoObektWokolnosttq = zelqnTuristiceskoObektWokolnosttq;
+    public void setMusic(String music) {
+        this.music = music;
     }
 
-    public String getPredlovenieZqOtbornqIgrq() {
-        return predlovenieZqOtbornqIgrq;
+    public String getTouristSitesInTheVicinity() {
+        return touristSitesInTheVicinity;
     }
 
-    public void setPredlovenieZqOtbornqIgrq(String predlovenieZqOtbornqIgrq) {
-        this.predlovenieZqOtbornqIgrq = predlovenieZqOtbornqIgrq;
+    public void setTouristSitesInTheVicinity(String touristSitesInTheVicinity) {
+        this.touristSitesInTheVicinity = touristSitesInTheVicinity;
     }
 
-    public String getOcqwqniWpecqtleniq() {
-        return ocqwqniWpecqtleniq;
+    public String getTeamGame() {
+        return teamGame;
     }
 
-    public void setOcqwqniWpecqtleniq(String ocqwqniWpecqtleniq) {
-        this.ocqwqniWpecqtleniq = ocqwqniWpecqtleniq;
+    public void setTeamGame(String teamGame) {
+        this.teamGame = teamGame;
     }
 
-    public String getKqkwoNeIskqteDqImq() {
-        return kqkwoNeIskqteDqImq;
+    public String getWhatDontYouWantHave() {
+        return whatDontYouWantHave;
     }
 
-    public void setKqkwoNeIskqteDqImq(String kqkwoNeIskqteDqImq) {
-        this.kqkwoNeIskqteDqImq = kqkwoNeIskqteDqImq;
+    public void setWhatDontYouWantHave(String whatDontYouWantHave) {
+        this.whatDontYouWantHave = whatDontYouWantHave;
     }
 
     public String getStudent() {

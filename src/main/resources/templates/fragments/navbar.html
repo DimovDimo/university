@@ -67,7 +67,7 @@
                                 <div class="dropdown-menu" aria-labelledby="publicRelationsDropdown">
                                     <a class="dropdown-item" th:href="@{/contact/all}">📢 All Contacts</a>
                                     <a class="dropdown-item" th:href="@{/poll/all}">📰 All Polls</a>
-                                    <a class="dropdown-item" th:href="@{/camp/all}">All camps??</a>
+                                    <a class="dropdown-item" th:href="@{/camp/all}">🏞️ All camp opinions</a>
                                     <a class="dropdown-item" th:href="@{/enjoy/all}">😸 All student-enjoy relations</a>
                                 </div>
                             </div>
@@ -107,17 +107,21 @@
                         </li>
                     </th:block>
 
-                    <li class="nav-item active">
-                        <a class="nav-link" th:href="@{/contact/add}">📇 Contact us</a>
-                    </li>
-
-                    <li class="nav-item active">
-                        <a class="nav-link" th:href="@{/poll/add}">🗳️ Poll</a>
-                    </li>
-
-                    <li class="nav-item active">
-                        <a class="nav-link" th:href="@{/camp/add}">camp??</a>
-                    </li>
+                    <th:block sec:authorize="hasRole('ROLE_STUDENT')">
+                        <li class="nav-item active">
+                            <div class="dropdown">
+                                <a class="nav-link active dropdown-toggle" href="#" role="button" id="questionsDropdown"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Questions
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="questionsDropdown">
+                                    <a class="dropdown-item" th:href="@{/contact/add}">📇 Contact us</a>
+                                    <a class="dropdown-item" th:href="@{/poll/add}">🗳️ Poll</a>
+                                    <a class="dropdown-item" th:href="@{/camp/add}">🏕️ Camp</a>
+                                </div>
+                            </div>
+                        </li>
+                    </th:block>
 
                     <li class="nav-item active">
                         <form action="/logout?login" method="post"><input type="hidden" name="_csrf"
