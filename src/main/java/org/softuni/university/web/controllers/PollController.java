@@ -10,10 +10,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.stream.Collectors;
@@ -41,7 +38,6 @@ public class PollController extends BaseController {
     @PageTitle("Тhanks for your poll")
     public ModelAndView addPollConfirm(@ModelAttribute PollAddBindingModel model) throws Exception {
         PollServiceModel pollServiceModel = this.mapper.map(model, PollServiceModel.class);
-//        createContact(contactServiceModel);//TODO
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String name = auth.getName();
 
@@ -59,22 +55,27 @@ public class PollController extends BaseController {
         return super.view("poll/all-polls", modelAndView);
     }
 
+    @GetMapping("/details/{id}")
+    @PreAuthorize("hasRole('ROLE_PUBLIC_RELATIONS')")
+    @PageTitle("Details poll")
+    public ModelAndView detailsPoll(@PathVariable String id, ModelAndView modelAndView) {
+        findPollDetailsById(id, modelAndView);
+
+        return super.view("poll/details-poll", modelAndView);
+    }
+
+    private void findPollDetailsById(@PathVariable String id, ModelAndView modelAndView) {
+        modelAndView.addObject("poll",
+                this.mapper.map(
+                        this.pollService.findPollById(id),
+                        PollAllViewModel.class
+                ));
+    }
+
     private void findAllPolls(ModelAndView modelAndView) {
         modelAndView.addObject("polls", this.pollService.findAllPolls()
                 .stream()
                 .map(pollServiceModel -> this.mapper.map(pollServiceModel, PollAllViewModel.class))
                 .collect(Collectors.toList()));
     }
-
-    //TODO : remove
-//    private void createContact(ContactServiceModel contactServiceModel) throws Exception {
-//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-//        String name = auth.getName();
-//
-//        this.pollService.createContact(
-//                contactServiceModel.getTitle(),
-//                contactServiceModel.getDescription(),
-//                name
-//        );
-//    }
 }

@@ -9,4 +9,6 @@ public interface PollService {
     void createPoll(PollServiceModel pollServiceModel, String name) throws Exception;
 
     List<PollServiceModel> findAllPolls();
+
+    PollServiceModel findPollById(String id);
 }

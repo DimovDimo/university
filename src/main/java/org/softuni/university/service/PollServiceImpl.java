@@ -5,6 +5,7 @@ import org.softuni.university.domain.entities.Poll;
 import org.softuni.university.domain.entities.User;
 import org.softuni.university.domain.models.service.UserServiceModel;
 import org.softuni.university.domain.models.service.PollServiceModel;
+import org.softuni.university.error.PollNotFoundException;
 import org.softuni.university.repository.PollRepository;
 import org.softuni.university.validation.service.UserValidationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,5 +56,12 @@ public class PollServiceImpl implements PollService {
                 .stream()
                 .map(contact -> mapper.map(contact, PollServiceModel.class))
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public PollServiceModel findPollById(String id) {
+        return this.pollRepository.findById(id)
+                .map(course -> this.mapper.map(course, PollServiceModel.class))
+                .orElseThrow(() -> new PollNotFoundException("PollNotFoundException with the given id was not found!"));
     }
 }

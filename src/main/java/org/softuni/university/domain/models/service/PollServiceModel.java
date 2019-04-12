@@ -5,6 +5,7 @@ import org.softuni.university.domain.entities.Poll;
 import org.softuni.university.mappings.IHaveCustomMappings;
 
 public class PollServiceModel implements IHaveCustomMappings {
+    private String id;
     private String liking;
     private String notLiking;
     private String easiest;
@@ -14,6 +15,14 @@ public class PollServiceModel implements IHaveCustomMappings {
     private String yourWork;
     private String whatEmployersAreLookingFor;
     private String student;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getLiking() {
         return liking;
