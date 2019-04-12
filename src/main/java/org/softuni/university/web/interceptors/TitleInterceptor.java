@@ -29,13 +29,4 @@ public class TitleInterceptor extends HandlerInterceptorAdapter {
             }
         }
     }
-
-    private String getTitle(ModelAndView modelAndView) {
-        String title = modelAndView.getViewName();
-        title = title.substring(0, 1).toUpperCase() + title.substring(1);
-        title = title.replace("-", " ");
-        title = title.replace("/", " ");
-
-        return title;
-    }
 }

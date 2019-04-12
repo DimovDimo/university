@@ -9,8 +9,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.multipart.MultipartFile;
 
-import static org.springframework.test.util.AssertionErrors.assertEquals;
-
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public class CloudinaryServiceTests {

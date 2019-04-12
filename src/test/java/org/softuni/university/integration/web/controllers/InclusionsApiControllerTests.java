@@ -6,7 +6,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.softuni.university.domain.entities.Inclusion;
 import org.softuni.university.domain.models.rest.CourseInclusionRequestModel;
-import org.softuni.university.domain.models.view.InclusionViewModel;
 import org.softuni.university.repository.InclusionRepository;
 import org.softuni.university.service.InclusionService;
 import org.softuni.university.web.controllers.InclusionsApiController;
@@ -16,7 +15,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;
 import java.util.ArrayList;
@@ -25,7 +23,6 @@ import java.util.List;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.util.AssertionErrors.assertEquals;
-import static org.springframework.test.util.AssertionErrors.assertTrue;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)

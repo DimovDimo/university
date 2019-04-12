@@ -11,11 +11,9 @@ import org.softuni.university.validation.user.UserEditValidator;
 import org.softuni.university.validation.user.UserRegisterValidator;
 import org.softuni.university.web.annotations.PageTitle;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -162,11 +160,6 @@ public class UserController extends BaseController {
         return super.redirect("/users/all");
     }
 
-    @InitBinder
-    private void initBinder(WebDataBinder webDataBinder) {
-        webDataBinder.registerCustomEditor(String.class, new StringTrimmerEditor(true));
-    }
-
     private List<UserAllViewModel> findAllUsers() {
         return this.userService.findAllUsers()
                 .stream()
@@ -177,24 +170,6 @@ public class UserController extends BaseController {
                     return user;
                 })
                 .collect(Collectors.toList());
-    }
-
-    private void editProfileUserByUserName(Principal principal, ModelAndView modelAndView) {
-        modelAndView
-                .addObject("model",
-                        this.modelMapper.map(
-                                this.userService.findUserByUserName(principal.getName()),
-                                UserProfileViewModel.class)
-                );
-    }
-
-    private void findUserByUserName(Principal principal, ModelAndView modelAndView) {
-        modelAndView
-                .addObject("model",
-                        this.modelMapper.map(
-                                this.userService.findUserByUserName(principal.getName()),
-                                UserProfileViewModel.class)
-                );
     }
 
     private boolean bindingResultHasErrors(ModelAndView modelAndView, @ModelAttribute(name = "model") UserRegisterBindingModel model, BindingResult bindingResult) {

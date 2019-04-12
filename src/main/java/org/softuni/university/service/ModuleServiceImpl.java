@@ -8,7 +8,6 @@ import org.softuni.university.repository.ModuleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.xml.validation.Validator;
 import java.util.List;
 import java.util.stream.Collectors;
 

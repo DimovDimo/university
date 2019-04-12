@@ -42,6 +42,14 @@ public class UserRegisterValidator implements org.springframework.validation.Val
             );
         }
 
+        if (userRegisterBindingModel.getPassword().length() < 6 || userRegisterBindingModel.getPassword().length() > 20) {
+            errors.rejectValue(
+                    "username",
+                    ValidationConstants.PASSWORDS_LENGTH,
+                    ValidationConstants.PASSWORDS_LENGTH
+            );
+        }
+
         if (!userRegisterBindingModel.getPassword().equals(userRegisterBindingModel.getConfirmPassword())) {
             errors.rejectValue(
                     "password",

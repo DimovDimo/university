@@ -5,7 +5,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.softuni.university.domain.entities.Role;
 import org.softuni.university.domain.entities.User;
-import org.softuni.university.domain.models.service.CourseServiceModel;
 import org.softuni.university.domain.models.service.RoleServiceModel;
 import org.softuni.university.domain.models.service.UserServiceModel;
 import org.softuni.university.repository.UserRepository;
@@ -13,12 +12,10 @@ import org.softuni.university.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.*;
 
-import static java.util.Optional.*;
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertNull;
 import static org.mockito.ArgumentMatchers.any;

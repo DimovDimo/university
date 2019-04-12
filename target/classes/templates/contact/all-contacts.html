@@ -16,18 +16,21 @@
         <tr class="row mx-auto">
             <th class="col-md-1 text-center">#</th>
             <th class="col-md-3 text-center">Title</th>
-            <th class="col-md-6 text-center">Description</th>
+            <th class="col-md-3 text-center">Description</th>
             <th class="col-md-2 text-center">Student</th>
+            <th class="col-md-3 text-center">Actions</th>
         </tr>
         </thead>
         <tbody>
         <th:block th:each="contact, iter : ${contacts}">
             <tr class="row mx-auto">
-                <!--                TODO: qdd detqils-->
                 <th class="col-md-1 text-center" th:text="${iter.index + 1}"></th>
                 <td class="col-md-3 text-center" th:text="${contact.title}"></td>
-                <td class="col-md-6 text-center" th:text="${contact.description}"></td>
+                <td class="col-md-3 text-center" th:text="${contact.description}"></td>
                 <td class="col-md-2 text-center" th:text="${contact.student}"></td>
+                <td class="col-md-3 text-center">
+                    <a th:href="@{/contact/details/{id}(id=${contact.id})}" class="custom-css-button-root btn btn-info font-weight-bold text-white">Details</a>
+                </td>
             </tr>
         </th:block>
         </tbody>
