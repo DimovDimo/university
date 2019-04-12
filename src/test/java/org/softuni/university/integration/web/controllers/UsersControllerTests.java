@@ -38,28 +38,126 @@ public class UsersControllerTests {
     public void login_whenGet_returnsCorrectView() throws Exception {
         this.mockMvc
                 .perform(get("/users/login"))
-                .andExpect(view().name("login"));
+                .andExpect(view().name("user/login"));
     }
 
     @Test
     public void register_whenNoRegister_ReturnsCorrectView() throws Exception {
         this.mockMvc
                 .perform(get("/users/register"))
-                .andExpect(view().name("register"));
+                .andExpect(view().name("user/register"));
     }
 
     @Test
-    public void register_whenNoRegister_registerUserCorrectly() throws Exception {
+    public void register_whenNoRegister_RegisterUserCorrectly() throws Exception {
         this.mockMvc
                 .perform(
                         post("/users/register")
-                                .param("username", "pesho")
+                                .param("username", "username")
+                                .param("password", "password")
+                                .param("confirmPassword", "password")
+                                .param("email", "p@p.p")
+                );
+
+        Assert.assertEquals(1, this.userRepository.findAll().size());
+    }
+
+    @Test
+    public void register_whenNoRegisterInvalidUsernameShort_doNotRegisterUser() throws Exception {
+        this.mockMvc
+                .perform(
+                        post("/users/register")
+                                .param("username", "p")
                                 .param("password", "passwordPesho")
                                 .param("confirmPassword", "passwordPesho")
                                 .param("email", "p@p.p")
                 );
 
-        Assert.assertEquals(1, this.userRepository.count());
+        Assert.assertEquals(0, this.userRepository.findAll().size());
+    }
+
+    @Test
+    public void register_whenNoRegisterInvalidUsernameLon_doNotRegisterUser() throws Exception {
+        this.mockMvc
+                .perform(
+                        post("/users/register")
+                                .param("username", "pppppppppppppppppppppppppppppp")
+                                .param("password", "passwordPesho")
+                                .param("confirmPassword", "passwordPesho")
+                                .param("email", "p@p.p")
+                );
+
+        Assert.assertEquals(0, this.userRepository.findAll().size());
+    }
+
+    @Test
+    public void register_whenNoRegisterInvalidPasswordShort_doNotRegisterUser() throws Exception {
+        this.mockMvc
+                .perform(
+                        post("/users/register")
+                                .param("username", "username")
+                                .param("password", "p")
+                                .param("confirmPassword", "p")
+                                .param("email", "p@p.p")
+                );
+
+        Assert.assertEquals(0, this.userRepository.findAll().size());
+    }
+
+    @Test
+    public void register_whenNoRegisterInvalidPasswordLong_doNotRegisterUser() throws Exception {
+        this.mockMvc
+                .perform(
+                        post("/users/register")
+                                .param("username", "username")
+                                .param("password", "ppppppppppppppppppppppppppppppppppppppppppp")
+                                .param("confirmPassword", "ppppppppppppppppppppppppppppppppppppppppppp")
+                                .param("email", "p@p.p")
+                );
+
+        Assert.assertEquals(0, this.userRepository.findAll().size());
+    }
+
+    @Test
+    public void register_whenNoRegisterPasswordLong_doNotRegisterUser() throws Exception {
+        this.mockMvc
+                .perform(
+                        post("/users/register")
+                                .param("username", "username")
+                                .param("password", "ppppppppppppppppppppppppppppppppppppppppppp")
+                                .param("confirmPassword", "ppppppppppppppppppppppppppppppppppppppppppp")
+                                .param("email", "p@p.p")
+                );
+
+        Assert.assertEquals(0, this.userRepository.findAll().size());
+    }
+
+    @Test
+    public void register_whenNoRegisterDoNotConfirmPassword_doNotRegisterUser() throws Exception {
+        this.mockMvc
+                .perform(
+                        post("/users/register")
+                                .param("username", "username")
+                                .param("password", "password")
+                                .param("confirmPassword", "confirmPassword")
+                                .param("email", "p@p.p")
+                );
+
+        Assert.assertEquals(0, this.userRepository.findAll().size());
+    }
+
+    @Test
+    public void register_whenNoEmail_doNotRegisterUser() throws Exception {
+        this.mockMvc
+                .perform(
+                        post("/users/register")
+                                .param("username", "username")
+                                .param("password", "password")
+                                .param("confirmPassword", "confirmPassword")
+                                .param("email", "")
+                );
+
+        Assert.assertEquals(0, this.userRepository.findAll().size());
     }
 
     @Test
@@ -72,7 +170,7 @@ public class UsersControllerTests {
                                 .param("confirmPassword", "passwordPesho")
                                 .param("email", "p@p.p")
                 )
-                .andExpect(view().name("redirect:/login"));
+                .andExpect(view().name("user/register"));
     }
 
     // TODO
