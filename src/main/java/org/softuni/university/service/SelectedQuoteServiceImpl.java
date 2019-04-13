@@ -1,17 +1,11 @@
 package org.softuni.university.service;
 
 import org.modelmapper.ModelMapper;
-import org.softuni.university.domain.entities.Quote;
-import org.softuni.university.domain.entities.SelectedQuote;
-import org.softuni.university.domain.models.service.QuoteServiceModel;
 import org.softuni.university.domain.models.service.SelectedQuoteServiceModel;
-import org.softuni.university.error.QuoteNotFoundException;
 import org.softuni.university.repository.SelectedQuoteRepository;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Random;
 import java.util.stream.Collectors;
 
 @Service
