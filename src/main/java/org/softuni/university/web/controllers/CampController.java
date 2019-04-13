@@ -35,7 +35,7 @@ public class CampController extends BaseController {
 
     @PostMapping("/add")
     @PreAuthorize("isAuthenticated()")
-    @PageTitle("Тhanks for your camp")
+    @PageTitle("Тhanks for your opinion")
     public ModelAndView addCampConfirm(@ModelAttribute CampAddBindingModel model) throws Exception {
         CampServiceModel campServiceModel = this.mapper.map(model, CampServiceModel.class);
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();

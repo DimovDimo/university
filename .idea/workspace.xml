@@ -3,73 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="57dc514e-99c0-4ac3-a5a2-d097ec2f62a0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/ContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/ContactService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/ModuleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/ModuleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/ValidationConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/ValidationConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/user/UserRegisterValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/user/UserRegisterValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/ModuleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/ModuleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/web/interceptors/TitleInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/web/interceptors/TitleInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/camp/thanks-camp.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/camp/thanks-camp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contact/thanks-contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contact/thanks-contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/poll/thanks-poll.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/poll/thanks-poll.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/CloudinaryServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/CloudinaryServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/ModuleServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/ModuleServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/RoleServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/RoleServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/UserServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/services/UserServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/web/controllers/EnjoyControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/web/controllers/EnjoyControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/web/controllers/InclusionsApiControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/web/controllers/InclusionsApiControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/web/controllers/InclusionsControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/web/controllers/InclusionsControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/domain/entities/Camp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/domain/entities/Camp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/domain/entities/Wenkete.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/domain/models/binding/CampAddBindingModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/domain/models/binding/CampAddBindingModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/domain/models/binding/WenketeAddBindingModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/domain/models/service/CampServiceModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/domain/models/service/CampServiceModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/domain/models/service/ContactServiceModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/domain/models/service/ContactServiceModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/domain/models/service/WenketeServiceModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/domain/models/view/CampAllViewModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/domain/models/view/CampAllViewModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/domain/models/view/ContactViewModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/domain/models/view/ContactViewModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/domain/models/view/WenketeAllViewModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/repository/WenketeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/service/CampService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/service/CampService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/service/CampServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/service/CampServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/service/ContactService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/service/ContactService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/service/ContactServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/service/ContactServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/service/WenketeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/service/WenketeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/ValidationConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/ValidationConstants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/service/WenketeValidationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/service/WenketeValidationServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/user/UserRegisterValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/validation/user/UserRegisterValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/web/controllers/CampController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/web/controllers/CampController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/web/controllers/ContactController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/web/controllers/ContactController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/CampController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/CampController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/service/InclusionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/service/InclusionServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/service/ModuleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/service/ModuleServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/web/controllers/ModuleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/web/controllers/ModuleController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/web/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/web/controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/web/controllers/WenketeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/web/interceptors/TitleInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/web/interceptors/TitleInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/camp/add-camp.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/camp/add-camp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/camp/all-camps.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/camp/all-camps.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/camp/thanks-camp.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/camp/thanks-camp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/contact/all-contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/contact/all-contacts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/contact/thanks-contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/contact/thanks-contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/course/details-course.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/course/details-course.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/wenkete/add-wenkete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/wenkete/all-wenketes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/wenkete/thanks-wenkete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CourseEnjoyDoNotCreateExceptionServiceTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/web/controllers/CourseControllerTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/web/controllers/GlobalExceptionHandlerTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/poll/thanks-poll.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/poll/thanks-poll.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CloudinaryServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/CloudinaryServiceTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/ModuleServiceTests$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/ModuleServiceTests$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/ModuleServiceTests$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/ModuleServiceTests$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/ModuleServiceTests$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/ModuleServiceTests$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/ModuleServiceTests$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/ModuleServiceTests$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/ModuleServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/ModuleServiceTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/RoleServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/RoleServiceTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/UserServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/services/UserServiceTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/web/controllers/EnjoyControllerTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/web/controllers/EnjoyControllerTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/web/controllers/InclusionsApiControllerTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/web/controllers/InclusionsApiControllerTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/web/controllers/InclusionsControllerTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/web/controllers/InclusionsControllerTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/web/controllers/ModuleControllerTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/web/controllers/UsersControllerTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/softuni/university/integration/web/controllers/UsersControllerTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/softuni/university/unit/validation/WenketeValidationServiceTests.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -91,9 +43,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/integration/web/controllers/UsersControllerTests.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/EnjoyApiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="-224">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/EnjoyController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2033">
               <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -103,7 +67,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/CampValidationServiceTests.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/GlobalExceptionHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/HomeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/InclusionsApiController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
@@ -115,10 +103,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/ContactValidationServiceTests.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/InclusionsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="-1955">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,10 +115,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/CourseValidationServiceTests.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/ModuleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="-2145">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,58 +127,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/EnjoyValidationServiceTests.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/PollController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/InclusionValidationServiceTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/ModuleValidationServiceTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/PollValidationServiceTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/RoleValidationServiceTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="-1529">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,15 +139,20 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/UserValidationServiceTests.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="-5411">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/poll/thanks-poll.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -264,7 +209,6 @@
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/error/CampNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/CampService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/CampServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/CampController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/camp/all-camps.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/camp/details-camp.html" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/ValidationConstants.java" />
@@ -294,6 +238,7 @@
         <option value="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/web/controllers/EnjoyControllerTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/web/controllers/InclusionsApiControllerTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/softuni/university/integration/web/controllers/InclusionsControllerTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/CampController.java" />
       </list>
     </option>
   </component>
@@ -310,8 +255,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -622,6 +567,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="camp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="university" type="b2602c69:ProjectViewProjectNode" />
+              <item name="university" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="course" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -632,6 +586,15 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="inclusion" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="university" type="b2602c69:ProjectViewProjectNode" />
+              <item name="university" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="poll" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="university" type="b2602c69:ProjectViewProjectNode" />
@@ -795,7 +758,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.org.softuni.university in university">
+  <component name="RunManager" selected="Spring Boot.UniversityApplication">
     <configuration name="EnjoyControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="university" />
       <extension name="coverage">
@@ -901,17 +864,12 @@
       <updated>1554981537206</updated>
       <workItem from="1554981538748" duration="6161000" />
       <workItem from="1554988561251" duration="18107000" />
-      <workItem from="1555054468287" duration="30551000" />
+      <workItem from="1555054468287" duration="31714000" />
+      <workItem from="1555129589572" duration="942000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UsersControllerTests_profile_whenGet_returnsCorrectView - 2019.04.12 at 19h 27m 20s.xml">
-      <configuration name="UsersControllerTests.profile_whenGet_returnsCorrectView" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UsersControllerTests_profile_whenGetIsNotAuthenticated_returnsErrorView - 2019.04.12 at 19h 29m 05s.xml">
-      <configuration name="UsersControllerTests.profile_whenGetIsNotAuthenticated_returnsErrorView" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UsersControllerTests - 2019.04.12 at 19h 30m 41s.xml">
       <configuration name="UsersControllerTests" configurationId="JUnit" />
     </history-entry>
@@ -936,9 +894,15 @@
     <history-entry file="org_softuni_university_in_university - 2019.04.12 at 20h 38m 06s.xml">
       <configuration name="org.softuni.university in university" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PollServiceTests_createPoll_whenCorect_returnPoll - 2019.04.12 at 21h 26m 55s.xml">
+      <configuration name="PollServiceTests.createPoll_whenCorect_returnPoll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="org_softuni_university_in_university - 2019.04.12 at 21h 28m 12s.xml">
+      <configuration name="org.softuni.university in university" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54819000" />
+    <option name="totallyTimeSpent" value="56924000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -950,10 +914,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3885906" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.39395973" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -967,7 +931,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
@@ -976,7 +940,6 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="right" id="Coverage" sideWeight="0.51358026" side_tool="true" weight="0.24966443" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.48641977" weight="0.24966443" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -987,22 +950,11 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Coverage" order="10" sideWeight="0.51358026" side_tool="true" weight="0.24966443" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/PollController.java</url>
-          <line>58</line>
-          <properties />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1018,23 +970,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/PollValidationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/RoleValidationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/RoleValidationServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1093,127 +1028,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/CampController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/ContactController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/CourseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/EnjoyApiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/EnjoyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/GlobalExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/InclusionsApiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/InclusionsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/ModuleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="65" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/PollController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -1358,13 +1172,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/integration/web/controllers/EnjoyControllerTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/integration/web/controllers/HomeControllerTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1395,16 +1202,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/integration/web/controllers/UsersControllerTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/CampValidationServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1417,7 +1214,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/ContactValidationServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
+        <state relative-caret-position="68">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1427,7 +1224,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/CourseValidationServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="68">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1437,7 +1234,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/EnjoyValidationServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="68">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1447,7 +1244,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/InclusionValidationServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="68">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1457,7 +1254,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/ModuleValidationServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="68">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1467,7 +1264,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/PollValidationServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="68">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1477,7 +1274,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/RoleValidationServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
+        <state relative-caret-position="68">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1487,8 +1284,165 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/UserValidationServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/integration/web/controllers/EnjoyControllerTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/integration/web/controllers/UsersControllerTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/camp/thanks-camp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="64" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/CampController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-613">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/ContactController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-77">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/CourseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2526">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/EnjoyApiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-224">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/EnjoyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2033">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/GlobalExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/InclusionsApiController.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/InclusionsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1955">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/ModuleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2145">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/poll/thanks-poll.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/PollController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1529">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5411">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
