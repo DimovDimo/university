@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="57dc514e-99c0-4ac3-a5a2-d097ec2f62a0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/QuoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/service/QuoteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/service/QuoteServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/service/QuoteServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/softuni/university/web/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/softuni/university/web/controllers/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,42 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/QuoteServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="73" column="55" selection-start-line="73" selection-start-column="55" selection-end-line="73" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/QuoteValidationService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/QuoteValidationServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-              <folding>
-                <element signature="e#266#267#0" expanded="true" />
-                <element signature="e#302#303#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/QuoteController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="898">
-              <caret line="84" column="37" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
+            <state relative-caret-position="346">
+              <caret line="92" column="12" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,28 +42,60 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/quote/all-quotes.html">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+            <state relative-caret-position="124">
+              <caret line="60" column="38" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/quote/add-quote.html">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-74">
-              <caret line="15" column="65" lean-forward="true" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="67" />
+            <state relative-caret-position="237">
+              <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/SelectedQuoteValidationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="45" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/SelectedQuoteValidationServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/SelectedQuoteValidationServiceTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#591#592#0" expanded="true" />
+                <element signature="e#657#658#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/domain/entities/Quote.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="18" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="18" />
+              <caret line="10" selection-start-line="10" selection-end-line="14" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1155#1156#0" expanded="true" />
@@ -101,28 +106,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/quote/delete-quote.html">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/camp/all-camps.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+            <state relative-caret-position="527">
+              <caret line="36" column="19" lean-forward="true" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/quote/edit-quote.html">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/camp/details-camp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="38" selection-end-column="14" />
+            <state relative-caret-position="153">
+              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="16" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/course/edit-course.html">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/SelectedQuoteServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="24" selection-end-column="65" />
+            <state relative-caret-position="256">
+              <caret line="34" column="58" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -159,11 +167,18 @@
       <find>course</find>
       <find>Course</find>
       <find>model</find>
+      <find>selectedQuoteRepository</find>
+      <find>QuoteServiceModel</find>
+      <find>QuoteValidationService</find>
+      <find>Quote</find>
     </findStrings>
     <replaceStrings>
       <replace>ROLE_PUBLIC_RELATIONS</replace>
       <replace>Quote</replace>
       <replace>quote</replace>
+      <replace>quoteRepository</replace>
+      <replace>SelectedQuoteServiceModel</replace>
+      <replace>SelectedQuote</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -172,25 +187,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/CampServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/ContactServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/CourseServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/EnjoyServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/InclusionServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/ModuleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/PollServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/RoleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/ModuleValidationServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/user/UserEditValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/user/UserRegisterValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/CampController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/ContactController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/CourseController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/EnjoyApiController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/EnjoyController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/InclusionsApiController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/InclusionsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/PollController.java" />
@@ -217,12 +219,25 @@
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/domain/models/binding/QuoteAddBindingModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/domain/models/service/QuoteServiceModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/domain/models/view/QuoteViewModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/QuoteServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/quote/all-quotes.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/quote/add-quote.html" />
         <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/QuoteController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/quote/edit-quote.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/quote/delete-quote.html" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/domain/entities/SelectedQuote.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/domain/models/binding/SelectedQuoteAddBindingModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/domain/models/service/SelectedQuoteServiceModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/domain/models/view/SelectedQuoteViewModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/error/SelectedQuoteNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/repository/SelectedQuoteRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/QuoteServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/SelectedQuoteService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/service/SelectedQuoteServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/home.html" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/SelectedQuoteValidationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/SelectedQuoteValidationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/SelectedQuoteValidationServiceTests.java" />
       </list>
     </option>
   </component>
@@ -558,6 +573,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="camp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="university" type="b2602c69:ProjectViewProjectNode" />
+              <item name="university" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="course" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -718,11 +742,11 @@
       <recent name="C:\Users\User\Desktop\sp4\university\src\main\resources\templates\wenkete" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.softuni.university.integration.services" />
-      <recent name="org.softuni.university.web.controllers" />
       <recent name="org.softuni.university.unit.validation" />
       <recent name="org.softuni.university.validation.service" />
       <recent name="org.softuni.university.service" />
+      <recent name="org.softuni.university.repository" />
+      <recent name="org.softuni.university.error" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\Desktop\sp4\university\src\main\resources\templates\user" />
@@ -740,7 +764,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UniversityApplication">
+  <component name="RunManager" selected="JUnit.org.softuni.university in university">
     <configuration name="EnjoyControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="university" />
       <extension name="coverage">
@@ -825,9 +849,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.org.softuni.university in university" />
         <item itemvalue="JUnit.QuoteValidationServiceTests" />
         <item itemvalue="JUnit.QuoteServiceTests" />
-        <item itemvalue="JUnit.org.softuni.university in university" />
         <item itemvalue="JUnit.EnjoyControllerTests" />
         <item itemvalue="JUnit.InclusionsControllerTests.all_whenGetIsNotAuthenticated_returnsErrorView" />
       </list>
@@ -847,17 +871,11 @@
       <workItem from="1554988561251" duration="18107000" />
       <workItem from="1555054468287" duration="31714000" />
       <workItem from="1555129589572" duration="6384000" />
-      <workItem from="1555161489688" duration="8536000" />
+      <workItem from="1555161489688" duration="12942000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EnjoyControllerTests - 2019.04.12 at 19h 46m 44s.xml">
-      <configuration name="EnjoyControllerTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EnjoyControllerTests - 2019.04.12 at 19h 47m 11s.xml">
-      <configuration name="EnjoyControllerTests" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="org_softuni_university_in_university - 2019.04.12 at 19h 49m 22s.xml">
       <configuration name="org.softuni.university in university" configurationId="JUnit" />
     </history-entry>
@@ -882,9 +900,15 @@
     <history-entry file="QuoteValidationServiceTests - 2019.04.13 at 18h 38m 28s.xml">
       <configuration name="QuoteValidationServiceTests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="org_softuni_university_in_university - 2019.04.13 at 21h 02m 24s.xml">
+      <configuration name="org.softuni.university in university" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="org_softuni_university_in_university - 2019.04.13 at 21h 04m 54s.xml">
+      <configuration name="org.softuni.university in university" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70902000" />
+    <option name="totallyTimeSpent" value="75308000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -923,7 +947,7 @@
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.48526078" weight="0.24966443" />
+      <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.4829932" weight="0.24966443" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
@@ -932,11 +956,23 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
-      <window_info anchor="right" id="Coverage" order="10" sideWeight="0.5147392" side_tool="true" weight="0.24966443" />
+      <window_info anchor="right" id="Coverage" order="10" sideWeight="0.5170068" side_tool="true" weight="0.24966443" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/HomeController.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -947,81 +983,11 @@
     <SUITE FILE_PATH="coverage/university$UsersControllerTests.ic" NAME="UsersControllerTests Coverage Results" MODIFIED="1555076395940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.softuni.university.integration.web.controllers.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/university$org_softuni_university_in_university.ic" NAME="org.softuni.university in university Coverage Results" MODIFIED="1555159244840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/university$org_softuni_university_in_university.ic" NAME="org.softuni.university in university Coverage Results" MODIFIED="1555178563802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.softuni.university.*</FILTER>
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/org/softuni/university/config/ApplicationInterceptorConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#1353#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-186" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/edit-profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="34" column="58" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/all-users.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1377" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/poll/thanks-poll.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/poll/details-poll.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/poll/all-polls.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/poll/add-poll.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inclusion/course.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/enjoy/course.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/contact/add-contact.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1043,13 +1009,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1020">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-273">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1284,13 +1243,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/QuoteServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="73" column="55" selection-start-line="73" selection-start-column="55" selection-end-line="73" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/QuoteValidationService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1354,14 +1306,142 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/domain/models/service/SelectedQuoteServiceModel.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/domain/models/view/SelectedQuoteViewModel.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/error/SelectedQuoteNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="85" selection-start-line="5" selection-start-column="85" selection-end-line="5" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/interceptors/ImageInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="27" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/repository/SelectedQuoteRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/domain/models/binding/SelectedQuoteAddBindingModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/domain/entities/SelectedQuote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="10" selection-start-line="10" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/SelectedQuoteService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/camp/details-camp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/web/controllers/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="60" column="38" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/camp/all-camps.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="36" column="19" lean-forward="true" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/domain/entities/Quote.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="18" />
+          <caret line="10" selection-start-line="10" selection-end-line="14" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1155#1156#0" expanded="true" />
             <element signature="e#1183#1184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/SelectedQuoteValidationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/validation/service/SelectedQuoteValidationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/softuni/university/unit/validation/SelectedQuoteValidationServiceTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/SelectedQuoteServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="34" column="58" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/university/service/QuoteServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="92" column="12" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

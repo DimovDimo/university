@@ -2,7 +2,9 @@ package org.softuni.university.web.controllers;
 
 import org.modelmapper.ModelMapper;
 import org.softuni.university.domain.models.view.ModuleViewModel;
+import org.softuni.university.domain.models.view.SelectedQuoteViewModel;
 import org.softuni.university.service.ModuleService;
+import org.softuni.university.service.SelectedQuoteService;
 import org.softuni.university.web.annotations.PageTitle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -16,11 +18,17 @@ import java.util.stream.Collectors;
 public class HomeController extends BaseController {
 
     private final ModuleService moduleService;
+    private final SelectedQuoteService selectedQuoteService;
     private final ModelMapper modelMapper;
 
     @Autowired
-    public HomeController(ModuleService moduleService, ModelMapper modelMapper) {
+    public HomeController(
+            ModuleService moduleService,
+            SelectedQuoteService selectedQuoteService,
+            ModelMapper modelMapper
+    ) {
         this.moduleService = moduleService;
+        this.selectedQuoteService = selectedQuoteService;
         this.modelMapper = modelMapper;
     }
 
@@ -36,6 +44,7 @@ public class HomeController extends BaseController {
     @PageTitle("Home")
     public ModelAndView home(ModelAndView modelAndView) {
         addModules(modelAndView);
+        addSelectedQuotes(modelAndView);
 
         return super.view("home", modelAndView);
     }
@@ -46,5 +55,13 @@ public class HomeController extends BaseController {
                         .stream()
                         .map(module -> this.modelMapper.map(module, ModuleViewModel.class)
                 ).collect(Collectors.toList()));
+    }
+
+    private void addSelectedQuotes(ModelAndView modelAndView) {
+        modelAndView.addObject("quotes",
+                this.selectedQuoteService.findAllSelectedQuotes()
+                        .stream()
+                        .map(selectedQuote -> this.modelMapper.map(selectedQuote, SelectedQuoteViewModel.class)
+                        ).collect(Collectors.toList()));
     }
 }

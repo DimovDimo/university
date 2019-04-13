@@ -9,6 +9,21 @@
     <main class="mt-3">
         <div class="row d-flex justify-content-between">
             <div class="custom-css-modules-navigation modules-navigation col-md-12">
+                <th:block th:each="quote, iter : ${quotes}">
+                    <div class="row text-center">
+                        <div class="col col-md-12 mt-5">
+                            <h5 th:text="
+                                '&quot;' + ${quote.text} + '&quot;' +
+                                ' - ' + ${quote.author} + ' ' + ${quote.reason} +
+                                ' ' + ${quote.place} + ' ' + ${quote.year}
+                            "></h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-md-12 mt-5">
+                        </div>
+                    </div>
+                </th:block>
                 <h2 class="text-center font-weight-bold">Modules</h2>
                 <form class="text-center mt-3">
                     <div class="custom-css-radio-button custom-control-inline custom-radio mt-3">
