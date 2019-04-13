@@ -5,6 +5,7 @@ import org.softuni.university.domain.entities.Camp;
 import org.softuni.university.mappings.IHaveCustomMappings;
 
 public class CampServiceModel implements IHaveCustomMappings {
+
     private String id;
     private int nights;
     private int beds;

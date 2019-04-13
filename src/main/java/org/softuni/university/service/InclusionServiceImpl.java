@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class InclusionServiceImpl implements InclusionService {
+
     private final InclusionRepository inclusionRepository;
     private final CourseRepository courseRepository;
     private final UserService userService;

@@ -23,7 +23,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @AutoConfigureTestDatabase(connection = EmbeddedDatabaseConnection.H2)
 public class UsersControllerTests {
-
     @Autowired
     private MockMvc mockMvc;
 

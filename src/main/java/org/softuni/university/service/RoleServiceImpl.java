@@ -17,7 +17,10 @@ public class RoleServiceImpl implements RoleService {
     private final ModelMapper modelMapper;
 
     @Autowired
-    public RoleServiceImpl(RoleRepository roleRepository, ModelMapper modelMapper) {
+    public RoleServiceImpl(
+            RoleRepository roleRepository,
+            ModelMapper modelMapper
+    ) {
         this.roleRepository = roleRepository;
         this.modelMapper = modelMapper;
     }

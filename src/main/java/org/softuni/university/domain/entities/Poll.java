@@ -8,6 +8,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "polls")
 public class Poll extends BaseEntity {
+
     private String liking;
     private String notLiking;
     private String easiest;

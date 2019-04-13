@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class CampServiceImpl implements CampService {
+
     private final CampRepository campRepository;
     private final UserService userService;
     private final ModelMapper mapper;

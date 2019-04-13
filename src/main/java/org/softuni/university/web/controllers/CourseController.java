@@ -32,7 +32,12 @@ public class CourseController extends BaseController {
     private final ModelMapper modelMapper;
 
     @Autowired
-    public CourseController(CourseService courseService, CloudinaryService cloudinaryService, ModuleService moduleService, ModelMapper modelMapper) {
+    public CourseController(
+            CourseService courseService,
+            CloudinaryService cloudinaryService,
+            ModuleService moduleService,
+            ModelMapper modelMapper
+    ) {
         this.courseService = courseService;
         this.cloudinaryService = cloudinaryService;
         this.moduleService = moduleService;

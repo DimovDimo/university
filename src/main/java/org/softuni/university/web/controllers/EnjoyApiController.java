@@ -12,6 +12,7 @@ import java.security.Principal;
 @RestController
 @RequestMapping("/api/enjoy")
 public class EnjoyApiController {
+
     private final EnjoyService enjoyService;
 
     public EnjoyApiController(EnjoyService enjoyService) {

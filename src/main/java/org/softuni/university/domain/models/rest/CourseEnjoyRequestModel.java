@@ -1,6 +1,7 @@
 package org.softuni.university.domain.models.rest;
 
 public class CourseEnjoyRequestModel {
+
     private String id;
 
     public String getId() {

@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 @Controller
 @RequestMapping("/contact")
 public class ContactController extends BaseController {
+
     private final ContactService contactService;
     private final ModelMapper mapper;
 

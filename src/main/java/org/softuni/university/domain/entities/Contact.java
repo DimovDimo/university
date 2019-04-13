@@ -8,6 +8,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "contacts")
 public class Contact extends BaseEntity {
+
     private String title;
     private String description;
     private String phone;

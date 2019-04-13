@@ -7,6 +7,7 @@ import org.softuni.university.mappings.IHaveCustomMappings;
 import java.math.BigDecimal;
 
 public class InclusionServiceModel implements IHaveCustomMappings {
+
     private String imageUrl;
     private String name;
     private BigDecimal price;

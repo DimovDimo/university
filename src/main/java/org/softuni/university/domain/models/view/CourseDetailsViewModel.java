@@ -3,6 +3,7 @@ package org.softuni.university.domain.models.view;
 import java.math.BigDecimal;
 
 public class CourseDetailsViewModel {
+
     private String id;
     private String name;
     private String description;

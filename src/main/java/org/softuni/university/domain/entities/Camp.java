@@ -8,6 +8,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "camps")
 public class Camp extends BaseEntity {
+
     private int nights;
     private int beds;
     private int parkingLots;

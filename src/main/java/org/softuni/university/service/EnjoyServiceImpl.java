@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class EnjoyServiceImpl implements EnjoyService {
+
     private final EnjoyRepository enjoyRepository;
     private final CourseRepository courseRepository;
     private final UserService userService;

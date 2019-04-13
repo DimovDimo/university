@@ -26,30 +26,24 @@ public class UserRegisterValidator implements org.springframework.validation.Val
     public void validate(Object o, Errors errors) {
         UserRegisterBindingModel userRegisterBindingModel = (UserRegisterBindingModel) o;
 
-        if (this.userRepository.findByUsername(userRegisterBindingModel.getUsername()).isPresent()) {
+        usernameAlreadyExists(errors, userRegisterBindingModel);
+        usernameLength(errors, userRegisterBindingModel);
+        passwordsLength(errors, userRegisterBindingModel);
+        passwordsDoNotMatch(errors, userRegisterBindingModel);
+        emailAlreadyExists(errors, userRegisterBindingModel);
+    }
+
+    private void emailAlreadyExists(Errors errors, UserRegisterBindingModel userRegisterBindingModel) {
+        if (this.userRepository.findByEmail(userRegisterBindingModel.getEmail()).isPresent()) {
             errors.rejectValue(
-                    "username",
-                    String.format(ValidationConstants.USERNAME_ALREADY_EXISTS, userRegisterBindingModel.getUsername()),
-                    String.format(ValidationConstants.USERNAME_ALREADY_EXISTS, userRegisterBindingModel.getUsername())
+                    "email",
+                    String.format(ValidationConstants.EMAIL_ALREADY_EXISTS, userRegisterBindingModel.getEmail()),
+                    String.format(ValidationConstants.EMAIL_ALREADY_EXISTS, userRegisterBindingModel.getEmail())
             );
         }
+    }
 
-        if (userRegisterBindingModel.getUsername().length() < 6 || userRegisterBindingModel.getUsername().length() > 20) {
-            errors.rejectValue(
-                    "username",
-                    ValidationConstants.USERNAME_LENGTH,
-                    ValidationConstants.USERNAME_LENGTH
-            );
-        }
-
-        if (userRegisterBindingModel.getPassword().length() < 6 || userRegisterBindingModel.getPassword().length() > 20) {
-            errors.rejectValue(
-                    "username",
-                    ValidationConstants.PASSWORDS_LENGTH,
-                    ValidationConstants.PASSWORDS_LENGTH
-            );
-        }
-
+    private void passwordsDoNotMatch(Errors errors, UserRegisterBindingModel userRegisterBindingModel) {
         if (!userRegisterBindingModel.getPassword().equals(userRegisterBindingModel.getConfirmPassword())) {
             errors.rejectValue(
                     "password",
@@ -57,12 +51,34 @@ public class UserRegisterValidator implements org.springframework.validation.Val
                     ValidationConstants.PASSWORDS_DO_NOT_MATCH
             );
         }
+    }
 
-        if (this.userRepository.findByEmail(userRegisterBindingModel.getEmail()).isPresent()) {
+    private void passwordsLength(Errors errors, UserRegisterBindingModel userRegisterBindingModel) {
+        if (userRegisterBindingModel.getPassword().length() < 6 || userRegisterBindingModel.getPassword().length() > 20) {
             errors.rejectValue(
-                    "email",
-                    String.format(ValidationConstants.EMAIL_ALREADY_EXISTS, userRegisterBindingModel.getEmail()),
-                    String.format(ValidationConstants.EMAIL_ALREADY_EXISTS, userRegisterBindingModel.getEmail())
+                    "username",
+                    ValidationConstants.PASSWORDS_LENGTH,
+                    ValidationConstants.PASSWORDS_LENGTH
+            );
+        }
+    }
+
+    private void usernameLength(Errors errors, UserRegisterBindingModel userRegisterBindingModel) {
+        if (userRegisterBindingModel.getUsername().length() < 6 || userRegisterBindingModel.getUsername().length() > 20) {
+            errors.rejectValue(
+                    "username",
+                    ValidationConstants.USERNAME_LENGTH,
+                    ValidationConstants.USERNAME_LENGTH
+            );
+        }
+    }
+
+    private void usernameAlreadyExists(Errors errors, UserRegisterBindingModel userRegisterBindingModel) {
+        if (this.userRepository.findByUsername(userRegisterBindingModel.getUsername()).isPresent()) {
+            errors.rejectValue(
+                    "username",
+                    String.format(ValidationConstants.USERNAME_ALREADY_EXISTS, userRegisterBindingModel.getUsername()),
+                    String.format(ValidationConstants.USERNAME_ALREADY_EXISTS, userRegisterBindingModel.getUsername())
             );
         }
     }

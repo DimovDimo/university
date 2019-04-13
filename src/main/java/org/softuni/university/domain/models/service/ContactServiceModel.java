@@ -5,6 +5,7 @@ import org.softuni.university.domain.entities.Contact;
 import org.softuni.university.mappings.IHaveCustomMappings;
 
 public class ContactServiceModel implements IHaveCustomMappings {
+
     private String id;
     private String title;
     private String description;

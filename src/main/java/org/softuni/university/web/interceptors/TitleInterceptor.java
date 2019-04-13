@@ -19,13 +19,16 @@ public class TitleInterceptor extends HandlerInterceptorAdapter {
         if (modelAndView == null) {
             modelAndView = new ModelAndView();
         } else {
-            if (handler instanceof HandlerMethod) {
-                PageTitle methodAnnotation = ((HandlerMethod) handler).getMethodAnnotation(PageTitle.class);
+            handlerInstance(handler, modelAndView, title);
+        }
+    }
 
-                if (methodAnnotation != null) {
-                    modelAndView
-                            .addObject("titleText", title + " - " + methodAnnotation.value());
-                }
+    private void handlerInstance(Object handler, ModelAndView modelAndView, String title) {
+        if (handler instanceof HandlerMethod) {
+            PageTitle methodAnnotation = ((HandlerMethod) handler).getMethodAnnotation(PageTitle.class);
+            if (methodAnnotation != null) {
+                modelAndView
+                        .addObject("titleText", title + " - " + methodAnnotation.value());
             }
         }
     }

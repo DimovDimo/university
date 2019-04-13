@@ -1,6 +1,7 @@
 package org.softuni.university.domain.models.binding;
 
 public class CampAddBindingModel {
+
     private int nights;
     private int beds;
     private int parkingLots;

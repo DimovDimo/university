@@ -28,7 +28,8 @@ public class CourseServiceImpl implements CourseService {
             CourseRepository courseRepository,
             ModuleService moduleService,
             CourseValidationService courseValidation,
-            ModelMapper modelMapper) {
+            ModelMapper modelMapper
+    ) {
         this.courseRepository = courseRepository;
         this.moduleService = moduleService;
         this.courseValidation = courseValidation;
@@ -38,14 +39,14 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public CourseServiceModel createCourse(CourseServiceModel courseServiceModel) {
         if (!courseValidation.isValid(courseServiceModel)) {
-            throw new CourseDoNotCreateException("CourseIllegalArgumentException this course is invalid");
+            throw new CourseDoNotCreateException("CourseDoNotCreateException this course is invalid");
         }
         Course course = this.courseRepository
                 .findByName(courseServiceModel.getName())
                 .orElse(null);
 
         if (course != null) {
-            throw new CourseNameAlreadyExistsException("CourseIllegalArgumentException already exists");
+            throw new CourseNameAlreadyExistsException("CourseNameAlreadyExistsException already exists");
         }
 
         course = this.modelMapper.map(courseServiceModel, Course.class);
@@ -74,22 +75,8 @@ public class CourseServiceImpl implements CourseService {
         Course course = this.courseRepository.findById(id)
                 .orElseThrow(() -> new CourseNotFoundException("CourseNotFoundException with the given id was not found!"));
 
-        courseServiceModel.setModules(
-                this.moduleService.findAllModules()
-                        .stream()
-                        .filter(c -> courseServiceModel.getModules().contains(c.getId()))
-                        .collect(Collectors.toList())
-        );
-
-        course.setName(courseServiceModel.getName());
-        course.setDescription(courseServiceModel.getDescription());
-        course.setPrice(courseServiceModel.getPrice());
-        course.setModules(
-                courseServiceModel.getModules()
-                        .stream()
-                        .map(c -> this.modelMapper.map(c, Module.class))
-                        .collect(Collectors.toList())
-        );
+        courseServiceModelSetModules(courseServiceModel);
+        courseSets(courseServiceModel, course);
 
         return this.modelMapper.map(this.courseRepository.saveAndFlush(course), CourseServiceModel.class);
     }
@@ -108,5 +95,26 @@ public class CourseServiceImpl implements CourseService {
                 .filter(course -> course.getModules().stream().anyMatch(moduleStream -> moduleStream.getName().equals(module)))
                 .map(course -> this.modelMapper.map(course, CourseServiceModel.class))
                 .collect(Collectors.toList());
+    }
+
+    private void courseSets(CourseServiceModel courseServiceModel, Course course) {
+        course.setName(courseServiceModel.getName());
+        course.setDescription(courseServiceModel.getDescription());
+        course.setPrice(courseServiceModel.getPrice());
+        course.setModules(
+                courseServiceModel.getModules()
+                        .stream()
+                        .map(c -> this.modelMapper.map(c, Module.class))
+                        .collect(Collectors.toList())
+        );
+    }
+
+    private void courseServiceModelSetModules(CourseServiceModel courseServiceModel) {
+        courseServiceModel.setModules(
+                this.moduleService.findAllModules()
+                        .stream()
+                        .filter(c -> courseServiceModel.getModules().contains(c.getId()))
+                        .collect(Collectors.toList())
+        );
     }
 }

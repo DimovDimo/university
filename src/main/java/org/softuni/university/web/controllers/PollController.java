@@ -18,6 +18,7 @@ import java.util.stream.Collectors;
 @Controller
 @RequestMapping("/poll")
 public class PollController extends BaseController {
+
     private final PollService pollService;
     private final ModelMapper mapper;
 

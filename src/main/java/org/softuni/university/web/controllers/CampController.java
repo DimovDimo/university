@@ -18,6 +18,7 @@ import java.util.stream.Collectors;
 @Controller
 @RequestMapping("/camp")
 public class CampController extends BaseController {
+
     private final CampService campService;
     private final ModelMapper mapper;
 
@@ -40,7 +41,6 @@ public class CampController extends BaseController {
         CampServiceModel campServiceModel = this.mapper.map(model, CampServiceModel.class);
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String name = auth.getName();
-
         campService.createCamp(campServiceModel, name);
 
         return super.view("camp/thanks-camp");

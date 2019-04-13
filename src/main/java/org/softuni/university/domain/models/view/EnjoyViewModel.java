@@ -3,6 +3,7 @@ package org.softuni.university.domain.models.view;
 import java.math.BigDecimal;
 
 public class EnjoyViewModel {
+
     private String imageUrl;
     private String name;
     private BigDecimal price;

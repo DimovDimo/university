@@ -23,7 +23,12 @@ public class UserServiceImpl implements UserService {
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Autowired
-    public UserServiceImpl(UserRepository userRepository, RoleService roleService, ModelMapper modelMapper, BCryptPasswordEncoder bCryptPasswordEncoder) {
+    public UserServiceImpl(
+            UserRepository userRepository,
+            RoleService roleService,
+            ModelMapper modelMapper,
+            BCryptPasswordEncoder bCryptPasswordEncoder
+    ) {
         this.userRepository = userRepository;
         this.roleService = roleService;
         this.modelMapper = modelMapper;
@@ -33,13 +38,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserServiceModel registerUser(UserServiceModel userServiceModel) throws Exception {
         this.roleService.seedRolesInDb();
-        if (this.userRepository.count() == 0) {
-            userServiceModel.setAuthorities(this.roleService.findAllRoles());
-        } else {
-            userServiceModel.setAuthorities(new LinkedHashSet<>());
-
-            userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_STUDENT"));
-        }
+        userSetAuthorities(userServiceModel);
 
         User user = this.modelMapper.map(userServiceModel, User.class);
         user.setPassword(this.bCryptPasswordEncoder.encode(userServiceModel.getPassword()));
@@ -81,7 +80,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<UserServiceModel> findAllUsers() {
-        return this.userRepository.findAll().stream().map(u -> this.modelMapper.map(u, UserServiceModel.class)).collect(Collectors.toList());
+        return this.userRepository.findAll()
+                .stream()
+                .map(u -> this.modelMapper.map(u, UserServiceModel.class))
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -114,5 +116,14 @@ public class UserServiceImpl implements UserService {
         }
 
         this.userRepository.saveAndFlush(this.modelMapper.map(userServiceModel, User.class));
+    }
+
+    private void userSetAuthorities(UserServiceModel userServiceModel) throws Exception {
+        if (this.userRepository.count() == 0) {
+            userServiceModel.setAuthorities(this.roleService.findAllRoles());
+        } else {
+            userServiceModel.setAuthorities(new LinkedHashSet<>());
+            userServiceModel.getAuthorities().add(this.roleService.findByAuthority("ROLE_STUDENT"));
+        }
     }
 }

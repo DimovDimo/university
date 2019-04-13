@@ -29,17 +29,24 @@ public class UserEditValidator implements org.springframework.validation.Validat
     @Override
     public void validate(Object o, Errors errors) {
         UserEditBindingModel userEditBindingModel = (UserEditBindingModel) o;
-
         User user = this.userRepository.findByUsername(userEditBindingModel.getUsername()).orElse(null);
 
-        if (!this.bCryptPasswordEncoder.matches(userEditBindingModel.getOldPassword(), user.getPassword())) {
+        passwordMatches(errors, userEditBindingModel, user);
+        passwordsEquals(errors, userEditBindingModel);
+        emailAlreadyExists(errors, userEditBindingModel, user);
+    }
+
+    private void emailAlreadyExists(Errors errors, UserEditBindingModel userEditBindingModel, User user) {
+        if (!user.getEmail().equals(userEditBindingModel.getEmail()) && this.userRepository.findByEmail(userEditBindingModel.getEmail()).isPresent()) {
             errors.rejectValue(
-                    "oldPassword",
-                    ValidationConstants.WRONG_PASSWORD,
-                    ValidationConstants.WRONG_PASSWORD
+                    "email",
+                    String.format(ValidationConstants.EMAIL_ALREADY_EXISTS, userEditBindingModel.getEmail()),
+                    String.format(ValidationConstants.EMAIL_ALREADY_EXISTS, userEditBindingModel.getEmail())
             );
         }
+    }
 
+    private void passwordsEquals(Errors errors, UserEditBindingModel userEditBindingModel) {
         if (userEditBindingModel.getPassword() != null && !userEditBindingModel.getPassword().equals(userEditBindingModel.getConfirmPassword())) {
             errors.rejectValue(
                     "password",
@@ -47,12 +54,14 @@ public class UserEditValidator implements org.springframework.validation.Validat
                     ValidationConstants.PASSWORDS_DO_NOT_MATCH
             );
         }
+    }
 
-        if (!user.getEmail().equals(userEditBindingModel.getEmail()) && this.userRepository.findByEmail(userEditBindingModel.getEmail()).isPresent()) {
+    private void passwordMatches(Errors errors, UserEditBindingModel userEditBindingModel, User user) {
+        if (!this.bCryptPasswordEncoder.matches(userEditBindingModel.getOldPassword(), user.getPassword())) {
             errors.rejectValue(
-                    "email",
-                    String.format(ValidationConstants.EMAIL_ALREADY_EXISTS, userEditBindingModel.getEmail()),
-                    String.format(ValidationConstants.EMAIL_ALREADY_EXISTS, userEditBindingModel.getEmail())
+                    "oldPassword",
+                    ValidationConstants.WRONG_PASSWORD,
+                    ValidationConstants.WRONG_PASSWORD
             );
         }
     }

@@ -7,6 +7,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "enjoys")
 public class Enjoy extends BaseEntity {
+
     Course course;
     User user;
 

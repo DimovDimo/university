@@ -12,6 +12,7 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class MappingsInitializer {
+
     private static final String ROOT_PACKAGE_NAME = "org.softuni.university";
 
     public static void initMappings(ModelMapper mapper) {

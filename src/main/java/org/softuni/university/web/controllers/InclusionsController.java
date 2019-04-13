@@ -21,6 +21,7 @@ import org.softuni.university.service.CourseService;
 @Controller
 @RequestMapping("/inclusion")
 public class InclusionsController extends BaseController {
+
     private final CourseService courseService;
     private final InclusionService inclusionService;
     private final ModelMapper mapper;

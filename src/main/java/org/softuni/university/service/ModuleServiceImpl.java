@@ -20,7 +20,8 @@ public class ModuleServiceImpl implements ModuleService {
     @Autowired
     public ModuleServiceImpl(
             ModuleRepository moduleRepository,
-            ModelMapper modelMapper) {
+            ModelMapper modelMapper
+    ) {
         this.moduleRepository = moduleRepository;
         this.modelMapper = modelMapper;
     }

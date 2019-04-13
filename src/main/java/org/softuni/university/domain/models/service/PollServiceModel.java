@@ -5,6 +5,7 @@ import org.softuni.university.domain.entities.Poll;
 import org.softuni.university.mappings.IHaveCustomMappings;
 
 public class PollServiceModel implements IHaveCustomMappings {
+
     private String id;
     private String liking;
     private String notLiking;

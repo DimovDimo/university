@@ -166,7 +166,6 @@ public class UserController extends BaseController {
                 .map(u -> {
                     UserAllViewModel user = this.modelMapper.map(u, UserAllViewModel.class);
                     user.setAuthorities(u.getAuthorities().stream().map(a -> a.getAuthority()).collect(Collectors.toSet()));
-
                     return user;
                 })
                 .collect(Collectors.toList());

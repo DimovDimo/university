@@ -17,13 +17,19 @@ import java.util.stream.Collectors;
 
 @Service
 public class ContactServiceImpl implements ContactService {
+
     private final ContactRepository contactRepository;
     private final UserService userService;
     private final ModelMapper mapper;
     private final UserValidationService userValidation;
 
     @Autowired
-    public ContactServiceImpl(ContactRepository contactRepository, UserService userService, ModelMapper mapper, UserValidationService userValidation) {
+    public ContactServiceImpl(
+            ContactRepository contactRepository,
+            UserService userService,
+            ModelMapper mapper,
+            UserValidationService userValidation
+    ) {
         this.contactRepository = contactRepository;
         this.userService = userService;
         this.mapper = mapper;

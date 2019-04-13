@@ -1,6 +1,7 @@
 package org.softuni.university.domain.models.binding;
 
 public class PollAddBindingModel {
+
     private String liking;
     private String notLiking;
     private String easiest;

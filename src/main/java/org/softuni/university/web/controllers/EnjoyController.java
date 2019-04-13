@@ -23,6 +23,7 @@ import java.util.stream.Collectors;
 @Controller
 @RequestMapping("/enjoy")
 public class EnjoyController extends BaseController {
+
     private final CourseService courseService;
     private final EnjoyService enjoyService;
     private final ModelMapper mapper;
