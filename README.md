@@ -47,3 +47,11 @@ New functionality @Scheduled selectQuote() in QuoteServiceImpl.
 📓 All Modules
 
 📚 All Courses
+### ROLE_DEAN functionality
+🤼 All Users & change roles
+
+🏫 All course-student relations
+### ROLE_PRESIDENT functionality
+The role of the president cannot change.
+
+🤼 All Users & change roles
