@@ -78,7 +78,7 @@ public class QuoteServiceImpl implements QuoteService {
 
     //                   second |min |hour| day
     @Scheduled(fixedRate = 1000 * 60 * 60 * 24)
-    private void generateOffers() {
+    private void selectQuote() {
         this.selectedQuoteRepository.deleteAll();
         List<QuoteServiceModel> quotes = this.findAllQuotes();
 
