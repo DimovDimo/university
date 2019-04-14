@@ -35,6 +35,15 @@ New functionality @Scheduled selectQuote() in QuoteServiceImpl.
 🏞️ All camp opinions
 
 😸 All student-enjoy relations
+
 📝 Add, Edit & Delete Quotes
 
 📋 All Quotes
+### ROLE_CHAIR_OF_A_DEPARTMENT functionality
+📄 Add, Edit & Delete Module
+
+📘 Add, Details, Edit & Delete Course
+
+📓 All Modules
+
+📚 All Courses
