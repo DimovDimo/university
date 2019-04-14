@@ -124,3 +124,31 @@ body {
 .custom-css-еrror{
     color: red;
 }
+
+@media only screen and (max-width: 1000px) {
+    .custom-css-course-image-index{
+        text-align: center;
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .custom-css-course-image-index{
+        text-align: center;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .custom-css-course-image-index{
+        text-align: center;
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+    .custom-css-course-image-index{
+        text-align: center;
+        height: 0px;
+    }
+}
