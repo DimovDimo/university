@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57dc514e-99c0-4ac3-a5a2-d097ec2f62a0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="57dc514e-99c0-4ac3-a5a2-d097ec2f62a0" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,8 +39,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="235">
-                <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="32" />
+              <first_editor relative-caret-position="252">
+                <caret line="54" column="12" lean-forward="true" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
               </first_editor>
               <second_editor />
             </state>
@@ -821,7 +818,7 @@
       <workItem from="1555054468287" duration="31714000" />
       <workItem from="1555129589572" duration="6384000" />
       <workItem from="1555161489688" duration="13641000" />
-      <workItem from="1555224142423" duration="4964000" />
+      <workItem from="1555224142423" duration="5467000" />
     </task>
     <servers />
   </component>
@@ -858,7 +855,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80971000" />
+    <option name="totallyTimeSpent" value="81474000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -873,7 +870,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -883,7 +880,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.3753541" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.3753541" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1380,8 +1377,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="235">
-            <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="32" />
+          <first_editor relative-caret-position="252">
+            <caret line="54" column="12" lean-forward="true" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
           </first_editor>
           <second_editor />
         </state>

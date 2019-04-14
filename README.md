@@ -55,3 +55,4 @@ New functionality @Scheduled selectQuote() in QuoteServiceImpl.
 The role of the president cannot change.
 
 🤼 All Users & change roles
+## I thank you - Doncho Minkov, Radoslav Evgeniev, Ivaylo Jelev and SoftUni Team.
