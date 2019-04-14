@@ -27,4 +27,14 @@ New functionality @Scheduled selectQuote() in QuoteServiceImpl.
 🗳️ Poll
 
 🏕️ Camp
+### ROLE_PUBLIC_RELATIONS functionality
+📢 All Contacts
 
+📰 All Polls
+
+🏞️ All camp opinions
+
+😸 All student-enjoy relations
+📝 Add, Edit & Delete Quotes
+
+📋 All Quotes
