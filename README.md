@@ -15,3 +15,16 @@ It is based on the workshops of Java MVC Frameworks - Spring - February 2019 in 
 Added Contact, Poll, Camp, Quote & SelectedQuote.
 
 New functionality @Scheduled selectQuote() in QuoteServiceImpl.
+### ROLE_STUDENT functionality
+😾 Profile
+
+📚 My courses & 1-Click inclusion course
+
+😺 My enjoy & enjoy course
+
+📇 Contact us
+
+🗳️ Poll
+
+🏕️ Camp
+
